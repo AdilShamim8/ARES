@@ -1,4 +1,4 @@
-# CLAUDE RESEARCH EXCELLENCE SYSTEM (CRES)
+# AI Research Excellence System (ARES)
 
 <p align="center">
   <img src="https://img.shields.io/badge/Release-v2.4%20(September%202026)-0052CC?style=for-the-badge&logo=git&logoColor=white" alt="Release Version" />
