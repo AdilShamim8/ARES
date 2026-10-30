@@ -1,8 +1,8 @@
-# CRES Framework Example: Social Science Research
+# ARES Framework Example: Social Science Research
 
 ## Research Area: Social Media's Effect on Democratic Deliberation
 
-This document demonstrates a complete walkthrough of the Claude Research Excellence System (CRES) applied to a social science research paper on how social media platforms affect the quality of democratic deliberation.
+This document demonstrates a complete walkthrough of the AI Research Excellence System (ARES) applied to a social science research paper on how social media platforms affect the quality of democratic deliberation.
 
 ---
 
@@ -67,14 +67,14 @@ All canonical and frontier papers analyzed in the cartography scan (Table 1.1) a
 | Sub-Area | Reference | Title & Venue | DOI / Persistent Link |
 |---|---|---|---|
 | **Early Theory** | Sunstein (2001) | Republic.com (*Princeton University Press*) | [10.1515/9781400840564](https://doi.org/10.1515/9781400840564) |
-| **Filter Bubbles** | Pariser (2011) | The Filter Bubble: What the Internet Is Hiding from You (*Penguin Press*) | [10.1080/01972243.2012.689617](https://doi.org/10.1080/01972243.2012.689617) |
+| **Filter Bubbles** | Pariser (2011) | The Filter Bubble: What the Internet Is Hiding from You (*Penguin Press, New York*) | Book — ISBN 978-1-59420-300-8 (no DOI) |
 | **Experimental Polarization** | Bail et al. (2018) | Exposure to opposing views on social media can increase political polarization (*PNAS*) | [10.1073/pnas.1804840115](https://doi.org/10.1073/pnas.1804840115) |
 | **Internet & Polarization** | Boxell et al. (2017) | Greater Internet use is not associated with faster growth in political polarization (*PNAS*) | [10.1073/pnas.1706588114](https://doi.org/10.1073/pnas.1706588114) |
 | **Misinformation Velocity** | Vosoughi et al. (2018) | The spread of true and false news online (*Science*) | [10.1126/science.aap9559](https://doi.org/10.1126/science.aap9559) |
 | **Misinformation Psychology**| Pennycook & Rand (2021) | The Psychology of Fake News (*Trends Cogn. Sci.*) | [10.1016/j.tics.2021.02.007](https://doi.org/10.1016/j.tics.2021.02.007) |
 | **Algorithmic Amplification** | Huszár et al. (2022) | Algorithmic amplification of politics on Twitter (*PNAS*) | [10.1073/pnas.2025334119](https://doi.org/10.1073/pnas.2025334119) |
 | **User vs. Algorithm** | Guess et al. (2023) | How do social media feed algorithms affect beliefs and behavior in an election campaign? (*Science*) | [10.1126/science.abp9364](https://doi.org/10.1126/science.abp9364) |
-| **Deliberative Measurement** | Steenbergen et al. (2003) | Measuring Political Deliberation: A Discourse Quality Index (*Acta Politica*) | [10.1057/palgrave.ap.5500013](https://doi.org/10.1057/palgrave.ap.5500013) |
+| **Deliberative Measurement** | Steenbergen et al. (2003) | Measuring Political Deliberation: A Discourse Quality Index (*Comparative European Politics*) | [10.1057/palgrave.cep.6110002](https://doi.org/10.1057/palgrave.cep.6110002) |
 | **Behavioral Interventions** | Pennycook et al. (2020) | Fighting COVID-19 misinformation on social media: Experimental evidence for a scalable accuracy-nudge intervention (*Psychol. Sci.*) | [10.1177/0956797620939054](https://doi.org/10.1177/0956797620939054) |
 
 ---
@@ -142,7 +142,7 @@ All canonical and frontier papers analyzed in the cartography scan (Table 1.1) a
 
 ```
 ╔══════════════════════════════════════════════════════════════════╗
-║                    CRES NOVELTY CERTIFICATE                      ║
+║                    ARES NOVELTY CERTIFICATE                      ║
 ╠══════════════════════════════════════════════════════════════════╣
 ║                                                                  ║
 ║  Research Question: Through which causal mechanisms does social   ║
@@ -183,7 +183,7 @@ All canonical and frontier papers analyzed in the cartography scan (Table 1.1) a
 ║  isolate the CAUSAL MECHANISMS through which social media         ║
 ║  degrades deliberation, moving beyond correlational patterns.     ║
 ║                                                                  ║
-║  Certificate ID: CRES-NC-2026-SS-0057                            ║
+║  Certificate ID: ARES-NC-2026-SS-0057                            ║
 ║  Date: 2026-09-18                                                ║
 ╚══════════════════════════════════════════════════════════════════╝
 ```
@@ -304,7 +304,7 @@ pre_registration:
           Deliberation"
   registration_platform: "AsPredicted"
   registration_date: "2026-09-18"
-  registration_id: "148291"
+  registration_id: "[ILLUSTRATIVE — replace with your real AsPredicted number upon registration]"
   
   hypotheses:
     H1: "Micro-interruptions mimicking social media notifications will reduce 
@@ -434,7 +434,7 @@ is the dominant mechanism.
 
 ## Step 5: WRITING
 
-### 5.1 Abstract (CRES Framework)
+### 5.1 Abstract (ARES Framework)
 
 > **[Context]** Social media platforms are increasingly the primary venue for political discourse in democracies worldwide, yet growing evidence suggests that these platforms may systematically degrade the quality of democratic deliberation — the reasoned exchange of arguments, evidence, and perspectives that underpins legitimate collective decision-making. **[Gap]** Despite extensive documentation of correlations between social media use and indicators of poor deliberation, no study has experimentally isolated the causal mechanisms through which social media exposure degrades deliberative quality, leaving the field unable to design targeted interventions or evaluate regulatory proposals. **[Purpose]** We identify and experimentally test three candidate mechanisms — attention fragmentation, affective priming, and norm erosion — in three pre-registered experiments (total N = 1,500) supplemented by qualitative interviews (n = 40). **[Method]** In Experiment 1, participants deliberated with or without social media–style micro-interruptions; in Experiment 2, they were exposed to emotionally-arousing versus neutral social media feeds before deliberation; in Experiment 3, they observed incivil versus civil online discourse before deliberating. Deliberative quality was measured using the novel Deliberative Capacity Index (DCI). **[Results]** All three mechanisms significantly reduced deliberative quality, with affective priming as the dominant pathway (proportion mediated: 46%), followed by attention fragmentation (27%) and norm erosion (19%); the combined model explained 67% of the total effect of social media exposure on deliberative quality. **[Contribution]** This is the first experimental decomposition of the causal mechanisms linking social media to deliberative degradation, providing a mechanistic framework that bridges deliberative democratic theory and media effects research. **[Implication]** The dominance of affective priming as a mechanism suggests that platform design interventions targeting emotional amplification (e.g., affect labeling, cooling-off periods) may be more effective for protecting deliberative quality than approaches focused solely on content moderation or echo chamber reduction.
 
@@ -589,7 +589,7 @@ We report three pre-registered experiments (total N = 1,500) that decompose the 
 
 ## Summary
 
-This example demonstrates how the CRES framework transforms the research process for a social science research paper:
+This example demonstrates how the ARES framework transforms the research process for a social science research paper:
 
 | Step | Key Output | Time Investment |
 |---|---|---|
@@ -597,7 +597,7 @@ This example demonstrates how the CRES framework transforms the research process
 | LITERATURE | 1,124-paper corpus mapped; three schools identified; mechanistic gap isolated | 5–7 days |
 | METHODOLOGY | Three-experiment design + qualitative component; DCI measure; power analysis | 4–6 days |
 | DATA | Results paragraphs with effect sizes; mediation model; figure protocols | 2–3 days |
-| WRITING | CRES abstract; hourglass introduction connecting deliberative theory to media effects | 3–4 days |
+| WRITING | ARES abstract; hourglass introduction connecting deliberative theory to media effects | 3–4 days |
 | QUALITY | 5-reviewer panel; external validity weakness identified (4.6/10); action items specified | 2–3 days |
 | JOURNAL | APSR as first target; Nature Human Behaviour as interdisciplinary alternative | 1 day |
 
