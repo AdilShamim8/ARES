@@ -1,8 +1,8 @@
-# CRES Framework Example: Computer Science Research
+# ARES Framework Example: Computer Science Research
 
 ## Research Area: Large Language Model Reasoning
 
-This document demonstrates a complete walkthrough of the Claude Research Excellence System (CRES) applied to a computer science research paper on improving reasoning capabilities in large language models.
+This document demonstrates a complete walkthrough of the AI Research Excellence System (ARES) applied to a computer science research paper on improving reasoning capabilities in large language models.
 
 ---
 
@@ -144,7 +144,7 @@ All representative papers benchmarked in the cartography scan (Table 1.1) and te
 
 ```
 ╔══════════════════════════════════════════════════════════════════╗
-║                    CRES NOVELTY CERTIFICATE                      ║
+║                    ARES NOVELTY CERTIFICATE                      ║
 ╠══════════════════════════════════════════════════════════════════╣
 ║                                                                  ║
 ║  Research Question: Can metacognitive self-regulation modules    ║
@@ -184,7 +184,7 @@ All representative papers benchmarked in the cartography scan (Table 1.1) and te
 ║  explicit metacognitive monitoring INTO the reasoning process,   ║
 ║  as opposed to post-hoc verification or external search.         ║
 ║                                                                  ║
-║  Certificate ID: CRES-NC-2026-CS-0041                            ║
+║  Certificate ID: ARES-NC-2026-CS-0041                            ║
 ║  Date: 2026-09-18                                                ║
 ╚══════════════════════════════════════════════════════════════════╝
 ```
@@ -367,8 +367,9 @@ benchmarks with verified public repositories:
    https://allenai.org/data/strategyqa).
 3. **Logical Reasoning**: ProofWriter (Tafjord et al., 2021; Findings of ACL; 
    https://allenai.org/data/proofwriter).
-4. **Multi-Domain Transfer**: BIG-bench Hard subset (Srivastava et al., 2023; 
-   DOI: 10.1088/2632-2153/acac61; https://github.com/google/BIG-bench).
+4. **Multi-Domain Transfer**: BIG-bench Hard subset (Suzgun et al., 2023, TMLR; 
+   arXiv:2210.09261; built on BIG-bench, Srivastava et al., arXiv:2206.04615; 
+   https://github.com/google/BIG-bench).
 
 ### 4.4 Statistical Analysis
 We employ mixed-effects logistic regression with random intercepts for 
@@ -383,7 +384,7 @@ pre_registration:
   title: "MENTOR: Metacognitive Self-Regulation for Enhanced LLM Reasoning"
   registration_platform: "OSF Registrations"
   registration_date: "2026-09-18"
-  registration_doi: "osf.io/x7kmp"
+  registration_doi: "[ILLUSTRATIVE — replace with your real OSF DOI upon registration]"
   
   hypotheses:
     H1: "MENTOR will improve reasoning accuracy by ≥5% over the best 
@@ -469,7 +470,7 @@ greater benefit. Mathematical + Llama-3-70B shows the highest benefit
 
 ## Step 5: WRITING
 
-### 5.1 Abstract (7-Sentence CRES Framework)
+### 5.1 Abstract (7-Sentence ARES Framework)
 
 > **[Context]** Large language models have demonstrated impressive reasoning capabilities through chain-of-thought prompting and its derivatives, yet these approaches treat reasoning as a purely forward process without the metacognitive self-regulation that characterizes expert human problem-solving. **[Gap]** No existing method provides LLMs with the ability to monitor their own reasoning uncertainty, strategically backtrack from unproductive paths, or adaptively allocate computational effort during inference. **[Purpose]** We introduce MENTOR (Metacognitive ENhanced Task-Oriented Reasoning), a framework that augments LLM reasoning with explicit metacognitive monitoring, strategic backtracking, and adaptive effort allocation. **[Method]** MENTOR operates as a plug-in metacognitive controller comprising three modules — an uncertainty tracker that estimates step-level confidence, a strategic backtracker that initiates targeted corrections when uncertainty exceeds a dynamic threshold, and an effort allocator that balances thoroughness against computational cost — requiring no fine-tuning of the backbone LLM. **[Results]** Across six LLMs and four reasoning domains, MENTOR improves accuracy by 8–15% over chain-of-thought baselines while reducing token consumption by 22–34% compared to search-based methods; the uncertainty tracker achieves strong calibration with step-level correctness (r = 0.73), and backtracking provides the greatest benefit for multi-step deductive tasks (18.4% improvement) versus minimal benefit for factual recall (3.1%). **[Contribution]** This work provides the first unified framework for metacognitive self-regulation in LLM reasoning, bridging a three-decade gap between cognitive science theories of metacognition and computational language model architectures. **[Implication]** MENTOR demonstrates that reasoning quality and efficiency need not trade off against each other, opening pathways toward AI systems that reason not just more powerfully but more reflectively.
 
@@ -619,7 +620,7 @@ We introduce MENTOR (Metacognitive ENhanced Task-Oriented Reasoning), the first 
 
 ## Summary
 
-This example demonstrates how the CRES framework transforms the research process for an LLM reasoning paper:
+This example demonstrates how the ARES framework transforms the research process for an LLM reasoning paper:
 
 | Step | Key Output | Time Investment |
 |---|---|---|
