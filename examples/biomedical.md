@@ -1,8 +1,8 @@
-# CRES Framework Example: Biomedical Research
+# ARES Framework Example: Biomedical Research
 
 ## Research Area: CRISPR-based Gene Therapy for Sickle Cell Disease
 
-This document demonstrates a complete walkthrough of the Claude Research Excellence System (CRES) applied to a biomedical research paper on CRISPR-based gene therapy for sickle cell disease (SCD).
+This document demonstrates a complete walkthrough of the AI Research Excellence System (ARES) applied to a biomedical research paper on CRISPR-based gene therapy for sickle cell disease (SCD).
 
 ---
 
@@ -67,13 +67,13 @@ All foundational and frontier papers benchmarked in Table 1.1 and Section 2.1 ar
 | **CRISPR Discovery** | Jinek et al. (2012) | A Programmable Dual-RNA-Guided DNA Endonuclease in Adaptive Bacterial Immunity (*Science*) | [10.1126/science.1225829](https://doi.org/10.1126/science.1225829) |
 | **Preclinical BCL11A** | DeWitt et al. (2016) | Selection-free genome editing of the sickle mutation in human adult hematopoietic stem/progenitor cells (*Sci. Transl. Med.*) | [10.1126/scitranslmed.aaf9336](https://doi.org/10.1126/scitranslmed.aaf9336) |
 | **Clinical Trial** | Frangoul et al. (2021) | CRISPR-Cas9 Gene Editing for Sickle Cell Disease and β-Thalassemia (*N. Engl. J. Med.*) | [10.1056/NEJMoa2031054](https://doi.org/10.1056/NEJMoa2031054) |
-| **Long-Term Efficacy** | Frangoul et al. (2024) | Extended Clinical Outcomes with Exagamglogene Autotemcel for Transfusion-Dependent β-Thalassemia and Sickle Cell Disease (*N. Engl. J. Med.*) | [10.1056/NEJMoa2309673](https://doi.org/10.1056/NEJMoa2309673) |
+| **Long-Term Efficacy** | Frangoul et al. (2024) | Exagamglogene Autotemcel for Severe Sickle Cell Disease (*N. Engl. J. Med.* 390:1649–1662) | [10.1056/NEJMoa2309676](https://doi.org/10.1056/NEJMoa2309676) |
 | **Prime Editing** | Anzalone et al. (2019) | Search-and-replace genome editing without double-strand breaks or donor DNA (*Nature*) | [10.1038/s41586-019-1711-4](https://doi.org/10.1038/s41586-019-1711-4) |
-| **Prime Editing Delivery**| Banskota et al. (2022) | Engineered virus-like particles for efficient in vivo delivery of prime editor ribonucleoprotein complexes (*Cell*) | [10.1016/j.cell.2021.12.021](https://doi.org/10.1016/j.cell.2021.12.021) |
-| **Base Editing** | Newby et al. (2023) | Base editing of haematopoietic stem cells for treating sickle cell disease (*Nature*) | [10.1038/s41586-021-03609-w](https://doi.org/10.1038/s41586-021-03609-w) |
+| **Prime Editing Delivery**| Banskota et al. (2022) | Engineered virus-like particles for efficient in vivo delivery of therapeutic proteins (*Cell*) | [10.1016/j.cell.2021.12.021](https://doi.org/10.1016/j.cell.2021.12.021) |
+| **Base Editing** | Newby et al. (2021) | Base editing of haematopoietic stem cells rescues sickle cell disease (*Nature*) | [10.1038/s41586-021-03609-w](https://doi.org/10.1038/s41586-021-03609-w) |
 | **Off-Target Profiling** | Tsai et al. (2015) | GUIDE-seq enables genome-wide profiling of off-target cleavage by CRISPR-Cas nucleases (*Nat. Biotechnol.*) | [10.1038/nbt.3117](https://doi.org/10.1038/nbt.3117) |
-| **Off-Target Profiling** | Cameron et al. (2019) | Mapping the genomic landscape of CRISPR-Cas9 cleavage (*Nat. Methods*) | [10.1038/s41592-019-0386-2](https://doi.org/10.1038/s41592-019-0386-2) |
-| **Global Access** | Salzman et al. (2023) | Affordability and Access to Gene Therapies for Rare Monogenic Disorders (*Health Affairs*) | [10.1377/hlthaff.2023.00642](https://doi.org/10.1377/hlthaff.2023.00642) |
+| **Off-Target Profiling** | Cameron et al. (2017) | Mapping the genomic landscape of CRISPR-Cas9 cleavage (*Nat. Methods*) | [10.1038/nmeth.4284](https://doi.org/10.1038/nmeth.4284) |
+| **Global Access** | Nikitin et al. (2023) | Gene therapies for sickle cell disease: Effectiveness and value (*J. Manag. Care Pharm.*) | [10.18553/jmcp.2023.29.11.1253](https://doi.org/10.18553/jmcp.2023.29.11.1253) |
 
 ---
 
@@ -140,7 +140,7 @@ All foundational and frontier papers benchmarked in Table 1.1 and Section 2.1 ar
 
 ```
 ╔══════════════════════════════════════════════════════════════════╗
-║                    CRES NOVELTY CERTIFICATE                      ║
+║                    ARES NOVELTY CERTIFICATE                      ║
 ╠══════════════════════════════════════════════════════════════════╣
 ║                                                                  ║
 ║  Research Question: What is the comprehensive editing landscape  ║
@@ -183,7 +183,7 @@ All foundational and frontier papers benchmarked in Table 1.1 and Section 2.1 ar
 ║  CRISPR editing landscape in PATIENT-DERIVED HSCs, and the       ║
 ║  FIRST to demonstrate that disease state alters editing outcomes. ║
 ║                                                                  ║
-║  Certificate ID: CRES-NC-2026-BM-0023                            ║
+║  Certificate ID: ARES-NC-2026-BM-0023                            ║
 ║  Date: 2026-09-18                                                ║
 ╚══════════════════════════════════════════════════════════════════╝
 ```
@@ -219,7 +219,7 @@ All foundational and frontier papers benchmarked in Table 1.1 and Section 2.1 ar
 - Frangoul et al. (2024) — 3-year follow-up data; sustained efficacy but limited durability data beyond 3 years
 - FDA ODAC (Dec 2023) — Advisory committee raises questions about off-target assessment and long-term follow-up
 - Vertex/CRISPR Therapeutics — Casgevy receives FDA approval (Dec 2023); EMA approval follows
-- Salzman et al. (2023) — Cost analysis; $2.2M per patient raises access concerns
+- Nikitin et al. (2023) — Cost-effectiveness and value analysis; Casgevy's US list price of $2.2M raises access concerns
 - **THE GAP:** No study has mapped the CRISPR editing landscape specifically in patient-derived HSCs from SCD individuals, who have a fundamentally different cellular microenvironment than the healthy donor cells used in all prior assessments
 
 ### 2.2 Intellectual Genealogy
@@ -388,7 +388,7 @@ with lme4, glmmTMB, and ggplot2 packages.
 
 ```yaml
 clinical_trial_registration:
-  nct_id: "NCT05912400"
+  nct_id: "NCT03745287"
   title: "Disease-State-Dependent CRISPR Editing Landscapes in Sickle 
           Cell Disease Hematopoietic Stem Cells"
   registration_date: "2026-09-18"
@@ -491,7 +491,7 @@ study component. Actual data will be generated during the study.
 
 ## Step 5: WRITING
 
-### 5.1 Abstract (CRES Framework)
+### 5.1 Abstract (ARES Framework)
 
 > **[Context]** CRISPR-Cas9-mediated disruption of the BCL11A erythroid enhancer has demonstrated transformative clinical efficacy for sickle cell disease, with elimination of vaso-occlusive crises in treated patients leading to regulatory approval of Casgevy in 2023. **[Gap]** However, all safety assessments of CRISPR editing fidelity have been performed in healthy donor hematopoietic stem cells or cell lines, despite extensive evidence that the chronic inflammatory milieu, oxidative stress, and altered DNA repair capacity characteristic of SCD may fundamentally alter the editing landscape in patient-derived cells. **[Purpose]** We systematically mapped the CRISPR editing landscape — including off-target sites, large deletions, translocations, and on-target collateral damage — in CD34+ hematopoietic stem cells from 30 SCD patients compared with 15 healthy donors. **[Method]** Patient-derived and healthy donor CD34+ cells were edited ex vivo with the clinical-grade BCL11A-targeting Cas9-sgRNA RNP, and the editing landscape was characterized using GUIDE-seq, CIRCLE-seq, long-read Oxford Nanopore sequencing, CAST-seq, and ATAC-seq for chromatin accessibility profiling. **[Results]** SCD patient HSCs exhibited 2.35-fold more off-target editing sites than healthy donor HSCs (7.3 vs. 3.1 sites, p < 0.001), with SCD-specific off-targets located in regions of NF-κB-dependent open chromatin unique to the inflammatory SCD microenvironment; large deletion frequency at the BCL11A on-target site was also elevated in SCD HSCs (4.2% vs. 1.1%, p < 0.001). **[Contribution]** This is the first demonstration that disease state significantly alters CRISPR editing outcomes in patient-derived HSCs, challenging the assumption that safety data from healthy cells can be directly extrapolated to patient populations. **[Implication]** Our findings necessitate patient-specific off-target assessment as a standard component of CRISPR gene therapy safety evaluation and have immediate implications for ongoing and planned clinical trials.
 
@@ -640,7 +640,7 @@ We report the first comprehensive mapping of the CRISPR editing landscape in pat
 
 ## Summary
 
-This example demonstrates how the CRES framework transforms the research process for a biomedical research paper:
+This example demonstrates how the ARES framework transforms the research process for a biomedical research paper:
 
 | Step | Key Output | Time Investment |
 |---|---|---|
@@ -648,7 +648,7 @@ This example demonstrates how the CRES framework transforms the research process
 | LITERATURE | 623-paper corpus mapped; 4 eras identified; mechanistic bridge between SCD pathophysiology and CRISPR safety | 4–6 days |
 | METHODOLOGY | Paired laboratory design; ClinicalTrials.gov registration; CONSORT-compliant methods | 3–5 days |
 | DATA | Results paragraphs with clinical-grade reporting; Circos and Kaplan-Meier figure protocols | 2–3 days |
-| WRITING | CRES-formatted abstract; hourglass introduction connecting pathophysiology to editing safety | 3–4 days |
+| WRITING | ARES-formatted abstract; hourglass introduction connecting pathophysiology to editing safety | 3–4 days |
 | QUALITY | 5-reviewer panel (clinical, technical, hematologic, regulatory, advocacy); consensus score 8.2/10 | 2–3 days |
 | JOURNAL | NEJM as first target; cover letter connecting to original CTX001 publication | 1 day |
 
