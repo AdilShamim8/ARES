@@ -1,4 +1,4 @@
-# Setup Guide — Claude Research Excellence System
+# Setup Guide — AI Research Excellence System (ARES)
 
 ## Quick Start (5 minutes to first prompt)
 
@@ -69,20 +69,22 @@ See `workflows/RAPID_PUBLICATION.md` for the compressed protocol.
 
 ## Journal Quick Reference
 
-| Journal/Venue | IF/Rank | Accept Rate | Turnaround | Best For |
-|---------------|---------|-------------|------------|----------|
-| Nature | ~69 | ~7% | 6-8mo | Any breakthrough science |
-| Science | ~56 | ~7% | 6-8mo | Any breakthrough science |
-| NEJM | ~200 | ~5% | 3-4mo | Clinical medicine |
-| Cell | ~68 | ~7% | 4-6mo | Life sciences |
-| NeurIPS | Top ML | ~25% | 6mo | ML, Deep Learning |
-| ICML | Top ML | ~25% | 6mo | ML, Theory |
-| ICLR | Top ML | ~30% | 6mo | Representation learning |
-| PNAS | ~12 | ~15% | 4-6mo | Multidisciplinary |
-| Nature Machine Intelligence | ~25 | ~10% | 4-6mo | AI |
-| JMLR | Top ML | ~35% | 3-6mo | ML theory/methods |
-| ACM CCS | Top Security | ~18% | 4-6mo | Computer security |
-| CHI | Top HCI | ~25% | 4-6mo | Human-computer interaction |
+| Journal/Venue | Impact Factor (2025 JCR) | Accept Rate (latest cycle) | Turnaround | Best For |
+|---------------|--------------------------|----------------------------|------------|----------|
+| Nature | 56.1 | ~7% | 6-8 mo | Any breakthrough science |
+| Science | 45.8 (2024 JCR) | ~7% | 6-8 mo | Any breakthrough science |
+| NEJM | 84.5 | ~5% | 3-4 mo | Clinical medicine |
+| Cell | 45.1 | ~7% | 4-6 mo | Life sciences |
+| NeurIPS | Premier ML conference | 24.5% (2025) | ~6 mo | ML, Deep Learning |
+| ICML | Premier ML conference | 26.9% (2025) | ~6 mo | ML, Theory |
+| ICLR | Premier ML conference | 32% (2025) | ~6 mo | Representation learning |
+| PNAS | 9.5 | ~13% (direct submissions) | 4-6 mo | Multidisciplinary |
+| Nature Machine Intelligence | 29.8 | ~10% | 4-6 mo | AI |
+| JMLR | Premier ML journal | selective | 3-6 mo | ML theory/methods |
+| ACM CCS | Premier security conference | ~18% | 4-6 mo | Computer security |
+| CHI | Premier HCI conference | ~25% | 4-6 mo | Human-computer interaction |
+
+*Journal impact factors reflect the 2025 Journal Citation Reports release (June 2026), verified against publisher metric pages in October 2026. Science's 2025 JIF was not yet retrievable; its 2024 value is shown. Acceptance rates for journals are approximate editor-reported figures; conference rates are official published statistics for the most recent completed cycle.*
 
 ## Troubleshooting
 
@@ -100,4 +102,4 @@ See `workflows/RAPID_PUBLICATION.md` for the compressed protocol.
 
 ---
 
-*CRES v2.4 — Setup guide for the world's most advanced research paper creation framework.*
+*ARES v3.0 — October 2026 — Setup guide for the world's most advanced research paper creation framework.*
