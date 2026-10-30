@@ -62,4 +62,4 @@ This rubric evaluates the communicative power, narrative architecture, and reada
 | **75–89** | **Clear & Compelling** | Smooth review experience; reviewers focus entirely on science rather than expression | Polish paragraph topic sentences and convert remaining passive constructions |
 | **60–74** | **Standard Academic** | Understandable but fatiguing; reviewers will ask for "editorial polishing" | Run `SKILL: WRITING_EXCELLENCE` (Abstract Mastery & Introduction Craft prompts) |
 | **45–59** | **High Cognitive Friction** | Risk of reviewer misunderstanding leading to false technical objections | Ruthlessly cut acronyms, split compound sentences, and rewrite figure captions |
-| **< 45** | **Obscure / Disorganized** | High probability of desk rejection due to unreadable presentation | Full manuscript rewrite required; restructure using CRES Hourglass Framework |
+| **< 45** | **Obscure / Disorganized** | High probability of desk rejection due to unreadable presentation | Full manuscript rewrite required; restructure using the ARES Hourglass Framework |
