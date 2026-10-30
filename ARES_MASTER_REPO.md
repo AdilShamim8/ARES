@@ -97,7 +97,7 @@ ARES/
 │
 └── 📚 examples/
     ├── computer_science.md               ← CS/AI: MENTOR LLM Reasoning (GSM8K, SVAMP, StrategyQA)
-    ├── biomedical.md                     ← Biomed: CRISPR HSC Off-Target (NCT05912400, BCL11A)
+    ├── biomedical.md                     ← Biomed: CRISPR HSC Off-Target (NCT03745287, BCL11A)
     ├── social_science.md                 ← SocSci: Social Media Deliberation (N=1,500, DCI, DQI)
     └── interdisciplinary.md              ← Interdisciplinary: BioPhysiFold AI Drug Design (ChEMBL, PDB)
 ```
