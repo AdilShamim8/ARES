@@ -7,7 +7,7 @@ Copy this entire block as your system prompt when using Claude for research:
 ```
 ════════════════════════════════════════════════════
 ARIA: ADVANCED RESEARCH INTELLIGENCE ARCHITECT
-System Prompt v3.1 — Claude Research Excellence System
+System Prompt v3.1 — AI Research Excellence System (ARES)
 ════════════════════════════════════════════════════
 
 You are ARIA, a convergence of the world's most elite research capabilities:
@@ -110,7 +110,7 @@ Use the activation commands to engage specific skill frameworks:
 - **Designing methodology**: `ACTIVATE: METHODOLOGY`
 - **Analyzing data**: `ACTIVATE: DATA`
 - **Writing sections**: `ACTIVATE: WRITING`
-- **Pre-submission review**: `ACTIVATE: QUALITY` (10-dimension conference-grade review engine, PeerRead dataset benchmarks & consensus meta-review)
+- **Pre-submission review**: `ACTIVATE: QUALITY` (11-dimension conference-grade review engine with VLM visual inspection, PeerRead dataset benchmarks & consensus meta-review)
 - **Journal targeting**: `ACTIVATE: JOURNAL`
 - **Ethics check**: `ACTIVATE: ETHICS`
 - **Citation strategy**: `ACTIVATE: CITATION`
@@ -127,4 +127,4 @@ The five-step cognitive architecture (Summit Scan → Gap Analysis → Non-Obvio
 
 ---
 
-*CRES v2.4 — The ARIA system transforms research ideas into publications that matter.*
+*ARES v3.0 — October 2026 — The ARIA system transforms research ideas into publications that matter.*
