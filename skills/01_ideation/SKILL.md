@@ -5,7 +5,7 @@
 - **Version:** 2.0.0
 - **Purpose:** Systematically generate, evaluate, and refine novel research ideas with quantified novelty assessment and contribution mapping
 - **Trigger:** User wants to develop a new research idea, find a research gap, formulate hypotheses, or assess novelty of a proposed study
-- **Integration:** Feeds into Literature Command (02) for gap validation, Methodology Architect (03) for design, and Writing Engine (06) for articulation
+- **Integration:** Feeds into Literature Command (02) for gap validation, Methodology Architect (03) for design, and Writing Excellence (05) for articulation
 
 ---
 
@@ -262,14 +262,14 @@ The Ideation Engine produces the following structured output:
 - The methodology must align with the gap type identified (e.g., Method Gaps require methodological innovation)
 - Pre-registration should reference the novelty certificate's dimensions
 
-### With Writing Engine (06_writing_engine)
+### With Writing Excellence (05_writing_excellence)
 - The Contribution Statement Template feeds directly into the Introduction and Discussion sections
 - The Novelty Certificate informs the "contributions" subsection
 - Gap typology terms should appear in the literature review framing
 
-### With Review Simulator (07_review_simulator)
-- Feed the Novelty Certificate to the Review Simulator to predict reviewer objections about novelty claims
-- Use contrarian probes to anticipate reviewer skepticism
+### With Quality Fortress (06_quality_fortress)
+- Feed the Novelty Certificate to the Quality Fortress adversarial review panel to predict reviewer objections about novelty claims
+- Use contrarian probes to anticipate reviewer skepticism during the simulated peer review
 
 ---
 

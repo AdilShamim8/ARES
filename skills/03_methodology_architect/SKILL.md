@@ -5,7 +5,7 @@
 - **Version:** 2.0.0
 - **Purpose:** Design rigorous, appropriate, and defensible research methodology that aligns research questions with optimal designs, measures, and analytical plans
 - **Trigger:** User needs to design a study, write a methods section, pre-register a study, or evaluate methodological rigor
-- **Integration:** Receives research questions and contribution maps from Ideation Engine (01), theoretical frameworks from Literature Command (02), and feeds structured methodology to Writing Engine (06) and Review Simulator (07)
+- **Integration:** Receives research questions and contribution maps from Ideation Engine (01), theoretical frameworks from Literature Command (02), and feeds structured methodology to Writing Excellence (05) and Quality Fortress (06)
 
 ---
 
@@ -437,12 +437,12 @@ After identifying all threats, classify each weakness:
 - Receive methodological scorecard to identify what design improvements the literature needs
 - Contribute methodological description to the related work section's positioning
 
-### With Writing Engine (06_writing_engine)
+### With Writing Excellence (05_writing_excellence)
 - Methods section draft feeds directly into the manuscript
 - Pre-registration language informs the manuscript's analysis section
 - Limitations section is pre-populated from the rigor stress test
 
-### With Review Simulator (07_review_simulator)
+### With Quality Fortress (06_quality_fortress)
 - Rigor stress test results predict reviewer objections
 - Weakness classifications inform response strategy
 - Alternative analytical approaches (from sensitivity analyses) prepare for reviewer suggestions

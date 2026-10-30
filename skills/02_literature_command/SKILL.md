@@ -5,7 +5,7 @@
 - **Version:** 2.0.0
 - **Purpose:** Master the research literature through systematic search, deep synthesis, and strategic citation — transforming scattered readings into a coherent intellectual foundation
 - **Trigger:** User needs to conduct a literature review, synthesize findings across studies, write a related work section, or develop a citation strategy
-- **Integration:** Receives gaps and questions from Ideation Engine (01), provides validated gap confirmation, feeds theoretical frameworks to Methodology Architect (03), and structures content for Writing Engine (06)
+- **Integration:** Receives gaps and questions from Ideation Engine (01), provides validated gap confirmation, feeds theoretical frameworks to Methodology Architect (03), and structures content for Writing Excellence (05)
 
 ---
 
@@ -356,12 +356,12 @@ Do NOT cite a work if ALL of the following apply:
 - Supply effect size estimates from meta-analyses for power analysis
 - Identify methodological weaknesses in the literature that the proposed study should address
 
-### With Writing Engine (06_writing_engine)
+### With Writing Excellence (05_writing_excellence)
 - The Related Work Draft feeds directly into the manuscript
 - The five-paragraph architecture maps to the standard Related Work section
 - Citation strategy ensures appropriate reference list construction
 
-### With Review Simulator (07_review_simulator)
+### With Quality Fortress (06_quality_fortress)
 - Citation strategy informs likely reviewer identities and concerns
 - Methodological audit identifies weaknesses that reviewers may target
 - Contradiction mapping prepares responses to "but what about Study X that found the opposite?"
