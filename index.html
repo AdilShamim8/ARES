@@ -1,1246 +1,744 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Claude Research Excellence System (CRES v2.4) — Elite AI-Powered Research Framework</title>
-<meta name="description" content="The world's most advanced AI-powered research paper creation framework — engineered for the top 0.0001%. Built for Nature, Science, NeurIPS, ICML, ICLR, IEEE, and ACM by Adil Shamim." />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Research Excellence System (ARES v3.0) — From Raw Idea to Published Paper</title>
+<meta name="description" content="ARES is a complete AI-powered operating system for research papers: 10 skills, 4 quantitative evaluators, 4 workflows, and 7 venue templates engineered for Nature, Science, NEJM, NeurIPS, ICML, ICLR, IEEE, and ACM. Release v3.0, October 2026.">
 <style>
-  :root {
-    --bg: #0a0d14;
-    --bg-elev: #11151f;
-    --bg-card: #161b27;
-    --bg-card-hover: #1c2230;
-    --border: #252b3a;
-    --border-soft: #1e2331;
-    --text: #e8e6df;
-    --text-dim: #9aa0b0;
-    --text-mute: #6b7180;
-    --accent: #d4a574;
-    --accent-bright: #f0c08a;
-    --accent-deep: #a87d4f;
-    --ink: #c9d4e8;
-    --ink-bright: #8fb4e8;
-    --green: #8fbc8f;
-    --red: #d99090;
-    --serif: 'Cormorant Garamond', Georgia, serif;
-    --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    --mono: 'JetBrains Mono', 'SF Mono', Consolas, monospace;
-  }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  html { scroll-behavior: smooth; scroll-padding-top: 80px; }
-  body {
-    background: var(--bg); color: var(--text); font-family: var(--sans);
-    font-weight: 300; line-height: 1.7; font-size: 16px;
-    -webkit-font-smoothing: antialiased; overflow-x: hidden;
-  }
-  a { color: inherit; text-decoration: none; transition: color .2s ease; }
-  ::selection { background: var(--accent); color: var(--bg); }
+/* ============================================================
+   AI RESEARCH EXCELLENCE SYSTEM (ARES) — v3.0
+   A single-file editorial site, typeset like a research
+   monograph: paper, ink, one oxblood accent. No frameworks,
+   no external fonts, no network. Mobile and desktop verified.
+   ============================================================ */
 
-  .atmos {
-    position: fixed; inset: 0; z-index: -1; pointer-events: none;
-    background:
-      radial-gradient(ellipse 80% 60% at 15% 0%, rgba(212,165,116,0.10), transparent 60%),
-      radial-gradient(ellipse 70% 50% at 85% 100%, rgba(143,180,232,0.07), transparent 60%),
-      radial-gradient(ellipse 50% 40% at 50% 50%, rgba(212,165,116,0.03), transparent 70%);
-  }
-  .grain {
-    position: fixed; inset: 0; z-index: -1; pointer-events: none; opacity: .035;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  }
+:root{
+  --paper:#f7f4ec;
+  --paper-2:#efeade;
+  --paper-3:#e8e1d0;
+  --ink:#211d16;
+  --ink-2:#5b5446;
+  --ink-3:#8f8674;
+  --rule:#d8d0bd;
+  --rule-2:#b9af97;
+  --accent:#93331d;          /* oxblood */
+  --accent-deep:#6f2413;
+  --accent-wash:#f1e2da;
+  --link:#31588a;
+  --ok:#4a6b38;
+  --ok-wash:#e9ecdf;
+  --warn:#8a681c;
+  --warn-wash:#f0e8d3;
+  --serif:Georgia,'Iowan Old Style','Times New Roman',Times,serif;
+  --sans:'Avenir Next','Segoe UI',-apple-system,BlinkMacSystemFont,Roboto,Arial,sans-serif;
+  --mono:ui-monospace,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace;
+}
 
-  nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    backdrop-filter: blur(20px) saturate(140%);
-    -webkit-backdrop-filter: blur(20px) saturate(140%);
-    background: rgba(10,13,20,0.72);
-    border-bottom: 1px solid var(--border-soft); transition: all .3s ease;
-  }
-  .nav-inner { max-width: 1280px; margin: 0 auto; padding: 18px 32px; display: flex; align-items: center; justify-content: space-between; }
-  .nav-logo { font-family: var(--serif); font-size: 22px; font-weight: 600; letter-spacing: 1px; display: flex; align-items: center; gap: 10px; }
-  .nav-logo .mark { width: 28px; height: 28px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), var(--accent-deep)); display: grid; place-items: center; font-family: var(--serif); color: var(--bg); font-size: 15px; font-weight: 700; }
-  .nav-links { display: flex; gap: 28px; align-items: center; }
-  .nav-links a { font-size: 12px; color: var(--text-dim); letter-spacing: .5px; text-transform: uppercase; font-weight: 500; position: relative; }
-  .nav-links a::after { content: ''; position: absolute; bottom: -6px; left: 0; width: 0; height: 1px; background: var(--accent); transition: width .3s ease; }
-  .nav-links a:hover { color: var(--text); }
-  .nav-links a:hover::after { width: 100%; }
-  .nav-cta { border: 1px solid var(--accent); padding: 9px 20px; border-radius: 2px; color: var(--accent) !important; font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; font-weight: 600; transition: all .3s ease; }
-  .nav-cta:hover { background: var(--accent); color: var(--bg) !important; }
-  .nav-cta::after { display: none; }
-  .menu-toggle { display: none; background: none; border: none; color: var(--text); cursor: pointer; font-size: 24px; }
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:86px;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{
+  background:var(--paper);color:var(--ink);
+  font-family:var(--serif);font-size:16px;line-height:1.62;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+}
+a{color:var(--link);text-decoration:none;border-bottom:1px solid rgba(49,88,138,.32)}
+a:hover{color:var(--accent);border-bottom-color:var(--accent)}
+code,.mono{font-family:var(--mono);font-size:.84em}
+code{background:var(--paper-2);border:1px solid var(--rule);border-radius:2px;padding:.08em .35em}
+::selection{background:var(--accent);color:var(--paper)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+a:focus-visible{border-bottom-color:var(--accent)}
 
-  .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 140px 32px 80px; position: relative; overflow: hidden; }
-  .hero-inner { max-width: 1280px; margin: 0 auto; width: 100%; }
-  .eyebrow { display: inline-flex; align-items: center; gap: 12px; font-size: 12px; letter-spacing: 3px; text-transform: uppercase; color: var(--accent); font-weight: 600; margin-bottom: 32px; }
-  .eyebrow::before { content: ''; width: 32px; height: 1px; background: var(--accent); }
-  .hero h1 { font-family: var(--serif); font-weight: 500; font-size: clamp(48px, 8vw, 104px); line-height: 1.02; letter-spacing: -1.5px; margin-bottom: 28px; color: var(--text); }
-  .hero h1 .italic { font-style: italic; color: var(--accent-bright); font-weight: 400; }
-  .hero .tagline { font-family: var(--serif); font-style: italic; font-size: clamp(18px, 2vw, 24px); color: var(--text-dim); max-width: 720px; line-height: 1.5; margin-bottom: 48px; }
-  .hero-meta { display: flex; gap: 48px; flex-wrap: wrap; margin-bottom: 56px; padding-top: 32px; border-top: 1px solid var(--border-soft); }
-  .hero-meta div { display: flex; flex-direction: column; gap: 4px; }
-  .hero-meta .label { font-size: 11px; text-transform: uppercase; letter-spacing: 2px; color: var(--text-mute); font-weight: 600; }
-  .hero-meta .value { font-family: var(--serif); font-size: 20px; color: var(--text); font-weight: 500; }
-  .hero-actions { display: flex; gap: 20px; flex-wrap: wrap; }
-  .btn { display: inline-flex; align-items: center; gap: 10px; padding: 16px 32px; font-size: 13px; letter-spacing: 2px; text-transform: uppercase; font-weight: 600; cursor: pointer; border: none; border-radius: 2px; transition: all .3s ease; font-family: var(--sans); }
-  .btn-primary { background: linear-gradient(135deg, var(--accent), var(--accent-deep)); color: var(--bg); }
-  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(212,165,116,0.25); }
-  .btn-ghost { background: transparent; color: var(--text); border: 1px solid var(--border); }
-  .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
-  .scroll-hint { position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%); font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--text-mute); display: flex; flex-direction: column; align-items: center; gap: 12px; animation: float 2.5s ease-in-out infinite; }
-  .scroll-hint::after { content: ''; width: 1px; height: 40px; background: linear-gradient(to bottom, var(--accent), transparent); }
-  @keyframes float { 0%,100% { transform: translate(-50%,0); } 50% { transform: translate(-50%,8px); } }
+/* ---------- top bar ---------- */
+.topbar{
+  position:sticky;top:0;z-index:60;background:var(--paper);
+  border-bottom:1px solid var(--rule-2);
+  display:flex;align-items:baseline;justify-content:space-between;
+  padding:10px 26px;gap:18px;
+}
+.topbar .wordmark{font-family:var(--serif);font-weight:700;font-size:17px;letter-spacing:.02em;color:var(--ink);border:none}
+.topbar .wordmark em{font-style:normal;color:var(--accent)}
+.topbar .wordmark:hover{color:var(--accent)}
+.topbar .strap{font-family:var(--sans);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.topbar .acts{display:flex;gap:14px;align-items:baseline;font-family:var(--sans);font-size:12.5px;white-space:nowrap}
+.topbar .acts a{color:var(--ink-2);border-bottom-color:transparent}
+.topbar .acts a:hover{color:var(--accent);border-bottom-color:var(--accent)}
+.topbar .acts .sep{color:var(--rule-2)}
+.topbar .acts a.cta{color:var(--accent);border:1px solid var(--accent);padding:4px 10px;font-weight:600;letter-spacing:.06em}
+.topbar .acts a.cta:hover{background:var(--accent);color:var(--paper)}
 
-  section { padding: 120px 32px; position: relative; }
-  .container { max-width: 1280px; margin: 0 auto; }
-  .section-head { margin-bottom: 72px; }
-  .section-num { font-family: var(--mono); font-size: 12px; color: var(--accent); letter-spacing: 2px; margin-bottom: 16px; display: block; }
-  .section-title { font-family: var(--serif); font-size: clamp(36px, 5vw, 56px); font-weight: 500; line-height: 1.1; letter-spacing: -.8px; margin-bottom: 24px; max-width: 800px; }
-  .section-title .italic { font-style: italic; color: var(--accent-bright); }
-  .section-lede { font-size: 18px; color: var(--text-dim); max-width: 720px; line-height: 1.7; }
+/* ---------- page frame ---------- */
+.page{max-width:1080px;margin:0 auto;padding:0 30px}
+main{display:block}
 
-  .overview-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
-  .overview-text p { font-size: 17px; color: var(--text-dim); margin-bottom: 24px; line-height: 1.8; }
-  .overview-text p strong { color: var(--text); font-weight: 500; }
-  .overview-text .lead { font-family: var(--serif); font-size: 24px; color: var(--text); font-style: italic; line-height: 1.5; margin-bottom: 32px; border-left: 2px solid var(--accent); padding-left: 24px; }
-  .stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border-soft); }
-  .stat { background: var(--bg-elev); padding: 40px 32px; transition: background .3s ease; }
-  .stat:hover { background: var(--bg-card-hover); }
-  .stat .num { font-family: var(--serif); font-size: 56px; font-weight: 600; color: var(--accent); line-height: 1; margin-bottom: 12px; }
-  .stat .desc { font-size: 13px; color: var(--text-dim); line-height: 1.5; text-transform: uppercase; letter-spacing: 1.5px; }
+/* ---------- section scaffolding ---------- */
+section{padding-top:60px;margin-top:26px;border-top:1px solid var(--rule-2)}
+section:first-of-type{border-top:none;margin-top:0;padding-top:0}
+.sechead{margin-bottom:24px}
+.sechead .no{
+  font-family:var(--sans);font-size:11px;letter-spacing:.24em;color:var(--accent);
+  text-transform:uppercase;
+}
+.sechead h2{
+  font-family:var(--serif);font-weight:700;font-size:clamp(25px,3.4vw,34px);
+  letter-spacing:-.012em;line-height:1.12;margin:6px 0 4px;
+}
+.sechead .tag{
+  font-family:var(--sans);font-size:12.5px;color:var(--ink-3);letter-spacing:.04em;
+}
+.lede{
+  font-size:16.5px;color:var(--ink-2);max-width:74ch;margin-bottom:22px;
+}
+.lede b,.lede strong{color:var(--ink)}
+.note{font-family:var(--sans);font-size:12.5px;color:var(--ink-3);max-width:74ch}
+.note b{color:var(--ink-2)}
 
-  .quickstart { background: var(--bg-elev); border-top: 1px solid var(--border-soft); border-bottom: 1px solid var(--border-soft); }
-  .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
-  .step { position: relative; padding: 36px 28px; border: 1px solid var(--border); border-radius: 4px; background: var(--bg-card); transition: all .35s ease; overflow: hidden; }
-  .step::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(to right, var(--accent), transparent); transform: scaleX(0); transform-origin: left; transition: transform .4s ease; }
-  .step:hover { transform: translateY(-4px); border-color: var(--accent-deep); background: var(--bg-card-hover); }
-  .step:hover::before { transform: scaleX(1); }
-  .step-num { font-family: var(--serif); font-size: 44px; font-weight: 600; color: var(--accent); opacity: .35; line-height: 1; margin-bottom: 20px; }
-  .step h3 { font-family: var(--serif); font-size: 20px; font-weight: 600; margin-bottom: 12px; color: var(--text); }
-  .step p { font-size: 14px; color: var(--text-dim); line-height: 1.6; margin-bottom: 16px; }
-  .step code { font-family: var(--mono); font-size: 11.5px; background: var(--bg); padding: 6px 10px; border-radius: 3px; color: var(--accent-bright); display: inline-block; border: 1px solid var(--border); word-break: break-all; }
+/* ---------- masthead ---------- */
+#overview{padding-top:44px}
+.mast .kicker{
+  font-family:var(--sans);font-size:11px;letter-spacing:.3em;text-transform:uppercase;
+  color:var(--accent);margin-bottom:14px;
+}
+.mast h1{
+  font-family:var(--serif);font-weight:700;font-size:clamp(42px,7vw,74px);
+  line-height:.98;letter-spacing:-.022em;
+}
+.mast h1 .dot{color:var(--accent)}
+.mast .dek{
+  font-family:var(--serif);font-style:italic;font-size:clamp(18px,2.4vw,23px);
+  color:var(--ink-2);margin:14px 0 0;max-width:38ch;line-height:1.35;
+}
+.mast .facts{
+  margin-top:24px;padding-top:14px;border-top:1px solid var(--rule-2);
+  font-family:var(--mono);font-size:12px;color:var(--ink-2);
+  display:flex;flex-wrap:wrap;gap:8px 0;align-items:baseline;
+}
+.mast .facts span{white-space:nowrap}
+.mast .facts .m{color:var(--ink-3);padding:0 10px}
+.mast .facts b{color:var(--ink);font-weight:600}
+.mast .status{
+  margin-top:28px;max-width:68ch;font-size:16.5px;line-height:1.68;
+}
+.mast .status::first-letter{
+  float:left;font-size:50px;line-height:.86;padding:7px 14px 0 0;color:var(--accent);
+  font-weight:700;
+}
+.mast .status b{color:var(--ink)}
 
-  /* ARIA */
-  .aria-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 64px; align-items: start; }
-  .aria-intro p { font-size: 16px; color: var(--text-dim); margin-bottom: 20px; line-height: 1.8; }
-  .aria-intro .expertise-list { list-style: none; margin: 28px 0; }
-  .aria-intro .expertise-list li { padding: 14px 0; border-bottom: 1px solid var(--border-soft); display: flex; gap: 14px; align-items: baseline; font-size: 15px; }
-  .aria-intro .expertise-list li:last-child { border: none; }
-  .aria-intro .expertise-list .role { color: var(--accent); font-family: var(--serif); font-weight: 600; min-width: 200px; font-size: 16px; }
-  .aria-intro .expertise-list .desc { color: var(--text-dim); }
-  .cognitive-steps { background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; padding: 8px; }
-  .cog-step { padding: 22px 26px; border-bottom: 1px solid var(--border-soft); display: grid; grid-template-columns: auto 1fr; gap: 20px; align-items: start; transition: background .25s ease; }
-  .cog-step:last-child { border-bottom: none; }
-  .cog-step:hover { background: var(--bg-card-hover); }
-  .cog-num { font-family: var(--serif); font-size: 28px; font-weight: 600; color: var(--accent); line-height: 1; min-width: 36px; }
-  .cog-step h4 { font-family: var(--serif); font-size: 18px; color: var(--text); margin-bottom: 8px; font-weight: 600; letter-spacing: .3px; }
-  .cog-step .cog-q { font-family: var(--serif); font-style: italic; color: var(--text-dim); font-size: 14.5px; line-height: 1.6; }
+/* ---------- chain box ---------- */
+.chain{
+  margin:32px 0 8px;padding:22px 26px;background:var(--paper-2);
+  border:1px solid var(--rule);border-left:3px solid var(--accent);
+  font-family:var(--serif);font-size:15.5px;line-height:2;max-width:78ch;
+  overflow-x:auto;
+}
+.chain .chain-label{
+  display:block;font-family:var(--sans);font-size:10.5px;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--accent);margin-bottom:10px;
+}
+.chain b{color:var(--ink)}
+.chain code{white-space:nowrap}
 
-  /* Workflows */
-  .workflows { background: var(--bg-elev); border-top: 1px solid var(--border-soft); border-bottom: 1px solid var(--border-soft); }
-  .workflow-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
-  .wf-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; padding: 36px; transition: all .35s ease; position: relative; overflow: hidden; }
-  .wf-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--accent); transform: scaleX(0); transform-origin: left; transition: transform .4s ease; }
-  .wf-card:hover { transform: translateY(-4px); border-color: var(--accent-deep); background: var(--bg-card-hover); }
-  .wf-card:hover::before { transform: scaleX(1); }
-  .wf-meta { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
-  .wf-tag { font-family: var(--mono); font-size: 11px; color: var(--accent); background: rgba(212,165,116,0.08); border: 1px solid rgba(212,165,116,0.2); padding: 5px 12px; border-radius: 3px; letter-spacing: .5px; }
-  .wf-duration { font-family: var(--serif); font-size: 18px; color: var(--text-dim); font-style: italic; }
-  .wf-card h3 { font-family: var(--serif); font-size: 26px; font-weight: 600; margin-bottom: 14px; color: var(--text); }
-  .wf-card p { font-size: 14.5px; color: var(--text-dim); line-height: 1.7; margin-bottom: 20px; }
-  .wf-phases { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 20px; }
-  .wf-phase { font-family: var(--mono); font-size: 11px; color: var(--ink-bright); background: rgba(143,180,232,0.06); border: 1px solid rgba(143,180,232,0.15); padding: 4px 10px; border-radius: 3px; }
-  .wf-link { font-size: 12px; color: var(--accent); text-transform: uppercase; letter-spacing: 1.5px; font-weight: 600; display: inline-flex; align-items: center; gap: 6px; }
-  .wf-link:hover { color: var(--accent-bright); }
+/* ---------- stat ledger (facts box) ---------- */
+.ledger{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+  gap:0;margin-top:26px;border:1px solid var(--rule-2);background:var(--paper);
+}
+.ledger .cell{
+  padding:16px 20px;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);
+}
+.ledger .cell .v{
+  font-family:var(--serif);font-size:34px;font-weight:700;letter-spacing:-.02em;
+  font-variant-numeric:tabular-nums;line-height:1;
+}
+.ledger .cell .v small{font-size:16px;color:var(--ink-3);font-weight:400}
+.ledger .cell .l{
+  font-family:var(--sans);font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--ink-3);margin-top:7px;
+}
+.ledger .cell.accent .v{color:var(--accent)}
 
-  /* Roadmap timeline */
-  .roadmap-tabs { display: flex; gap: 4px; margin-bottom: 40px; border-bottom: 1px solid var(--border); padding-bottom: 0; }
-  .roadmap-tab { padding: 14px 24px; font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; font-weight: 600; color: var(--text-mute); cursor: pointer; border: none; background: none; border-bottom: 2px solid transparent; transition: all .25s ease; font-family: var(--sans); }
-  .roadmap-tab.active { color: var(--accent); border-bottom-color: var(--accent); }
-  .roadmap-tab:hover { color: var(--text); }
-  .roadmap-panel { display: none; }
-  .roadmap-panel.active { display: block; animation: fadeIn .4s ease; }
-  @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+/* ---------- ladder (steps / rows) ---------- */
+.ladder{border:1px solid var(--rule-2);margin-top:6px}
+.rung{display:grid;grid-template-columns:170px 1fr 130px;gap:0;border-bottom:1px solid var(--rule)}
+.rung:last-child{border-bottom:none}
+.rung .rn{
+  padding:15px 18px;border-right:1px solid var(--rule);
+  font-family:var(--sans);font-size:12.5px;font-weight:600;letter-spacing:.02em;
+}
+.rung .rn .lv{display:block;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-3);font-weight:400;margin-top:3px}
+.rung .rd{padding:15px 18px;font-family:var(--sans);font-size:13px;color:var(--ink-2);line-height:1.55}
+.rung .rd b{color:var(--ink)}
+.rung .rd code{font-size:.82em}
+.rung .rc{
+  padding:15px 18px;text-align:right;border-left:1px solid var(--rule);
+  font-family:var(--serif);font-size:22px;font-weight:700;font-variant-numeric:tabular-nums;
+}
+.rung .rc small{display:block;font-family:var(--sans);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);font-weight:400}
+.rung.hl .rn{color:var(--accent)}
 
-  .timeline { position: relative; padding-left: 48px; }
-  .timeline::before { content: ''; position: absolute; left: 19px; top: 12px; bottom: 12px; width: 1px; background: linear-gradient(to bottom, var(--accent), var(--border) 80%, transparent); }
-  .tl-item { position: relative; padding-bottom: 36px; }
-  .tl-item:last-child { padding-bottom: 0; }
-  .tl-item::before { content: ''; position: absolute; left: -36px; top: 8px; width: 14px; height: 14px; border-radius: 50%; background: var(--bg); border: 2px solid var(--accent); transition: all .25s ease; }
-  .tl-item:hover::before { background: var(--accent); box-shadow: 0 0 0 6px rgba(212,165,116,0.15); }
-  .tl-week { font-family: var(--mono); font-size: 11px; color: var(--accent); letter-spacing: 1.5px; margin-bottom: 6px; text-transform: uppercase; }
-  .tl-title { font-family: var(--serif); font-size: 22px; font-weight: 600; color: var(--text); margin-bottom: 8px; }
-  .tl-skills { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
-  .tl-skill { font-family: var(--mono); font-size: 10.5px; color: var(--ink-bright); background: rgba(143,180,232,0.08); border: 1px solid rgba(143,180,232,0.2); padding: 3px 9px; border-radius: 3px; }
-  .tl-desc { font-size: 14.5px; color: var(--text-dim); line-height: 1.7; margin-bottom: 10px; }
-  .tl-output { font-size: 13px; color: var(--text-mute); font-style: italic; padding-left: 16px; border-left: 2px solid var(--border-soft); }
-  .tl-output strong { color: var(--accent); font-style: normal; font-weight: 600; }
+/* ---------- judge / callout box ---------- */
+.judgebox{
+  margin-top:22px;padding:20px 24px;background:var(--accent-wash);
+  border:1px solid #ddc4b8;border-left:3px solid var(--accent);max-width:78ch;
+}
+.judgebox .jb-k{
+  font-family:var(--sans);font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--accent);margin-bottom:8px;
+}
+.judgebox p{font-size:15.5px;color:var(--ink-2)}
+.judgebox p b{color:var(--ink)}
+.judgebox.ok{background:var(--ok-wash);border:1px solid #cdd4bd;border-left:3px solid var(--ok)}
+.judgebox.ok .jb-k{color:var(--ok)}
+.judgebox.warn{background:var(--warn-wash);border:1px solid #ddceb0;border-left:3px solid var(--warn)}
+.judgebox.warn .jb-k{color:var(--warn)}
 
-  /* Architecture tree */
-  .arch-wrap { display: grid; grid-template-columns: 1fr 1.4fr; gap: 64px; align-items: start; }
-  .arch-intro p { font-size: 16px; color: var(--text-dim); margin-bottom: 20px; line-height: 1.8; }
-  .arch-intro .key-fact { border-left: 2px solid var(--accent); padding: 8px 0 8px 20px; margin: 24px 0; }
-  .arch-intro .key-fact strong { display: block; color: var(--text); font-family: var(--serif); font-size: 20px; margin-bottom: 6px; }
-  .arch-intro .key-fact span { color: var(--text-dim); font-size: 14px; }
-  .tree { font-family: var(--mono); font-size: 13px; line-height: 1.9; background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; padding: 32px; overflow-x: auto; }
-  .tree .root { color: var(--accent); font-weight: 500; }
-  .tree .dir { color: var(--ink-bright); }
-  .tree .file { color: var(--text-dim); }
-  .tree .arrow { color: var(--accent-deep); }
-  .tree .comment { color: var(--text-mute); font-style: italic; }
+/* ---------- tables ---------- */
+.tbl{width:100%;border-collapse:collapse;margin-top:20px;font-family:var(--sans);font-size:13px}
+.tbl th{
+  text-align:left;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--ink-3);font-weight:600;padding:10px 12px;border-bottom:2px solid var(--rule-2);
+}
+.tbl td{padding:11px 12px;border-bottom:1px solid var(--rule);color:var(--ink-2);vertical-align:top;line-height:1.5}
+.tbl td b{color:var(--ink)}
+.tbl td .cmd{font-family:var(--mono);font-size:12px;color:var(--accent);background:var(--accent-wash);border:1px solid #ddc4b8;border-radius:2px;padding:2px 8px;white-space:nowrap;display:inline-block}
+.tbl tr:hover td{background:var(--paper-2)}
+.badge{
+  display:inline-block;font-family:var(--sans);font-size:10px;font-weight:700;
+  letter-spacing:.12em;text-transform:uppercase;border-radius:2px;padding:3px 8px;white-space:nowrap;
+}
+.badge.b-ok{color:var(--ok);background:var(--ok-wash);border:1px solid #cdd4bd}
+.badge.b-ac{color:var(--accent);background:var(--accent-wash);border:1px solid #ddc4b8}
+.badge.b-wa{color:var(--warn);background:var(--warn-wash);border:1px solid #ddceb0}
+.tbl-scroll{overflow-x:auto;margin-top:20px}
 
-  /* Skills */
-  .skills-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
-  .skill-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; padding: 36px; position: relative; overflow: hidden; transition: all .4s cubic-bezier(.2,.7,.3,1); }
-  .skill-card::before { content: ''; position: absolute; top: 0; left: 0; bottom: 0; width: 3px; background: var(--accent); transform: scaleY(0); transform-origin: top; transition: transform .4s ease; }
-  .skill-card:hover { background: var(--bg-card-hover); border-color: var(--accent-deep); transform: translateX(4px); }
-  .skill-card:hover::before { transform: scaleY(1); }
-  .skill-head { display: flex; align-items: baseline; gap: 20px; margin-bottom: 14px; flex-wrap: wrap; }
-  .skill-num { font-family: var(--serif); font-size: 34px; font-weight: 600; color: var(--accent); line-height: 1; opacity: .55; }
-  .skill-name { font-family: var(--serif); font-size: 24px; font-weight: 600; color: var(--text); }
-  .skill-purpose { font-size: 15px; color: var(--text-dim); line-height: 1.7; margin-bottom: 18px; }
-  .skill-activation { font-family: var(--mono); font-size: 12px; color: var(--accent-bright); background: rgba(212,165,116,0.08); border: 1px solid rgba(212,165,116,0.2); padding: 7px 14px; border-radius: 3px; display: inline-block; letter-spacing: .5px; }
+/* ---------- ascii map ---------- */
+.map{
+  margin-top:24px;padding:24px 26px;background:var(--paper-2);
+  border:1px solid var(--rule);border-left:3px solid var(--accent);
+  overflow-x:auto;-webkit-overflow-scrolling:touch;
+}
+.map pre{
+  font-family:var(--mono);font-size:12px;line-height:1.5;color:var(--ink-2);
+  white-space:pre;min-width:min-content;
+}
+.map .map-label{
+  display:block;font-family:var(--sans);font-size:10.5px;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--accent);margin-bottom:12px;
+}
+@media(max-width:640px){
+  .map pre{font-size:10px}
+}
 
-  /* Skill deep dive */
-  .deepdive { background: var(--bg-elev); border-top: 1px solid var(--border-soft); border-bottom: 1px solid var(--border-soft); }
-  .dd-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 64px; align-items: start; }
-  .dd-intro h3 { font-family: var(--serif); font-size: 32px; margin-bottom: 16px; color: var(--text); font-weight: 600; }
-  .dd-intro p { font-size: 15.5px; color: var(--text-dim); margin-bottom: 20px; line-height: 1.8; }
-  .dd-intro .meta-row { display: flex; flex-direction: column; gap: 12px; margin-top: 28px; padding-top: 24px; border-top: 1px solid var(--border-soft); }
-  .dd-intro .meta-row div { display: flex; justify-content: space-between; gap: 16px; font-size: 13px; }
-  .dd-intro .meta-row .k { color: var(--text-mute); text-transform: uppercase; letter-spacing: 1.5px; }
-  .dd-intro .meta-row .v { color: var(--accent); font-family: var(--mono); }
-  .dd-phases { display: flex; flex-direction: column; gap: 16px; }
-  .dd-phase { background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; padding: 28px; transition: all .3s ease; }
-  .dd-phase:hover { border-color: var(--accent-deep); transform: translateX(4px); }
-  .dd-phase-head { display: flex; align-items: baseline; gap: 14px; margin-bottom: 12px; }
-  .dd-phase-num { font-family: var(--mono); font-size: 12px; color: var(--accent); letter-spacing: 1.5px; }
-  .dd-phase h4 { font-family: var(--serif); font-size: 20px; color: var(--text); font-weight: 600; }
-  .dd-phase p { font-size: 14px; color: var(--text-dim); line-height: 1.7; margin-bottom: 14px; }
-  .dd-phase .gates { display: flex; flex-wrap: wrap; gap: 6px; }
-  .dd-phase .gate { font-family: var(--mono); font-size: 10.5px; padding: 3px 9px; border-radius: 3px; border: 1px solid; }
-  .dd-phase .gate.ok { color: var(--green); border-color: rgba(143,188,143,0.3); background: rgba(143,188,143,0.06); }
+/* ---------- skills grid ---------- */
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-top:24px}
+.card{
+  background:var(--paper);border:1px solid var(--rule-2);padding:18px 20px;
+  display:flex;flex-direction:column;gap:8px;
+}
+.card .c-no{font-family:var(--mono);font-size:11px;color:var(--accent);letter-spacing:.14em}
+.card .c-t{font-family:var(--serif);font-weight:700;font-size:18px;letter-spacing:-.01em}
+.card .c-d{font-family:var(--sans);font-size:12.5px;color:var(--ink-2);line-height:1.5;flex:1}
+.card .c-c{font-family:var(--mono);font-size:11.5px;color:var(--accent)}
+.card:hover{border-color:var(--accent);background:#fbf9f2}
 
-  /* Matrix */
-  .matrix-section { background: var(--bg-elev); border-top: 1px solid var(--border-soft); border-bottom: 1px solid var(--border-soft); }
-  .matrix { border: 1px solid var(--border); border-radius: 4px; overflow: hidden; background: var(--bg-card); }
-  .matrix-row { display: grid; grid-template-columns: 1.2fr 2fr; gap: 0; border-bottom: 1px solid var(--border-soft); transition: background .25s ease; }
-  .matrix-row:last-child { border-bottom: none; }
-  .matrix-row:hover { background: var(--bg-card-hover); }
-  .matrix-row.header { background: var(--bg); font-family: var(--sans); font-weight: 600; text-transform: uppercase; letter-spacing: 2px; font-size: 12px; color: var(--accent); }
-  .matrix-row.header > div { padding: 20px 28px; }
-  .matrix-row > div { padding: 22px 28px; }
-  .matrix-task { font-family: var(--serif); font-size: 17px; color: var(--text); font-weight: 500; border-right: 1px solid var(--border-soft); }
-  .matrix-flow { font-family: var(--mono); font-size: 12.5px; color: var(--text-dim); line-height: 1.8; display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
-  .matrix-flow .chip { background: rgba(143,180,232,0.08); color: var(--ink-bright); border: 1px solid rgba(143,180,232,0.2); padding: 4px 10px; border-radius: 3px; font-size: 11.5px; }
-  .matrix-flow .arrow { color: var(--accent); margin: 0 2px; }
+/* ---------- citation block ---------- */
+.cite{
+  margin-top:22px;padding:22px 26px;background:var(--paper-2);border:1px solid var(--rule);
+  overflow-x:auto;
+}
+.cite pre{font-family:var(--mono);font-size:12.5px;line-height:1.6;color:var(--ink-2);white-space:pre}
+.cite .cite-label{
+  display:block;font-family:var(--sans);font-size:10.5px;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--accent);margin-bottom:10px;
+}
 
-  /* Journal table */
-  .journal-table { border: 1px solid var(--border); border-radius: 4px; overflow: hidden; }
-  .jt-head { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 2fr; background: var(--bg); padding: 16px 24px; gap: 16px; font-size: 11px; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent); font-weight: 600; }
-  .jt-row { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 2fr; padding: 18px 24px; gap: 16px; border-top: 1px solid var(--border-soft); transition: background .25s ease; align-items: center; }
-  .jt-row:hover { background: var(--bg-card); }
-  .jt-name { font-family: var(--serif); font-size: 17px; color: var(--text); font-weight: 600; }
-  .jt-val { font-family: var(--mono); font-size: 13px; color: var(--accent-bright); }
-  .jt-desc { font-size: 13px; color: var(--text-dim); }
+/* ---------- author chips ---------- */
+.authors{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.authors a{
+  font-family:var(--sans);font-size:12.5px;font-weight:600;color:var(--ink-2);
+  border:1px solid var(--rule-2);padding:8px 16px;border-radius:2px;
+  border-bottom:1px solid var(--rule-2);
+}
+.authors a:hover{color:var(--accent);border-color:var(--accent);background:var(--accent-wash)}
 
-  /* Do / Don't */
-  .dodont { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-  .dd-col { background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; padding: 36px; }
-  .dd-col.do { border-top: 3px solid var(--green); }
-  .dd-col.dont { border-top: 3px solid var(--red); }
-  .dd-col h3 { font-family: var(--serif); font-size: 24px; margin-bottom: 20px; color: var(--text); font-weight: 600; display: flex; align-items: center; gap: 12px; }
-  .dd-col.do h3 .icon { color: var(--green); }
-  .dd-col.dont h3 .icon { color: var(--red); }
-  .dd-col ul { list-style: none; }
-  .dd-col li { padding: 10px 0 10px 28px; position: relative; font-size: 14.5px; color: var(--text-dim); line-height: 1.6; border-bottom: 1px solid var(--border-soft); }
-  .dd-col li:last-child { border: none; }
-  .dd-col.do li::before { content: '✓'; position: absolute; left: 0; color: var(--green); font-weight: 700; }
-  .dd-col.dont li::before { content: '✕'; position: absolute; left: 0; color: var(--red); font-weight: 700; }
+/* ---------- footer ---------- */
+footer{
+  margin-top:70px;padding:26px 0 40px;border-top:1px solid var(--rule-2);
+}
+footer .f-row{
+  display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:space-between;
+  font-family:var(--sans);font-size:12px;color:var(--ink-3);
+}
+footer .f-row b{color:var(--ink-2)}
+footer .fine{margin-top:14px;font-family:var(--mono);font-size:11px;color:var(--ink-3)}
 
-  /* Troubleshooting */
-  .trouble-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-  .trouble-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; padding: 28px; transition: all .3s ease; }
-  .trouble-card:hover { border-color: var(--accent-deep); }
-  .trouble-card .label { display: inline-block; font-family: var(--mono); font-size: 10px; color: var(--red); background: rgba(217,144,144,0.08); border: 1px solid rgba(217,144,144,0.2); padding: 4px 10px; border-radius: 3px; letter-spacing: 1px; margin-bottom: 14px; }
-  .trouble-card .problem { font-family: var(--serif); font-size: 18px; color: var(--text); margin-bottom: 12px; font-weight: 600; line-height: 1.4; }
-  .trouble-card .solution { font-size: 14px; color: var(--text-dim); line-height: 1.7; }
-  .trouble-card .solution strong { color: var(--accent); font-weight: 500; }
-
-  /* Philosophy */
-  .philosophy { text-align: center; padding: 160px 32px; background: radial-gradient(ellipse at center, rgba(212,165,116,0.05), transparent 70%); }
-  .philosophy .quote-mark { font-family: var(--serif); font-size: 120px; color: var(--accent); line-height: 1; opacity: .3; margin-bottom: -40px; }
-  .philosophy blockquote { font-family: var(--serif); font-style: italic; font-size: clamp(28px, 4vw, 44px); line-height: 1.4; font-weight: 400; max-width: 920px; margin: 0 auto 40px; color: var(--text); }
-  .philosophy blockquote .em { color: var(--accent-bright); font-style: italic; }
-  .philosophy cite { font-style: normal; font-size: 13px; color: var(--text-mute); text-transform: uppercase; letter-spacing: 3px; font-weight: 600; }
-  .philosophy cite::before { content: '— '; }
-
-  /* Footer */
-  footer { background: var(--bg-elev); border-top: 1px solid var(--border); padding: 80px 32px 40px; }
-  .footer-inner { max-width: 1280px; margin: 0 auto; }
-  .footer-top { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 64px; padding-bottom: 56px; border-bottom: 1px solid var(--border-soft); }
-  .footer-brand h4 { font-family: var(--serif); font-size: 28px; font-weight: 600; margin-bottom: 12px; display: flex; align-items: center; gap: 12px; }
-  .footer-brand h4 .mark { width: 32px; height: 32px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), var(--accent-deep)); display: grid; place-items: center; color: var(--bg); font-size: 17px; font-weight: 700; }
-  .footer-brand p { color: var(--text-dim); font-size: 14px; max-width: 360px; line-height: 1.7; }
-  .footer-col h5 { font-size: 11px; text-transform: uppercase; letter-spacing: 2px; color: var(--accent); margin-bottom: 20px; font-weight: 600; }
-  .footer-col ul { list-style: none; }
-  .footer-col li { margin-bottom: 10px; }
-  .footer-col a { font-size: 14px; color: var(--text-dim); display: inline-flex; align-items: center; gap: 8px; }
-  .footer-col a:hover { color: var(--accent); }
-  .footer-bottom { padding-top: 32px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
-  .footer-bottom p { font-size: 12px; color: var(--text-mute); letter-spacing: .5px; }
-  .footer-bottom .version { font-family: var(--mono); font-size: 12px; color: var(--accent); border: 1px solid var(--border); padding: 6px 12px; border-radius: 3px; }
-
-  /* Audit Dimensions Grid */
-  .audit-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 28px; }
-  .audit-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; padding: 22px 24px; transition: all .3s ease; position: relative; }
-  .audit-card:hover { border-color: var(--accent-deep); transform: translateY(-2px); background: var(--bg-card-hover); }
-  .audit-tag { font-family: var(--mono); font-size: 11px; color: var(--accent); background: rgba(212,165,116,0.1); border: 1px solid rgba(212,165,116,0.25); padding: 3px 8px; border-radius: 3px; display: inline-block; margin-bottom: 8px; }
-  .audit-title { font-family: var(--serif); font-size: 19px; font-weight: 600; color: var(--text); margin-bottom: 6px; }
-  .audit-desc { font-size: 13.5px; color: var(--text-dim); line-height: 1.6; }
-
-  /* Benchmark Provenance Cards */
-  .prov-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 28px; }
-  .prov-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; padding: 26px 24px; transition: all .3s ease; position: relative; overflow: hidden; }
-  .prov-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(to right, var(--accent), transparent); }
-  .prov-card:hover { border-color: var(--accent); background: var(--bg-card-hover); transform: translateY(-3px); }
-  .prov-metric { font-family: var(--serif); font-size: 38px; color: var(--accent); font-weight: 600; line-height: 1; margin-bottom: 10px; }
-  .prov-title { font-family: var(--serif); font-size: 19px; color: var(--text); font-weight: 600; margin-bottom: 8px; }
-  .prov-desc { font-size: 13.5px; color: var(--text-dim); line-height: 1.6; }
-
-  /* Evaluator Scorecard Grid */
-  .eval-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 36px; }
-  .eval-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; padding: 28px 22px; transition: all .35s ease; position: relative; overflow: hidden; }
-  .eval-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--accent); transform: scaleX(0); transform-origin: left; transition: transform .35s ease; }
-  .eval-card:hover { transform: translateY(-4px); border-color: var(--accent); background: var(--bg-card-hover); }
-  .eval-card:hover::before { transform: scaleX(1); }
-  .eval-thresh { font-family: var(--mono); font-size: 12px; color: var(--green); margin-bottom: 14px; display: inline-block; background: rgba(143,188,143,0.08); border: 1px solid rgba(143,188,143,0.25); padding: 4px 10px; border-radius: 3px; }
-  .eval-name { font-family: var(--serif); font-size: 22px; font-weight: 600; color: var(--text); margin-bottom: 10px; }
-  .eval-desc { font-size: 13px; color: var(--text-dim); line-height: 1.6; margin-bottom: 16px; }
-  .eval-weights { list-style: none; border-top: 1px solid var(--border-soft); padding-top: 12px; font-size: 12px; color: var(--text-mute); }
-  .eval-weights li { padding: 4px 0; display: flex; justify-content: space-between; }
-  .eval-weights li span:last-child { color: var(--accent-bright); font-family: var(--mono); font-size: 11px; }
-
-  @media (max-width: 960px) {
-    .nav-links { display: none; }
-    .menu-toggle { display: block; }
-    .overview-grid, .arch-wrap, .aria-grid, .dd-grid { grid-template-columns: 1fr; gap: 48px; }
-    .steps, .workflow-grid, .skills-grid, .dodont, .trouble-grid, .audit-grid, .prov-grid, .eval-grid { grid-template-columns: 1fr; }
-    .footer-top { grid-template-columns: 1fr; gap: 40px; }
-    .hero-meta { gap: 32px; }
-    .jt-head, .jt-row { grid-template-columns: 1fr; gap: 4px; }
-    .jt-head { display: none; }
-    .jt-row::before { content: attr(data-name); font-family: var(--serif); font-size: 18px; color: var(--text); font-weight: 600; margin-bottom: 8px; display: block; }
-  }
-  @media (max-width: 600px) {
-    section { padding: 80px 20px; }
-    .hero { padding: 120px 20px 60px; }
-    .nav-inner { padding: 16px 20px; }
-    .stat-grid { grid-template-columns: 1fr; }
-    .matrix-row { grid-template-columns: 1fr; }
-    .matrix-task { border-right: none; border-bottom: 1px solid var(--border-soft); }
-    .hero-actions { flex-direction: column; }
-    .btn { justify-content: center; }
-    .cog-step { grid-template-columns: 1fr; gap: 8px; }
-  }
-
-  .reveal { opacity: 0; transform: translateY(30px); transition: opacity .8s ease, transform .8s ease; }
-  .reveal.visible { opacity: 1; transform: translateY(0); }
+/* ---------- responsive ---------- */
+@media (max-width:960px){
+  .topbar{flex-wrap:wrap;gap:8px 16px}
+  .rung{grid-template-columns:1fr}
+  .rung .rn{border-right:none;border-bottom:1px dashed var(--rule);padding-bottom:6px}
+  .rung .rc{border-left:none;text-align:left;padding-top:0}
+}
+@media (max-width:640px){
+  .page{padding:0 18px}
+  .topbar{padding:10px 18px}
+  .topbar .strap{display:none}
+  .topbar .acts{font-size:11.5px;gap:10px}
+  .topbar .acts a.cta{display:none}
+  .mast .facts{font-size:11px;gap:6px 0}
+  .ledger .cell .v{font-size:28px}
+  .tbl{font-size:12px}
+  .tbl th,.tbl td{padding:8px 8px}
+  .chain{padding:16px 16px;font-size:14px}
+  .judgebox{padding:16px 16px}
+  section{padding-top:46px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+}
+@media print{
+  .topbar,.authors{display:none}
+  body{font-size:12px}
+  section{page-break-inside:avoid}
+}
 </style>
 </head>
 <body>
 
-<div class="atmos"></div>
-<div class="grain"></div>
-
-<!-- NAV -->
-<nav>
-  <div class="nav-inner">
-    <a href="#top" class="nav-logo"><span class="mark">C</span><span>CRES</span></a>
-    <div class="nav-links">
-      <a href="#overview">Overview</a>
-      <a href="#aria">ARIA</a>
-      <a href="#workflows">Workflows</a>
-      <a href="#roadmap">Roadmap</a>
-      <a href="#skills">Skills</a>
-      <a href="#quality">Expert Review</a>
-      <a href="#evaluators">Evaluators</a>
-      <a href="#journals">Journals</a>
-      <a href="https://github.com/AdilShamim8/claude-research-excellence" target="_blank" rel="noopener" class="nav-cta">View Repo</a>
-    </div>
-    <button class="menu-toggle" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
-  </div>
+<nav class="topbar">
+  <span class="wordmark">AI Research <em>Excellence</em> System</span>
+  <span class="strap">ARES · v3.0 · October 2026 · ARIA Engine v3.1</span>
+  <span class="acts">
+    <a href="#start">Start here</a><span class="sep">·</span>
+    <a href="#skills">Skills</a><span class="sep">·</span>
+    <a href="#datasets">Datasets</a><span class="sep">·</span>
+    <a href="https://github.com/AdilShamim8/ARES" target="_blank" rel="noopener">GitHub</a><span class="sep">·</span>
+    <a class="cta" href="#quick">5-min setup</a>
+  </span>
 </nav>
 
-<!-- HERO -->
-<header class="hero" id="top">
-  <div class="hero-inner">
-    <div class="eyebrow">Claude Research Excellence System</div>
-    <h1>The framework for<br><span class="italic">research that refuses</span><br>to settle for "good enough."</h1>
-    <p class="tagline">The world's most advanced AI-powered research paper creation framework — engineered for the top 0.0001%.</p>
-    <div class="hero-meta">
-      <div><span class="label">Version</span><span class="value">CRES v2.4</span></div>
-      <div><span class="label">Core System</span><span class="value">ARIA v3.1</span></div>
-      <div><span class="label">Skills</span><span class="value">10 Modular</span></div>
-      <div><span class="label">Review Engine</span><span class="value">10-Dim Audit</span></div>
-      <div><span class="label">Author</span><span class="value">Adil Shamim</span></div>
-    </div>
-    <div class="hero-actions">
-      <a href="https://github.com/AdilShamim8/claude-research-excellence" target="_blank" rel="noopener" class="btn btn-primary">Explore the Repository &nbsp;&rarr;</a>
-      <a href="#quickstart" class="btn btn-ghost">5-Minute Quick Start</a>
-    </div>
-  </div>
-  <div class="scroll-hint">Scroll</div>
-</header>
+<div class="page">
+<main>
 
-<!-- OVERVIEW -->
+<!-- ==================== MASTHEAD ==================== -->
 <section id="overview">
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="section-num">01 — Overview</span>
-      <h2 class="section-title">What <span class="italic">is</span> CRES?</h2>
+  <div class="mast">
+    <div class="kicker">ARES — AI Research Excellence System</div>
+    <h1>From raw idea<br>to published paper<span class="dot">.</span></h1>
+    <p class="dek">A complete operating system of prompts, skills, evaluators, and templates that turns an AI assistant into a disciplined research partner for the world's most demanding venues.</p>
+    <div class="facts">
+      <span>Release <b>v3.0</b></span><span class="m">·</span>
+      <span>Verified <b>30 Oct 2026</b></span><span class="m">·</span>
+      <span>Engine <b>ARIA v3.1</b></span><span class="m">·</span>
+      <span>License <b>MIT</b></span><span class="m">·</span>
+      <span>Language <b>plain Markdown</b></span><span class="m">·</span>
+      <span>Install <b>1 paste</b></span>
     </div>
-    <div class="overview-grid">
-      <div class="overview-text reveal">
-        <p class="lead">A comprehensive, skill-based framework that transforms research ideas into papers that pass peer review at the world's most elite venues.</p>
-        <p><strong>CRES</strong> is a comprehensive, skill-based framework that transforms research ideas into papers that pass peer review at <strong>Nature, Science, Cell, NEJM, NeurIPS, ICML,</strong> or equivalent venues. It provides structured prompts, adversarial review simulations, and systematic workflows that embody the best practices of the world's most elite researchers.</p>
-        <p>Rather than a single rigid script, CRES is organized as <strong>ten modular skills</strong> — each activated on demand by a simple command. You compose them like instruments in an orchestra, calling in ideation when you need a sharp research question, methodology when you need a design that pre-empts reviewer critiques, or quality when your draft must survive adversarial review before submission.</p>
-        <p>The system is powered by <strong>ARIA</strong> — the Advanced Research Intelligence Architect — a master system prompt that loads a five-step cognitive architecture running silently before every response. The result is a research workflow that is simultaneously systematic and creative — one that respects the rules of rigorous inquiry while leaving room for the judgment of a rigorous mind.</p>
-      </div>
-      <div class="stat-grid reveal">
-        <div class="stat"><div class="num">10</div><div class="desc">Modular Skills</div></div>
-        <div class="stat"><div class="num">10</div><div class="desc">Audit Dimensions</div></div>
-        <div class="stat"><div class="num">14.7k</div><div class="desc">PeerRead Benchmarks</div></div>
-        <div class="stat"><div class="num">4</div><div class="desc">Quantitative Evaluators</div></div>
-      </div>
+    <p class="status">ARES is a repository of forty-plus modular documents that take a general-purpose LLM and give it a research editor's discipline: adversarial peer review before submission, quantitative 0–100 scoring gates, venue-exact templates, and a strict evidence floor that refuses fabricated citations. This release re-verifies every dataset, trial identifier, and DOI against live registries — <b>nothing here is remembered, everything was checked</b>.</p>
+  </div>
+
+  <div class="chain">
+    <span class="chain-label">The ten-station pipeline — say the word, get the deliverable</span>
+    <code>IDEATION</code> → <code>LITERATURE</code> → <code>METHODOLOGY</code> → <i>run your study</i> → <code>DATA</code> → <code>WRITING</code> → <code>QUALITY</code> → <code>JOURNAL</code> → <code>CITATION</code> → <code>IMPACT</code>
+  </div>
+</section>
+
+<!-- ==================== 01 · WHY ==================== -->
+<section id="why">
+  <div class="sechead">
+    <div class="no">§01 · The problem</div>
+    <h2>Why this system exists</h2>
+    <div class="tag">Generic LLM prompting produces reviewer bait: shallow summaries, hallucinated citations, boilerplate prose.</div>
+  </div>
+  <p class="lede">Ask an ordinary AI assistant to "help with your paper" and you get a plausible-sounding draft with <b>invented DOIs</b>, generic claims, and none of the falsifiability elite reviewers demand. ARES takes the opposite approach on four fronts:</p>
+  <div class="ladder">
+    <div class="rung hl">
+      <div class="rn">Epistemic depth<span class="lv">vs. summaries</span></div>
+      <div class="rd">Every skill forces <b>causal depth, falsifiable hypotheses, boundary-condition stress tests</b>, and an anti-summary standard that synthesizes tension instead of listing chronology.</div>
+      <div class="rc">Floor<small>non-negotiable</small></div>
+    </div>
+    <div class="rung">
+      <div class="rn">Adversarial review<span class="lv">before submission</span></div>
+      <div class="rd">A five-persona panel — <b>Methodologist, Domain Expert, Logician, Communicator, Impact Assessor</b> — attacks the manuscript the way Reviewer 2 will, then a meta-review consolidates the verdict.</div>
+      <div class="rc">5×1<small>reviewers</small></div>
+    </div>
+    <div class="rung">
+      <div class="rn">Quantitative gates<span class="lv">0–100 rubrics</span></div>
+      <div class="rd">Four independent evaluators score the manuscript with weighted dimensions and explicit go/no-go thresholds. <b>No score, no submission.</b></div>
+      <div class="rc">4<small>engines</small></div>
+    </div>
+    <div class="rung hl">
+      <div class="rn">Empirical provenance<span class="lv">real-world only</span></div>
+      <div class="rd">Every example is grounded in <b>verified public datasets, clinical trials, and DOI-registered literature</b>. Fabricated identifiers are classified as critical flaws and eliminated — this release itself corrected six.</div>
+      <div class="rc">100%<small>resolvable</small></div>
     </div>
   </div>
 </section>
 
-<!-- ARIA -->
-<section id="aria">
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="section-num">02 — ARIA Architecture</span>
-      <h2 class="section-title">The mind <span class="italic">behind the system</span></h2>
-      <p class="section-lede">ARIA — Advanced Research Intelligence Architect — is the master system prompt that powers every CRES skill. It loads a six-dimension expertise matrix and runs a five-step cognitive protocol before every response, calibrating output to the highest possible standard.</p>
+<!-- ==================== 02 · LEDGER ==================== -->
+<section id="numbers">
+  <div class="sechead">
+    <div class="no">§02 · The system, in numbers</div>
+    <h2>A fact ledger</h2>
+    <div class="tag">Every figure below is a verifiable property of this repository.</div>
+  </div>
+  <div class="ledger">
+    <div class="cell accent"><div class="v">10</div><div class="l">Research skills</div></div>
+    <div class="cell"><div class="v">4</div><div class="l">0–100 evaluators</div></div>
+    <div class="cell"><div class="v">4</div><div class="l">End-to-end workflows</div></div>
+    <div class="cell"><div class="v">7</div><div class="l">Venue templates</div></div>
+    <div class="cell"><div class="v">4</div><div class="l">Worked exemplar papers</div></div>
+    <div class="cell accent"><div class="v">11</div><div class="l">Audit dimensions (Skill 06)</div></div>
+    <div class="cell"><div class="v">14,784</div><div class="l">PeerRead paper drafts</div></div>
+    <div class="cell"><div class="v">83.8<small>%</small></div><div class="l">Pairwise rank accuracy</div></div>
+  </div>
+  <p class="note">PeerRead figures per Kang et al., NAACL 2018 (<code>arXiv:1804.09635</code>): 14,784 paper drafts with accept/reject decisions, of which 10.7K include full textual expert reviews. The 83.8% figure is the relative-rank engine's validated pairwise accuracy on a 100-pool ICLR 2017 benchmark.</p>
+</section>
+
+<!-- ==================== 03 · QUICK START ==================== -->
+<section id="start">
+  <div class="sechead">
+    <div class="no">§03 · Start here</div>
+    <h2>Five steps, five minutes, zero setup</h2>
+    <div class="tag">No plugins. No install scripts. Just Markdown and one paste.</div>
+  </div>
+  <div class="ladder">
+    <div class="rung">
+      <div class="rn">Step 1<span class="lv">2 minutes</span></div>
+      <div class="rd"><b>Get the repository.</b> <code>git clone https://github.com/AdilShamim8/ARES.git</code> — or press <b>Code → Download ZIP</b> on GitHub. No build step; it is all plain text.</div>
+      <div class="rc"><small>download</small></div>
     </div>
-    <div class="aria-grid">
-      <div class="aria-intro reveal">
-        <p>When you paste <code style="font-family:var(--mono);font-size:13px;color:var(--accent-bright);background:var(--bg);padding:2px 6px;border-radius:3px;">MASTER_PROMPT.md</code> as your Claude system prompt, you activate ARIA — a convergence of six elite research capabilities. Every response is then filtered through five cognitive steps designed to find the non-obvious bridge, stress-test against the harshest reviewer, and synthesize across disciplines.</p>
-        <h4 style="font-family:var(--serif);font-size:20px;color:var(--text);margin:32px 0 16px;font-weight:600;">The Expertise Matrix</h4>
-        <ul class="expertise-list">
-          <li><span class="role">Scientific Depth</span><span class="desc">Nobel Prize-caliber domain knowledge across all disciplines</span></li>
-          <li><span class="role">Statistical Rigor</span><span class="desc">The precision of the world's most cited biostatisticians</span></li>
-          <li><span class="role">Writing Clarity</span><span class="desc">The communicative power of the best science journalists</span></li>
-          <li><span class="role">Creative Vision</span><span class="desc">The paradigm-shifting instincts of Kuhn-level innovators</span></li>
-          <li><span class="role">Strategic Mind</span><span class="desc">The publication wisdom of senior Nature/Science editors</span></li>
-          <li><span class="role">Critical Acuity</span><span class="desc">The adversarial precision of the harshest peer reviewers</span></li>
-        </ul>
-      </div>
-      <div class="cognitive-steps reveal">
-        <div class="cog-step">
-          <div class="cog-num">1</div>
-          <div>
-            <h4>Summit Scan</h4>
-            <p class="cog-q">"What does the absolute best version of this look like? Think of the top 3 papers in this space from the last 5 years. What do they share? What do they do that others don't?"</p>
-          </div>
-        </div>
-        <div class="cog-step">
-          <div class="cog-num">2</div>
-          <div>
-            <h4>Gap Analysis</h4>
-            <p class="cog-q">"What is the specific delta between where we are now and that summit? What's the single most important gap to close first?"</p>
-          </div>
-        </div>
-        <div class="cog-step">
-          <div class="cog-num">3</div>
-          <div>
-            <h4>Non-Obvious Bridge</h4>
-            <p class="cog-q">"What's the solution that isn't just 'do it better'? What cross-domain insight, methodological innovation, or reframing transforms this problem entirely?"</p>
-          </div>
-        </div>
-        <div class="cog-step">
-          <div class="cog-num">4</div>
-          <div>
-            <h4>Adversarial Stress Test</h4>
-            <p class="cog-q">"I am now the harshest reviewer who has seen 1,000 papers this year and is actively looking for reasons to reject. What do I say? Now: how does the work preempt every one of these critiques?"</p>
-          </div>
-        </div>
-        <div class="cog-step">
-          <div class="cog-num">5</div>
-          <div>
-            <h4>Synthesis</h4>
-            <p class="cog-q">"What am I missing by staying within this discipline? What would a physicist / economist / ML researcher / biologist say? What's the cross-domain insight that makes this singular?"</p>
-          </div>
-        </div>
-      </div>
+    <div class="rung hl">
+      <div class="rn">Step 2<span class="lv">2 minutes</span></div>
+      <div class="rd"><b>Install ARIA.</b> Copy the boxed prompt inside <code>MASTER_PROMPT.md</code> and paste it into Claude <b>Project Instructions</b> (recommended) or as the first message of a new chat. This one paste activates the five-step cognitive engine for every reply.</div>
+      <div class="rc"><small>1 paste</small></div>
     </div>
+    <div class="rung">
+      <div class="rn">Step 3<span class="lv">1 minute</span></div>
+      <div class="rd"><b>State your topic.</b> Be specific: <i>"Sample-efficient graph neural networks for drug-target affinity prediction, targeting Nature Machine Intelligence."</i> No topic yet? Ask for a high-novelty question in your field instead.</div>
+      <div class="rc"><small>1 sentence</small></div>
+    </div>
+    <div class="rung hl">
+      <div class="rn">Step 4<span class="lv">on demand</span></div>
+      <div class="rd"><b>Activate skills like switches.</b> Each command returns one structured deliverable — see the skill table in §05. Example: <code>ACTIVATE: IDEATION</code> returns a gap matrix plus a scored novelty certificate.</div>
+      <div class="rc"><small>10 commands</small></div>
+    </div>
+    <div class="rung">
+      <div class="rn">Step 5<span class="lv">iterate</span></div>
+      <div class="rd"><b>Loop until the gates are green.</b> Run the evaluators, fix what the simulated reviewers found, repeat. The pipeline in the masthead is the recommended order for a full paper.</div>
+      <div class="rc"><small>ship it</small></div>
+    </div>
+  </div>
+  <div class="judgebox ok">
+    <div class="jb-k">Beginner note</div>
+    <p>If you have never used an AI assistant for research: you do not need to read all 40 files. <b>Read this page top to bottom once, paste one prompt, and start with Step 3.</b> The system will tell you what to do next at every stage.</p>
   </div>
 </section>
 
-<!-- QUICK START -->
-<section id="quickstart" class="quickstart">
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="section-num">03 — Quick Start</span>
-      <h2 class="section-title">Five minutes to <span class="italic">your first prompt</span></h2>
-      <p class="section-lede">No installation. No dependencies. Just copy, paste, and activate. CRES lives entirely inside your Claude session as a structured system prompt — or as a Claude Project for persistent use.</p>
-    </div>
-    <div class="steps">
-      <div class="step reveal">
-        <div class="step-num">01</div>
-        <h3>Copy the Master Prompt</h3>
-        <p>Paste <code>MASTER_PROMPT.md</code> as your Claude system prompt. This loads the ARIA v3.1 activation system that powers every skill.</p>
-        <code>MASTER_PROMPT.md</code>
-      </div>
-      <div class="step reveal">
-        <div class="step-num">02</div>
-        <h3>State Your Research Context</h3>
-        <p>Provide your domain, what you've done so far, your constraints (time, data, resources), and target venue if known.</p>
-        <code>"I'm working on [TOPIC]"</code>
-      </div>
-      <div class="step reveal">
-        <div class="step-num">03</div>
-        <h3>Activate a Skill</h3>
-        <p>Issue an activation command to summon the exact skill you need. Skills are modular — call only what you need, in sequence.</p>
-        <code>"ACTIVATE: IDEATION"</code>
-      </div>
-      <div class="step reveal">
-        <div class="step-num">04</div>
-        <h3>Iterate &amp; Refine</h3>
-        <p>Review each output, provide feedback, then move to the next skill or re-engage the same one for deeper analysis. Best papers are never written in one pass.</p>
-        <code>iterate &rarr; refine</code>
-      </div>
-    </div>
+<!-- ==================== 04 · SYSTEM MAP ==================== -->
+<section id="system">
+  <div class="sechead">
+    <div class="no">§04 · The map</div>
+    <h2>How a manuscript moves through ARES</h2>
+    <div class="tag">One idea enters; a submission-ready manuscript exits.</div>
+  </div>
+  <div class="map">
+    <span class="map-label">System flow — install once, execute on demand, gate before submission</span>
+<pre>                ┌──────────────────────────────────────────────────┐
+                │        YOUR IDEA  /  EXISTING DRAFT               │
+                └────────────────────────┬─────────────────────────┘
+                                         │
+                                         ▼
+                ┌──────────────────────────────────────────────────┐
+                │      MASTER_PROMPT.md  ·  ARIA v3.1 engine        │
+                │   5-step cognitive architecture runs before        │
+                │   every response: Summit Scan → Gap Analysis →     │
+                │   Non-Obvious Bridge → Adversarial Test → Synthesis│
+                └────────────────────────┬─────────────────────────┘
+                                         │
+      ┌──────────────────────┬──────────┴─────────┬──────────────────────┐
+      ▼                      ▼                    ▼                      ▼
+┌──────────────┐     ┌───────────────┐    ┌──────────────┐     ┌──────────────┐
+│ SKILLS 01–10 │     │  WORKFLOWS ×4 │    │ TEMPLATES ×7 │     │  EXAMPLES ×4  │
+│ on command   │     │ 28-wk / 30-dy │    │ Nature·Sci·  │     │ full worked   │
+│ ACTIVATE: X  │     │ interdisc.·   │    │ NeurIPS·IEEE │     │ papers with   │
+│              │     │ replication   │    │ ACM·Springer │     │ real datasets │
+└──────┬───────┘     └───────┬───────┘    │ arXiv        │     └──────────────┘
+       │                     │            └──────────────┘
+       ▼                     ▼
+┌──────────────────────────────────────────────────────────────┐
+│                 EVALUATORS  ·  0–100 with gates                │
+│     Novelty ≥70   Rigor ≥75   Clarity ≥80   Impact ≥75         │
+└──────────────────────────────┬───────────────────────────────┘
+                               ▼
+┌──────────────────────────────────────────────────────────────┐
+│        QUALITY FORTRESS  ·  11-dim audit + VLM + 5-panel      │
+│      adversarial review, calibrated on PeerRead (83.8%)       │
+└──────────────────────────────┬───────────────────────────────┘
+                               ▼
+                 ┌─────────────────────────────────┐
+                 │    SUBMISSION-READY PAPER        │
+                 │   + rebuttals, cover letters,   │
+                 │     policy briefs, follow-ups   │
+                 └─────────────────────────────────┘</pre>
   </div>
 </section>
 
-<!-- WORKFLOWS -->
-<section id="workflows" class="workflows">
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="section-num">04 — Workflows</span>
-      <h2 class="section-title">Four end-to-end <span class="italic">research protocols</span></h2>
-      <p class="section-lede">Each workflow chains multiple CRES skills into a coherent, phase-gated process — from the first spark of an idea to post-publication impact. Choose the one that matches your situation.</p>
-    </div>
-    <div class="workflow-grid">
-      <div class="wf-card reveal">
-        <div class="wf-meta"><span class="wf-tag">FULL WORKFLOW</span><span class="wf-duration">28 weeks</span></div>
-        <h3>Full Paper Workflow</h3>
-        <p>The definitive A→Z guide to producing a rigorous, high-impact research paper. Integrates all 10 skill modules into eight phase-gated stages with daily task breakdowns, quality gates, and decision points at every transition.</p>
-        <div class="wf-phases">
-          <span class="wf-phase">Ideation</span><span class="wf-phase">Literature</span><span class="wf-phase">Methodology</span><span class="wf-phase">Data</span><span class="wf-phase">Writing</span><span class="wf-phase">Quality</span><span class="wf-phase">Strategy</span><span class="wf-phase">Submission</span>
-        </div>
-        <a href="https://github.com/AdilShamim8/claude-research-excellence/blob/main/workflows/FULL_PAPER_WORKFLOW.md" target="_blank" rel="noopener" class="wf-link">Read the protocol &nearr;</a>
-      </div>
-
-      <div class="wf-card reveal">
-        <div class="wf-meta"><span class="wf-tag">RAPID PUBLICATION</span><span class="wf-duration">30 days</span></div>
-        <h3>Rapid Publication</h3>
-        <p>A compressed, high-intensity protocol for time-sensitive research. Trades comprehensive depth for strategic focus while maintaining a non-negotiable quality floor. Includes a decision matrix for when rapid is appropriate vs. risky.</p>
-        <div class="wf-phases">
-          <span class="wf-phase">Rapid Ideation</span><span class="wf-phase">Targeted Lit</span><span class="wf-phase">Streamlined Method</span><span class="wf-phase">Analysis</span><span class="wf-phase">Writing Sprint</span><span class="wf-phase">Quality</span><span class="wf-phase">Strategy</span><span class="wf-phase">Submission</span>
-        </div>
-        <a href="https://github.com/AdilShamim8/claude-research-excellence/blob/main/workflows/RAPID_PUBLICATION.md" target="_blank" rel="noopener" class="wf-link">Read the protocol &nearr;</a>
-      </div>
-
-      <div class="wf-card reveal">
-        <div class="wf-meta"><span class="wf-tag">INTERDISCIPLINARY</span><span class="wf-duration">High-impact</span></div>
-        <h3>Interdisciplinary Research</h3>
-        <p>A structured approach to research at the intersection of two or more disciplines. Interdisciplinary work carries extraordinary potential for breakthroughs — and extraordinary risk of failure. This workflow provides the scaffolding to navigate both.</p>
-        <div class="wf-phases">
-          <span class="wf-phase">Cross-Domain Ideation</span><span class="wf-phase">Dual Literature</span><span class="wf-phase">Method Fusion</span><span class="wf-phase">Translation Writing</span><span class="wf-phase">Dual-Review Survival</span>
-        </div>
-        <a href="https://github.com/AdilShamim8/claude-research-excellence/blob/main/workflows/INTERDISCIPLINARY.md" target="_blank" rel="noopener" class="wf-link">Read the protocol &nearr;</a>
-      </div>
-
-      <div class="wf-card reveal">
-        <div class="wf-meta"><span class="wf-tag">REPLICATION STUDY</span><span class="wf-duration">Rigor-focused</span></div>
-        <h3>Replication &amp; Extension</h3>
-        <p>In an era of replication crisis, well-executed replications are among the most valuable scientific contributions — yet among the hardest to publish. This workflow maximizes both rigor and impact across six phases from target selection to publication.</p>
-        <div class="wf-phases">
-          <span class="wf-phase">Target Selection</span><span class="wf-phase">Protocol Dev</span><span class="wf-phase">Pre-Registration</span><span class="wf-phase">Execution</span><span class="wf-phase">Writing</span><span class="wf-phase">Publication Strategy</span>
-        </div>
-        <a href="https://github.com/AdilShamim8/claude-research-excellence/blob/main/workflows/REPLICATION_STUDY.md" target="_blank" rel="noopener" class="wf-link">Read the protocol &nearr;</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ROADMAP -->
-<section id="roadmap">
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="section-num">05 — Roadmap</span>
-      <h2 class="section-title">From spark to <span class="italic">submission</span></h2>
-      <p class="section-lede">Two timelines, one philosophy: every phase has explicit deliverables, quality gates, and go/no-go criteria. The 28-week track is the gold standard; the 30-day rapid track is for time-sensitive work where data and methods are already in hand.</p>
-    </div>
-
-    <div class="roadmap-tabs reveal">
-      <button class="roadmap-tab active" data-panel="full">28-Week Full Track</button>
-      <button class="roadmap-tab" data-panel="rapid">30-Day Rapid Track</button>
-    </div>
-
-    <!-- FULL TRACK -->
-    <div class="roadmap-panel active" id="panel-full">
-      <div class="timeline">
-        <div class="tl-item">
-          <div class="tl-week">Week 1–2</div>
-          <div class="tl-title">Ideation</div>
-          <div class="tl-skills"><span class="tl-skill">01 Ideation</span></div>
-          <p class="tl-desc">Define research domain boundaries, scan recent publications, identify 15+ gaps, prioritize by significance/feasibility/novelty, formulate 3–5 candidate hypotheses, select primary hypothesis, and produce a research question document with team sign-off.</p>
-          <p class="tl-output"><strong>Output:</strong> Research Question Document + Hypothesis + Novelty Assessment</p>
-        </div>
-        <div class="tl-item">
-          <div class="tl-week">Week 3–6</div>
-          <div class="tl-title">Literature Command</div>
-          <div class="tl-skills"><span class="tl-skill">02 Literature</span><span class="tl-skill">09 Citation</span></div>
-          <p class="tl-desc">Systematic search across primary databases (200+ papers), full-text screening (40–70 paper corpus), deep reading in three groups (foundational, recent, cross-disciplinary), citation network analysis, synthesis narrative, and a four-section literature review draft with formatted bibliography.</p>
-          <p class="tl-output"><strong>Output:</strong> Literature Review Draft + Citation Network Map + Bibliography</p>
-        </div>
-        <div class="tl-item">
-          <div class="tl-week">Week 7–10</div>
-          <div class="tl-title">Methodology Architect</div>
-          <div class="tl-skills"><span class="tl-skill">03 Methodology</span><span class="tl-skill">08 Ethics</span></div>
-          <p class="tl-desc">Design experimental protocol, run statistical rigor checks, build reproducibility framework, detect bias, draft pre-registration, and submit ethics application. Pre-registration is non-negotiable — top journals will ask.</p>
-          <p class="tl-output"><strong>Output:</strong> Pre-Registered Protocol + Ethics Approval</p>
-        </div>
-        <div class="tl-item">
-          <div class="tl-week">Week 11–20</div>
-          <div class="tl-title">Data Intelligence</div>
-          <div class="tl-skills"><span class="tl-skill">04 Data</span></div>
-          <p class="tl-desc">The longest phase. Collect and clean data, run the analysis engine, generate publication-quality visualizations, and package a reproducible data repository. Every figure must tell a story a reviewer can understand in 30 seconds.</p>
-          <p class="tl-output"><strong>Output:</strong> Complete Results + Figures + Data Repository</p>
-        </div>
-        <div class="tl-item">
-          <div class="tl-week">Week 21–24</div>
-          <div class="tl-title">Writing Excellence</div>
-          <div class="tl-skills"><span class="tl-skill">05 Writing</span><span class="tl-skill">09 Citation</span></div>
-          <p class="tl-desc">Draft abstract, introduction, methods, results, discussion, and conclusion — each through its dedicated writing sub-prompt. Format citations in target journal style. Produce a complete first draft, not a polished final.</p>
-          <p class="tl-output"><strong>Output:</strong> Complete First Draft</p>
-        </div>
-        <div class="tl-item">
-          <div class="tl-week">Week 25–26</div>
-          <div class="tl-title">Quality Fortress</div>
-          <div class="tl-skills"><span class="tl-skill">06 Quality</span><span class="tl-skill">08 Ethics</span></div>
-          <p class="tl-desc">Subject the manuscript to adversarial peer review simulation, logic validation, novelty stress test, and reproducibility audit. Expect REJECT verdicts initially — most papers move to MAJOR REVISION with focused effort on the top 2–3 issues.</p>
-          <p class="tl-output"><strong>Output:</strong> Review-Ready Manuscript</p>
-        </div>
-        <div class="tl-item">
-          <div class="tl-week">Week 27</div>
-          <div class="tl-title">Journal Strategy</div>
-          <div class="tl-skills"><span class="tl-skill">07 Journal</span></div>
-          <p class="tl-desc">Run the venue selection matrix across 5–7 candidate journals scored on scope fit, audience fit, impact match, method affinity, and strategic value. Craft the cover letter and prepare reviewer response templates.</p>
-          <p class="tl-output"><strong>Output:</strong> Target Journal + Cover Letter + Response Templates</p>
-        </div>
-        <div class="tl-item">
-          <div class="tl-week">Week 28</div>
-          <div class="tl-title">Submission</div>
-          <div class="tl-skills"><span class="tl-skill">08 Ethics</span><span class="tl-skill">10 Impact</span></div>
-          <p class="tl-desc">Final ethics and compliance check, format verification against journal guidelines, submission, and immediate launch of the dissemination plan. Post-publication impact amplification begins the day you submit.</p>
-          <p class="tl-output"><strong>Output:</strong> Submitted Manuscript + Dissemination Plan</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- RAPID TRACK -->
-    <div class="roadmap-panel" id="panel-rapid">
-      <div class="timeline">
-        <div class="tl-item">
-          <div class="tl-week">Day 1–3</div>
-          <div class="tl-title">Rapid Ideation</div>
-          <div class="tl-skills"><span class="tl-skill">01 Ideation</span></div>
-          <p class="tl-desc">Compressed gap analysis focused on existing datasets or proven methods. Skip exploratory frontier scanning — go straight to the most tractable, highest-novelty question your data can answer.</p>
-          <p class="tl-output"><strong>Gate:</strong> Data ready + method proven + low ethics risk &rarr; proceed. Otherwise, abort to full workflow.</p>
-        </div>
-        <div class="tl-item">
-          <div class="tl-week">Day 4–7</div>
-          <div class="tl-title">Targeted Literature Review</div>
-          <div class="tl-skills"><span class="tl-skill">02 Literature</span></div>
-          <p class="tl-desc">Read only the 20–30 papers most directly relevant to your question. Skip broad frontier mapping. Build a tight positioning statement: what gap, why now, why you.</p>
-          <p class="tl-output"><strong>Output:</strong> Positioning statement + core citation set</p>
-        </div>
-        <div class="tl-item">
-          <div class="tl-week">Day 8–10</div>
-          <div class="tl-title">Streamlined Methodology</div>
-          <div class="tl-skills"><span class="tl-skill">03 Methodology</span></div>
-          <p class="tl-desc">Use a proven, validated method. No new instrument development. Pre-register a minimal protocol. The goal is reproducibility, not methodological innovation.</p>
-          <p class="tl-output"><strong>Output:</strong> Pre-registered minimal protocol</p>
-        </div>
-        <div class="tl-item">
-          <div class="tl-week">Day 11–15</div>
-          <div class="tl-title">Data Analysis</div>
-          <div class="tl-skills"><span class="tl-skill">04 Data</span></div>
-          <p class="tl-desc">Run the analysis. Quantify uncertainty honestly. Generate 3–5 publication-quality figures. No p-hacking — pre-registered analyses only.</p>
-          <p class="tl-output"><strong>Output:</strong> Results + figures</p>
-        </div>
-        <div class="tl-item">
-          <div class="tl-week">Day 16–20</div>
-          <div class="tl-title">Writing Sprint</div>
-          <div class="tl-skills"><span class="tl-skill">05 Writing</span></div>
-          <p class="tl-desc">Five days, full draft. Abstract last. Cut every sentence that doesn't earn its word count. Aim for short communication length — 2,500–4,000 words.</p>
-          <p class="tl-output"><strong>Output:</strong> Complete draft</p>
-        </div>
-        <div class="tl-item">
-          <div class="tl-week">Day 21–23</div>
-          <div class="tl-title">Quality Review</div>
-          <div class="tl-skills"><span class="tl-skill">06 Quality</span></div>
-          <p class="tl-desc">Run the adversarial review. Fix the top 3 issues only — ignore the rest for the rapid track. Honesty about limitations is mandatory.</p>
-          <p class="tl-output"><strong>Output:</strong> Revised draft</p>
-        </div>
-        <div class="tl-item">
-          <div class="tl-week">Day 24–25</div>
-          <div class="tl-title">Journal Strategy</div>
-          <div class="tl-skills"><span class="tl-skill">07 Journal</span></div>
-          <p class="tl-desc">Target journals with fast turnaround and short communication formats. PNAS, Nature Communications, journal short-report tracks, or arXiv-first for ML.</p>
-          <p class="tl-output"><strong>Output:</strong> Target journal + cover letter</p>
-        </div>
-        <div class="tl-item">
-          <div class="tl-week">Day 26–28</div>
-          <div class="tl-title">Revision Sprint</div>
-          <div class="tl-skills"><span class="tl-skill">05 Writing</span><span class="tl-skill">06 Quality</span></div>
-          <p class="tl-desc">Final polish pass. Format check. Co-author sign-off. This buffer absorbs the inevitable slippage of a compressed timeline.</p>
-          <p class="tl-output"><strong>Output:</strong> Submission-ready manuscript</p>
-        </div>
-        <div class="tl-item">
-          <div class="tl-week">Day 29–30</div>
-          <div class="tl-title">Final Submission</div>
-          <div class="tl-skills"><span class="tl-skill">08 Ethics</span><span class="tl-skill">10 Impact</span></div>
-          <p class="tl-desc">Submit. Immediately post a preprint (if journal permits). Draft a thread, blog post, and outreach list. Day 1 of the citation lifecycle starts now.</p>
-          <p class="tl-output"><strong>Output:</strong> Submitted manuscript + preprint + dissemination plan</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ARCHITECTURE -->
-<section id="architecture">
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="section-num">06 — Architecture</span>
-      <h2 class="section-title">A repository <span class="italic">structured for rigor</span></h2>
-      <p class="section-lede">Every folder serves a distinct phase of the research lifecycle — from the first flicker of an idea to the long tail of post-publication impact.</p>
-    </div>
-    <div class="arch-wrap">
-      <div class="arch-intro reveal">
-        <p>The repository is organized as a layered system: a master prompt activates the framework, ten skills handle specific research tasks, four workflows chain skills end-to-end, and templates plus evaluators provide format and assessment scaffolding.</p>
-        <div class="key-fact"><strong>ARIA Activation System</strong><span>The MASTER_PROMPT.md file is the entry point — it loads the activation grammar every skill responds to.</span></div>
-        <div class="key-fact"><strong>Domain Templates</strong><span>Seven venue-specific formats: IEEE, ACM, Nature Family, Science, NeurIPS/ICML/ICLR, arXiv, and Springer.</span></div>
-        <div class="key-fact"><strong>Quantitative Evaluators</strong><span>Four rubrics score your work on Novelty, Rigor, Clarity, and predicted Impact before you ever submit.</span></div>
-        <div class="key-fact"><strong>Domain Examples</strong><span>Worked example papers across computer science, biomedical, social science, and interdisciplinary research.</span></div>
-      </div>
-      <pre class="tree reveal"><span class="root">claude-research-excellence/</span>
-├── <span class="file">README.md</span>                              <span class="arrow">←</span> <span class="comment">You are here</span>
-├── <span class="file">MASTER_PROMPT.md</span>                       <span class="arrow">←</span> <span class="comment">The ARIA v3.1 activation system</span>
-├── <span class="file">SETUP.md</span>                               <span class="arrow">←</span> <span class="comment">Setup &amp; best practices</span>
-│
-├── <span class="dir">skills/</span>
-│   ├── <span class="dir">01_ideation/</span>                       <span class="arrow">←</span> <span class="comment">Research ideation engine</span>
-│   ├── <span class="dir">02_literature_command/</span>             <span class="arrow">←</span> <span class="comment">Deep literature mastery</span>
-│   ├── <span class="dir">03_methodology_architect/</span>          <span class="arrow">←</span> <span class="comment">Research design engine</span>
-│   ├── <span class="dir">04_data_intelligence/</span>              <span class="arrow">←</span> <span class="comment">Data strategy system</span>
-│   ├── <span class="dir">05_writing_excellence/</span>             <span class="arrow">←</span> <span class="comment">Writing mastery system</span>
-│   ├── <span class="dir">06_quality_fortress/</span>               <span class="arrow">←</span> <span class="comment">10-dim conference review &amp; PeerRead benchmarks</span>
-│   ├── <span class="dir">07_journal_strategy/</span>               <span class="arrow">←</span> <span class="comment">Publication targeting system</span>
-│   ├── <span class="dir">08_ethics_compliance/</span>              <span class="arrow">←</span> <span class="comment">Research ethics &amp; integrity</span>
-│   ├── <span class="dir">09_citation_mastery/</span>               <span class="arrow">←</span> <span class="comment">Citation strategy system</span>
-│   └── <span class="dir">10_impact_amplifier/</span>               <span class="arrow">←</span> <span class="comment">Post-publication acceleration</span>
-│
-├── <span class="dir">workflows/</span>
-│   ├── <span class="file">FULL_PAPER_WORKFLOW.md</span>             <span class="arrow">←</span> <span class="comment">28-week A→Z protocol</span>
-│   ├── <span class="file">RAPID_PUBLICATION.md</span>              <span class="arrow">←</span> <span class="comment">30-day fast-track</span>
-│   ├── <span class="file">INTERDISCIPLINARY.md</span>              <span class="arrow">←</span> <span class="comment">Cross-domain innovation</span>
-│   └── <span class="file">REPLICATION_STUDY.md</span>             <span class="arrow">←</span> <span class="comment">Replication &amp; extension</span>
-│
-├── <span class="dir">templates/</span>                             <span class="arrow">←</span> <span class="comment">Journal &amp; conference formats</span>
-│   ├── <span class="file">Nature_Family.md</span>  <span class="file">Science.md</span>  <span class="file">NeurIPS_ICML_ICLR.md</span>
-│   ├── <span class="file">IEEE.md</span>  <span class="file">ACM.md</span>  <span class="file">Springer.md</span>  <span class="file">arXiv.md</span>
-│
-├── <span class="dir">evaluators/</span>                            <span class="arrow">←</span> <span class="comment">Quantitative rubrics</span>
-│   ├── <span class="file">NOVELTY_SCORE_RUBRIC.md</span>
-│   ├── <span class="file">RIGOR_RUBRIC.md</span>
-│   ├── <span class="file">CLARITY_ANALYZER.md</span>
-│   └── <span class="file">IMPACT_PREDICTOR.md</span>
-│
-└── <span class="dir">examples/</span>                              <span class="arrow">←</span> <span class="comment">Domain-specific exemplar papers</span>
-    ├── <span class="file">computer_science.md</span>                <span class="arrow">←</span> <span class="comment">CS/AI: MENTOR LLM Reasoning</span>
-    ├── <span class="file">biomedical.md</span>                      <span class="arrow">←</span> <span class="comment">Biomed: CRISPR HSC Off-Target</span>
-    ├── <span class="file">social_science.md</span>                  <span class="arrow">←</span> <span class="comment">SocSci: Social Media Deliberation</span>
-    └── <span class="file">interdisciplinary.md</span>               <span class="arrow">←</span> <span class="comment">Interdisc: BioPhysiFold AI Drug Discovery</span></pre>
-    </div>
-  </div>
-</section>
-
-<!-- SKILLS -->
+<!-- ==================== 05 · SKILLS ==================== -->
 <section id="skills">
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="section-num">07 — The Ten Skills</span>
-      <h2 class="section-title">Ten instruments, <span class="italic">one orchestra</span></h2>
-      <p class="section-lede">Each skill is a self-contained expert you can summon with a single command. Activate one for a focused task, or chain several for an end-to-end workflow.</p>
-    </div>
-    <div class="skills-grid">
-      <div class="skill-card reveal"><div class="skill-head"><span class="skill-num">01</span><span class="skill-name">Ideation Engine</span></div><p class="skill-purpose">Transform vague ideas into razor-sharp research questions through field cartography, gap typology, question forging, novelty assessment, and contribution mapping.</p><span class="skill-activation">ACTIVATE: IDEATION</span></div>
-      <div class="skill-card reveal"><div class="skill-head"><span class="skill-num">02</span><span class="skill-name">Literature Command</span></div><p class="skill-purpose">Achieve genuine mastery &amp; synthesis of a literature — not summaries, but positioned arguments ending with implications for your work.</p><span class="skill-activation">ACTIVATE: LITERATURE</span></div>
-      <div class="skill-card reveal"><div class="skill-head"><span class="skill-num">03</span><span class="skill-name">Methodology Architect</span></div><p class="skill-purpose">Design methodology that pre-empts reviewer critiques — experimental design, statistical rigor, reproducibility framework, and bias detection.</p><span class="skill-activation">ACTIVATE: METHODOLOGY</span></div>
-      <div class="skill-card reveal"><div class="skill-head"><span class="skill-num">04</span><span class="skill-name">Data Intelligence</span></div><p class="skill-purpose">Transform raw results into compelling scientific findings with appropriate uncertainty quantification and publication-quality visualization.</p><span class="skill-activation">ACTIVATE: DATA</span></div>
-      <div class="skill-card reveal"><div class="skill-head"><span class="skill-num">05</span><span class="skill-name">Writing Excellence</span></div><p class="skill-purpose">Produce rigorous, clear, compelling scientific prose — abstract mastery, introduction craft, methods precision, results power, discussion depth.</p><span class="skill-activation">ACTIVATE: WRITING</span></div>
-      <div class="skill-card reveal"><div class="skill-head"><span class="skill-num">06</span><span class="skill-name">Quality Fortress</span></div><p class="skill-purpose">Conference-grade adversarial peer review across 11 technical dimensions &amp; VLM visual figure inspection, calibrated against PeerRead (14,784 reviews; 83.8% pairwise ranking accuracy across 100 benchmark pools).</p><span class="skill-activation">ACTIVATE: QUALITY</span></div>
-      <div class="skill-card reveal"><div class="skill-head"><span class="skill-num">07</span><span class="skill-name">Journal Strategy</span></div><p class="skill-purpose">Match paper to venue &amp; craft winning submission materials — venue selection matrix, cover letter engine, reviewer response mastery.</p><span class="skill-activation">ACTIVATE: JOURNAL</span></div>
-      <div class="skill-card reveal"><div class="skill-head"><span class="skill-num">08</span><span class="skill-name">Ethics &amp; Compliance</span></div><p class="skill-purpose">Ensure research integrity across all dimensions — bias detection, reproducibility audit, pre-registration, IRB compliance.</p><span class="skill-activation">ACTIVATE: ETHICS</span></div>
-      <div class="skill-card reveal"><div class="skill-head"><span class="skill-num">09</span><span class="skill-name">Citation Mastery</span></div><p class="skill-purpose">Build a strategic citation architecture — not exhaustive bibliography, but a network that positions your work and anticipates reviewers.</p><span class="skill-activation">ACTIVATE: CITATION</span></div>
-      <div class="skill-card reveal"><div class="skill-head"><span class="skill-num">10</span><span class="skill-name">Impact Amplifier</span></div><p class="skill-purpose">Maximize post-publication reach and citations — dissemination plan, preprint strategy, social media, press outreach, follow-up work.</p><span class="skill-activation">ACTIVATE: IMPACT</span></div>
-    </div>
+  <div class="sechead">
+    <div class="no">§05 · The ten skills</div>
+    <h2>Stations on the assembly line</h2>
+    <div class="tag">Each directory holds an authoritative SKILL.md plus specialized modular prompts.</div>
+  </div>
+  <div class="grid2">
+    <div class="card"><span class="c-no">01 · skills/01_ideation</span><span class="c-t">Ideation Engine</span><span class="c-d">Gap typology, contrarian probes, hypothesis forge, and a scored novelty certificate with go/no-go bands.</span><span class="c-c">ACTIVATE: IDEATION</span></div>
+    <div class="card"><span class="c-no">02 · skills/02_literature_command</span><span class="c-t">Literature Command</span><span class="c-d">Temporal mapping, intellectual genealogy, consensus mapping — synthesis, never chronological summary.</span><span class="c-c">ACTIVATE: LITERATURE</span></div>
+    <div class="card"><span class="c-no">03 · skills/03_methodology_architect</span><span class="c-t">Methodology Architect</span><span class="c-d">Design selection matrices, threat-to-validity audits, statistical power plans, pre-registration language.</span><span class="c-c">ACTIVATE: METHODOLOGY</span></div>
+    <div class="card"><span class="c-no">04 · skills/04_data_intelligence</span><span class="c-t">Data Intelligence</span><span class="c-d">Results audits, effect-size architecture, colorblind-safe figure specs, the 30-second figure test.</span><span class="c-c">ACTIVATE: DATA</span></div>
+    <div class="card"><span class="c-no">05 · skills/05_writing_excellence</span><span class="c-t">Writing Excellence</span><span class="c-d">Seven-sentence abstracts, introduction arcs, methods precision, discussion defense, closing impact.</span><span class="c-c">ACTIVATE: WRITING</span></div>
+    <div class="card"><span class="c-no">06 · skills/06_quality_fortress</span><span class="c-t">Quality Fortress</span><span class="c-d">Conference-grade review: 11-dimension audit, VLM figure inspection, PeerRead-calibrated relative rank.</span><span class="c-c">ACTIVATE: QUALITY</span></div>
+    <div class="card"><span class="c-no">07 · skills/07_journal_strategy</span><span class="c-t">Journal Strategy</span><span class="c-d">Venue decision matrix across five dimensions, editor cover letters, reviewer-response mastery.</span><span class="c-c">ACTIVATE: JOURNAL</span></div>
+    <div class="card"><span class="c-no">08 · skills/08_ethics_compliance</span><span class="c-t">Ethics &amp; Compliance</span><span class="c-d">Bias detection, IRB checklists, FAIR data management plans, dual-use safety review.</span><span class="c-c">ACTIVATE: ETHICS</span></div>
+    <div class="card"><span class="c-no">09 · skills/09_citation_mastery</span><span class="c-t">Citation Mastery</span><span class="c-d">Citation cartography, balance audits, multi-format bibliography engines, hallucination screening.</span><span class="c-c">ACTIVATE: CITATION</span></div>
+    <div class="card"><span class="c-no">10 · skills/10_impact_amplifier</span><span class="c-t">Impact Amplifier</span><span class="c-d">Press releases, policy translation memos, social threads, and the follow-up research agenda.</span><span class="c-c">ACTIVATE: IMPACT</span></div>
   </div>
 </section>
 
-<!-- SKILL DEEP DIVE -->
-<section id="deepdive" class="deepdive">
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="section-num">08 — Skill Deep Dive</span>
-      <h2 class="section-title">Inside the <span class="italic">Ideation Engine</span></h2>
-      <p class="section-lede">A look under the hood of Skill 01. Every CRES skill follows this same disciplined structure: phases with explicit quality gates, no skipping, no advancing until the current phase meets its criteria.</p>
-    </div>
-    <div class="dd-grid">
-      <div class="dd-intro reveal">
-        <h3>The five-phase protocol</h3>
-        <p>The Ideation Engine runs a strict five-phase protocol. Each phase produces concrete artifacts that must clear a quality gate before advancing. This isn't brainstorming — it's a systematic method for locating the highest-novelty, most-feasible, most-impactful question your resources can answer.</p>
-        <p>The skill integrates forward into Literature Command (02) for gap validation, Methodology Architect (03) for design, and Writing Excellence (05) for articulation. Outputs from Phase 5 directly feed the next skill in the chain.</p>
-        <div class="meta-row">
-          <div><span class="k">Version</span><span class="v">2.0.0</span></div>
-          <div><span class="k">Phases</span><span class="v">5</span></div>
-          <div><span class="k">Quality Gates</span><span class="v">5</span></div>
-          <div><span class="k">Gap Types</span><span class="v">7-type taxonomy</span></div>
-          <div><span class="k">Outputs</span><span class="v">RQ doc + hypothesis + novelty score</span></div>
-        </div>
-      </div>
-      <div class="dd-phases reveal">
-        <div class="dd-phase">
-          <div class="dd-phase-head"><span class="dd-phase-num">PHASE 1</span><h4>Field Cartography</h4></div>
-          <p>Map the intellectual terrain. Frontier Scan identifies 5 active research streams and tags each as Advancing, Plateauing, or Retreating. Adjacency Scan finds 3 neighboring fields whose methods could cross-pollinate. Contrarian Probe identifies 3 widely-accepted claims that have never been rigorously challenged.</p>
-          <div class="gates"><span class="gate ok">5+ frontier streams</span><span class="gate ok">3 adjacencies</span><span class="gate ok">3 contrarian probes</span></div>
-        </div>
-        <div class="dd-phase">
-          <div class="dd-phase-head"><span class="dd-phase-num">PHASE 2</span><h4>Gap Typology</h4></div>
-          <p>Classify gaps using the seven-type taxonomy: Knowledge, Method, Theory, Application, Replication, Population, Mechanistic. Score each on Severity, Feasibility, Impact, and Novelty. Compute the Gap Priority Index (GPI) and rank. Only gaps scoring ≥ 3.0 advance.</p>
-          <div class="gates"><span class="gate ok">3+ gaps</span><span class="gate ok">2+ gap types</span><span class="gate ok">GPI ≥ 3.0</span></div>
-        </div>
-        <div class="dd-phase">
-          <div class="dd-phase-head"><span class="dd-phase-num">PHASE 3</span><h4>Question Forge</h4></div>
-          <p>Transform prioritized gaps into precise, falsifiable research questions. Each question must be answerable in a single sentence, falsifiable, and tied to a specific contribution type. Generate 3–5 candidate questions per gap.</p>
-          <div class="gates"><span class="gate ok">Single-sentence</span><span class="gate ok">Falsifiable</span><span class="gate ok">Contribution-typed</span></div>
-        </div>
-        <div class="dd-phase">
-          <div class="dd-phase-head"><span class="dd-phase-num">PHASE 4</span><h4>Hypothesis Forge</h4></div>
-          <p>Convert questions into testable hypotheses. Map each to potential methodologies. Evaluate testability and falsifiability. Identify primary hypothesis plus 1–2 backups. The hypothesis must survive the question: "Could a well-designed study plausibly answer this?"</p>
-          <div class="gates"><span class="gate ok">Testable</span><span class="gate ok">Falsifiable</span><span class="gate ok">Method-mapped</span></div>
-        </div>
-        <div class="dd-phase">
-          <div class="dd-phase-head"><span class="dd-phase-num">PHASE 5</span><h4>Novelty Calculator &amp; Contribution Map</h4></div>
-          <p>Score novelty across dimensions: conceptual, methodological, empirical, theoretical. At least two dimensions must score high. Produce a contribution map specifying what's genuinely new. Output: the Research Question Document that feeds Skill 02.</p>
-          <div class="gates"><span class="gate ok">2+ novelty dims</span><span class="gate ok">Contribution map</span><span class="gate ok">RQ Document v1</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- EXPERT REVIEW -->
-<section id="quality" class="deepdive">
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="section-num">09 — Conference-Grade Expert Review</span>
-      <h2 class="section-title">Peer review at <span class="italic">area chair caliber</span></h2>
-      <p class="section-lede">Quality Fortress (Skill 06) deploys an 11-dimension audit framework, VLM multi-modal figure inspection, and multi-agent adversarial panel calibrated against real-world benchmark datasets: 14,784 human reviews from PeerRead, 100-pool pairwise validation (83.8% accuracy), AAAI 2026 reverse prompting, and the NeurIPS 21-point reproducibility benchmark.</p>
-    </div>
-
-    <!-- Benchmark Provenance Row -->
-    <div class="prov-grid reveal">
-      <div class="prov-card">
-        <div class="prov-metric">14,784</div>
-        <div class="prov-title">PeerRead Corpus</div>
-        <div class="prov-desc">Calibrated against Kang et al. (NAACL 2018) containing real human reviewer comments, numerical scores, and accept/reject decisions from ICLR, NeurIPS, and ACL.</div>
-      </div>
-      <div class="prov-card">
-        <div class="prov-metric">83.8%</div>
-        <div class="prov-title">100-Pool Benchmark</div>
-        <div class="prov-desc">Empirical pairwise ranking accuracy validated on 100 pools from PeerRead ICLR 2017, accurately predicting accepted papers over rejected drafts.</div>
-      </div>
-      <div class="prov-card">
-        <div class="prov-metric">VLM</div>
-        <div class="prov-title">Visual &amp; Multi-Modal</div>
-        <div class="prov-desc">Page-snapshot layout and figure aesthetics audit evaluating subfigure alignment, 300+ DPI vector clarity, and Okabe-Ito colorblind accessibility.</div>
-      </div>
-      <div class="prov-card">
-        <div class="prov-metric">21-Point</div>
-        <div class="prov-title">NeurIPS Reproducibility</div>
-        <div class="prov-desc">Official Pineau et al. reproducibility protocol auditing assumptions, mathematical derivations, random seeds, error bars, and dataset licenses.</div>
-      </div>
-    </div>
-
-    <!-- 11 Dimension Grid -->
-    <div style="margin-top: 56px;" class="reveal">
-      <h3 style="font-family: var(--serif); font-size: 28px; margin-bottom: 8px; color: var(--text);">The 11-Dimension Technical Audit Framework</h3>
-      <p style="font-size: 15px; color: var(--text-dim); max-width: 760px; line-height: 1.7;">Every draft is audited across 11 distinct failure axes with strict evidence-anchoring requirements. Zero speculative feedback — every critique points to an exact equation, table, section, or figure.</p>
-      
-      <div class="audit-grid">
-        <div class="audit-card">
-          <span class="audit-tag">[A] Logic &amp; Argumentation</span>
-          <div class="audit-title">Deductive Validity &amp; Boundary Conditions</div>
-          <div class="audit-desc">Audits Toulmin argument structures, falsifiability of hypotheses, and prevents correlational claims from masquerading as causal mechanisms.</div>
-        </div>
-        <div class="audit-card">
-          <span class="audit-tag">[B] Empirical Rigor &amp; Consistency</span>
-          <div class="audit-title">Cross-Table Numerical Verification</div>
-          <div class="audit-desc">Cross-references numbers across Abstract, Tables, and Figures. Flags arithmetic mismatches, missing seeds, and untuned baseline comparisons.</div>
-        </div>
-        <div class="audit-card">
-          <span class="audit-tag">[C] Writing Momentum</span>
-          <div class="audit-title">Cognitive Density &amp; Active Syntax</div>
-          <div class="audit-desc">Eliminates passive bloat, ensures topic-stress alignment, and guarantees the central thesis is crystal clear on first read.</div>
-        </div>
-        <div class="audit-card">
-          <span class="audit-tag">[D] Citation Cartography</span>
-          <div class="audit-title">Balanced Lineage &amp; Anti-Hallucination</div>
-          <div class="audit-desc">Audits against S2ORC citation graphs to ensure seminal works and 2024–2026 baselines are properly situated without citation gaps.</div>
-        </div>
-        <div class="audit-card">
-          <span class="audit-tag">[E] Mathematical Integrity</span>
-          <div class="audit-title">Symbol Collision &amp; Derivation Flow</div>
-          <div class="audit-desc">Scans for overloaded notation (e.g. θ vs τ collisions), dimensional consistency, and complete proof continuity between text and appendix.</div>
-        </div>
-        <div class="audit-card">
-          <span class="audit-tag">[F] Double-Blind Compliance</span>
-          <div class="audit-title">Anonymity &amp; Metadata Sanitization</div>
-          <div class="audit-desc">Scans for deanonymizing repository links, author self-citations in first person, institutional markers, and PDF document metadata.</div>
-        </div>
-        <div class="audit-card">
-          <span class="audit-tag">[G] Venue Standards</span>
-          <div class="audit-title">Page Budgets &amp; Mandatory Disclosures</div>
-          <div class="audit-desc">Enforces strict publisher formatting (Nature, IEEE, ACM, NeurIPS), compute resource accounting, and ethics/broader impact statements.</div>
-        </div>
-        <div class="audit-card">
-          <span class="audit-tag">[H] Academic Tone Purity</span>
-          <div class="audit-title">Anti-AI Smell &amp; Boilerplate Purge</div>
-          <div class="audit-desc">Strips out telltale LLM boilerplate ("delve", "testament", "pivotal", "furthermore"), marketing buzzwords, and unsubstantiated superlatives.</div>
-        </div>
-        <div class="audit-card">
-          <span class="audit-tag">[I] Narrative Hierarchy</span>
-          <div class="audit-title">Thesis Alignment Across Sections</div>
-          <div class="audit-desc">Verifies that every promise made in the Introduction is fulfilled in the Results and defended against boundary conditions in the Discussion.</div>
-        </div>
-        <div class="audit-card">
-          <span class="audit-tag">[J] Reviewer Red Flags</span>
-          <div class="audit-title">Puffery &amp; "First Ever" Eradication</div>
-          <div class="audit-desc">Identifies phrase-level triggers ("we are the first", "obviously", "drastic leap") that provoke reviewer skepticism and desk rejects.</div>
-        </div>
-        <div class="audit-card">
-          <span class="audit-tag">[K] Visual Aesthetics (VLM)</span>
-          <div class="audit-title">Subfigure Alignment &amp; Accessibility</div>
-          <div class="audit-desc">Conducts multi-modal visual inspection of figures and page snapshots. Audits subfigure labels (a, b), axis font legibility at column width, 300+ DPI vector clarity, and Okabe-Ito colorblind accessibility.</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- EVALUATORS -->
+<!-- ==================== 06 · EVALUATORS ==================== -->
 <section id="evaluators">
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="section-num">10 — Quantitative Evaluators</span>
-      <h2 class="section-title">Four quantitative <span class="italic">0–100 rubrics</span></h2>
-      <p class="section-lede">Prior to journal submission, CRES audits manuscripts using four independent, weighted evaluation engines. Every dimension features concrete point breakdowns and hard go/no-go thresholds.</p>
+  <div class="sechead">
+    <div class="no">§06 · The gates</div>
+    <h2>Four quantitative evaluators</h2>
+    <div class="tag">Weighted 0–100 rubrics with explicit submission thresholds — a manuscript that cannot pass does not ship.</div>
+  </div>
+  <div class="ladder">
+    <div class="rung hl">
+      <div class="rn">Novelty Score<span class="lv">evaluators/NOVELTY_SCORE_RUBRIC</span></div>
+      <div class="rd">Conceptual (25%), methodological (25%), empirical (20%), translational utility (15%), interdisciplinary synthesis (15%). Top-tier gate for <b>Nature / NeurIPS</b>-grade claims.</div>
+      <div class="rc">≥ 70<small>/100</small></div>
     </div>
-
-    <div class="eval-grid reveal">
-      <div class="eval-card">
-        <span class="eval-thresh">Target: ≥ 70 / 100</span>
-        <div class="eval-name">Novelty Score</div>
-        <div class="eval-desc">Evaluates originality and non-obviousness across 5 weighted dimensions calibrated against top-tier conference paradigms.</div>
-        <ul class="eval-weights">
-          <li><span>Conceptual Novelty</span><span>25%</span></li>
-          <li><span>Methodological Novelty</span><span>25%</span></li>
-          <li><span>Empirical Novelty</span><span>20%</span></li>
-          <li><span>Translational Utility</span><span>15%</span></li>
-          <li><span>Interdisciplinary Synthesis</span><span>15%</span></li>
-        </ul>
-      </div>
-
-      <div class="eval-card">
-        <span class="eval-thresh">Target: ≥ 75 / 100</span>
-        <div class="eval-name">Rigor Rubric</div>
-        <div class="eval-desc">Assesses causal identification, statistical power, multiple comparison corrections, and open science artifacts.</div>
-        <ul class="eval-weights">
-          <li><span>Internal &amp; External Validity</span><span>25%</span></li>
-          <li><span>Statistical Power &amp; Inference</span><span>25%</span></li>
-          <li><span>Reproducibility &amp; Open Science</span><span>20%</span></li>
-          <li><span>Baseline Fairness &amp; Controls</span><span>15%</span></li>
-          <li><span>Boundary Sensitivity</span><span>15%</span></li>
-        </ul>
-      </div>
-
-      <div class="eval-card">
-        <span class="eval-thresh">Target: ≥ 80 / 100</span>
-        <div class="eval-name">Clarity Analyzer</div>
-        <div class="eval-desc">Evaluates scientific communication, rhetorical momentum, cognitive load, and 30-second self-contained visual grammar.</div>
-        <ul class="eval-weights">
-          <li><span>Macro-Structure Momentum</span><span>20%</span></li>
-          <li><span>Sentence Micro-Clarity</span><span>20%</span></li>
-          <li><span>Cognitive Load Density</span><span>15%</span></li>
-          <li><span>Visual Grammar &amp; Figures</span><span>15%</span></li>
-          <li><span>Executive Abstract Calibration</span><span>15%</span></li>
-        </ul>
-      </div>
-
-      <div class="eval-card">
-        <span class="eval-thresh">Target: ≥ 75 / 100</span>
-        <div class="eval-name">Impact Predictor</div>
-        <div class="eval-desc">Projects 24–60 month citation trajectory, field-shaping longevity, cross-disciplinary diffusion, and policy adoption.</div>
-        <ul class="eval-weights">
-          <li><span>Theoretical Longevity</span><span>25%</span></li>
-          <li><span>Tool &amp; Method Adoption</span><span>25%</span></li>
-          <li><span>Cross-Disciplinary Diffusion</span><span>20%</span></li>
-          <li><span>Policy &amp; Industrial Utility</span><span>15%</span></li>
-          <li><span>Obsolescence Robustness</span><span>15%</span></li>
-        </ul>
-      </div>
+    <div class="rung">
+      <div class="rn">Rigor Score<span class="lv">evaluators/RIGOR_RUBRIC</span></div>
+      <div class="rd">Validity (25%), statistical power &amp; inference (25%), reproducibility &amp; open science (20%), baseline fairness (15%), boundary conditions (15%). Mandatory pre-submission audit.</div>
+      <div class="rc">≥ 75<small>/100</small></div>
+    </div>
+    <div class="rung">
+      <div class="rn">Clarity Score<span class="lv">evaluators/CLARITY_ANALYZER</span></div>
+      <div class="rd">Hourglass architecture, paragraph cohesion, cognitive-load economy, visual grammar, terminology precision, abstract calibration — six axes of communication quality.</div>
+      <div class="rc">≥ 80<small>/100</small></div>
+    </div>
+    <div class="rung hl">
+      <div class="rn">Impact Prediction<span class="lv">evaluators/IMPACT_PREDICTOR</span></div>
+      <div class="rd">24–60-month citation trajectory: theoretical longevity, tool adoption, cross-disciplinary diffusion, translational &amp; policy utility, field-shaping robustness.</div>
+      <div class="rc">≥ 75<small>/100</small></div>
     </div>
   </div>
 </section>
 
-<!-- MATRIX -->
-<section id="matrix" class="matrix-section">
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="section-num">11 — Skill Combination Matrix</span>
-      <h2 class="section-title">Compose skills for <span class="italic">every situation</span></h2>
-      <p class="section-lede">Different research situations call for different skill combinations. The matrix below shows the recommended chains for the most common scenarios — drawn from the official SETUP.md guide.</p>
+<!-- ==================== 07 · QUALITY FORTRESS ==================== -->
+<section id="quality">
+  <div class="sechead">
+    <div class="no">§07 · The adversarial core</div>
+    <h2>Quality Fortress — peer review before peer review</h2>
+    <div class="tag">Accepts LaTeX, PDF, Word, and Markdown. Calibrated on real conference review corpora.</div>
+  </div>
+  <p class="lede">Skill 06 simulates a senior area chair's board: a security scan (prompt-injection defense, double-blind leaks, unicode obfuscation), an <b>11-dimension technical audit</b> with VLM figure inspection, and a five-persona adversarial panel whose concerns consolidate into one meta-review with a priority-ordered fix list.</p>
+  <div class="tbl-scroll">
+    <table class="tbl">
+      <thead><tr><th>Empirical grounding</th><th>What it is</th><th>Role in the system</th><th>Verified via</th></tr></thead>
+      <tbody>
+        <tr><td><b>PeerRead</b> (Kang et al., NAACL 2018)</td><td>14,784 paper drafts with accept/reject decisions from ICLR 2017, NeurIPS 2013–2017, ACL 2017; 10.7K with full expert reviews</td><td>Empirical thresholds for acceptance probability and rejection triggers</td><td><code>arXiv:1804.09635</code></td></tr>
+        <tr><td><b>PeerRead 100-pool benchmark</b></td><td>100 sampled ICLR 2017 pools</td><td>Validates the relative-rank engine: <b>83.8% pairwise ordering accuracy</b></td><td>skills/06 docs</td></tr>
+        <tr><td><b>AAAI 2026 calibration</b></td><td>Reviewer guidelines &amp; decision boundaries, 40th AAAI (Singapore, Jan 20–27, 2026)</td><td>Reverse-engineered reviewer decision probes</td><td><code>aaai.org/conference/aaai/aaai-26</code></td></tr>
+        <tr><td><b>OpenReview venue pools</b></td><td>Public review archives, ICLR / NeurIPS / ICML / CoRL, 2020–2026</td><td>Relative rank against the live accepted-paper distribution</td><td><code>openreview.net</code></td></tr>
+        <tr><td><b>NeurIPS reproducibility checklist</b> (Pineau et al., JMLR 2021)</td><td>The standardized 21-point artifact audit</td><td>Reproducibility &amp; open-science scoring</td><td>JMLR 22 (164)</td></tr>
+        <tr><td><b>S2ORC + SciCite</b> (Lo 2020; Cohan 2019)</td><td>81M+ full-text papers with classified citation intents</td><td>Citation cartography &amp; attribution auditing</td><td>ACL Anthology</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="judgebox">
+    <div class="jb-k">The 11 dimensions, compressed</div>
+    <p><b>[A]</b> logic &amp; argumentation · <b>[B]</b> empirical rigor &amp; cross-table consistency · <b>[C]</b> writing quality · <b>[D]</b> citation cartography (zero hallucinated references) · <b>[E]</b> mathematical &amp; notational integrity · <b>[F]</b> double-blind compliance · <b>[G]</b> venue formatting · <b>[H]</b> anti-AI-tone purity · <b>[I]</b> narrative structure · <b>[J]</b> red flags &amp; puffery · <b>[K]</b> visual &amp; figure aesthetics (VLM).</p>
+  </div>
+</section>
+
+<!-- ==================== 08 · DATASETS ==================== -->
+<section id="datasets">
+  <div class="sechead">
+    <div class="no">§08 · Provenance</div>
+    <h2>Real-world datasets, collected and re-verified</h2>
+    <div class="tag">Every exemplar paper is grounded in public data you can download today. All identifiers below were re-resolved on 30 October 2026.</div>
+  </div>
+  <div class="tbl-scroll">
+    <table class="tbl">
+      <thead><tr><th>Domain</th><th>Exemplar study</th><th>Verified datasets &amp; registries</th><th>Primary sources (resolvable)</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><b>Computer Science</b></td>
+          <td><b>MENTOR</b> — metacognitive self-regulation for LLM reasoning</td>
+          <td>GSM8K · SVAMP · StrategyQA · ProofWriter · BIG-bench Hard</td>
+          <td><code>arXiv:2111.03797</code> · <code>arXiv:2103.07191</code> · <code>10.1162/tacl_a_00370</code> · <code>10.18653/v1/2021.findings-acl.317</code> · <code>arXiv:2210.09261</code></td>
+        </tr>
+        <tr>
+          <td><b>Biomedical</b></td>
+          <td><b>CRISPR editing landscapes</b> in sickle-cell HSCs</td>
+          <td>CTX001 trial (Phase 1/2/3, Vertex) · GUIDE-seq · BCL11A +58 erythroid enhancer</td>
+          <td><code>NCT03745287</code> · <code>10.1038/nbt.3117</code> · Frangoul 2021 <code>10.1056/NEJMoa2031054</code> · Frangoul 2024 <code>10.1056/NEJMoa2309676</code></td>
+        </tr>
+        <tr>
+          <td><b>Social Science</b></td>
+          <td><b>Social media &amp; democratic deliberation</b>, N = 1,500 three-experiment design</td>
+          <td>1,124-paper PRISMA corpus · Discourse Quality Index · pre-registered panel</td>
+          <td>Bail 2018 <code>10.1073/pnas.1804840115</code> · Vosoughi 2018 <code>10.1126/science.aap9559</code> · Steenbergen 2003 <code>10.1057/palgrave.cep.6110002</code></td>
+        </tr>
+        <tr>
+          <td><b>Interdisciplinary</b></td>
+          <td><b>BioPhysiFold</b> — biophysically-informed foundation models for drug discovery</td>
+          <td>ChEMBL Release 37 (2.92M compounds) · ZINC20 · PubChem · PDBbind v2020 · MoleculeNet</td>
+          <td><code>10.1093/nar/gky1075</code> · <code>10.1021/acs.jcim.0c00675</code> · <code>10.1093/nar/gkaa971</code> · <code>10.1021/acs.accounts.6b00491</code> · <code>10.1039/c7sc02664a</code></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="judgebox warn">
+    <div class="jb-k">Verification policy — how this release was built</div>
+    <p>DOIs are resolved against doi.org and Crossref; trial IDs against the ClinicalTrials.gov API; database versions against live vendor APIs (ChEMBL 37, PDBbind 2025); journal metrics against the 2025 JCR release. Unregistered identifiers are classified as <b>critical flaws and corrected or removed</b> — v3.0 fixed six of them. Illustrative placeholders inside examples are explicitly labeled so they can never masquerade as real registrations.</p>
+  </div>
+</section>
+
+<!-- ==================== 09 · WORKFLOWS + TEMPLATES ==================== -->
+<section id="workflows">
+  <div class="sechead">
+    <div class="no">§09 · Timelines &amp; formats</div>
+    <h2>Workflows and venue templates</h2>
+    <div class="tag">Four pipelines for four ambitions; seven blueprints for seven publishing houses.</div>
+  </div>
+  <div class="tbl-scroll">
+    <table class="tbl">
+      <thead><tr><th>Workflow</th><th>Timeline</th><th>Use when</th><th></th></tr></thead>
+      <tbody>
+        <tr><td><b>Full Paper Lifecycle</b></td><td>28 weeks · 8 phases</td><td>You have a topic and want the maximum-quality pipeline</td><td><span class="badge b-ac">comprehensive</span></td></tr>
+        <tr><td><b>Rapid Publication</b></td><td>30 days</td><td>A breakthrough needs a priority claim — without sacrificing rigor</td><td><span class="badge b-wa">compressed</span></td></tr>
+        <tr><td><b>Interdisciplinary Innovation</b></td><td>stage-gated</td><td>The work bridges two fields and must satisfy reviewers from both</td><td><span class="badge b-ac">cross-domain</span></td></tr>
+        <tr><td><b>Replication &amp; Extension</b></td><td>stage-gated</td><td>Replicating prior work with pre-registration and equivalence testing</td><td><span class="badge b-ok">pre-registered</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="tbl-scroll">
+    <table class="tbl">
+      <thead><tr><th>Template</th><th>Venue</th><th>Current limit (checked Oct 2026)</th></tr></thead>
+      <tbody>
+        <tr><td><b>Nature_Family.md</b></td><td>Nature &amp; Nature Portfolio</td><td>Article ≈ 2,500 words (6 pages) to 4,300 words (8 pages); Methods ≤ 3,000; summary ≤ 200</td></tr>
+        <tr><td><b>Science.md</b></td><td>Science (AAAS)</td><td>Research Article ~4,500 words; Report ~2,500 words</td></tr>
+        <tr><td><b>NeurIPS_ICML_ICLR.md</b></td><td>Top ML conferences</td><td>9-page main text (NeurIPS 2026), proofs &amp; error bars, ethics statement</td></tr>
+        <tr><td><b>IEEE.md</b></td><td>IEEE Transactions</td><td>Two-column, formal math, complexity analysis</td></tr>
+        <tr><td><b>ACM.md</b></td><td>ACM SIGCONF / TOCS</td><td>CCS concepts, artifact badges</td></tr>
+        <tr><td><b>Springer.md</b></td><td>LNCS &amp; Springer journals</td><td>Monograph &amp; journal standards</td></tr>
+        <tr><td><b>arXiv.md</b></td><td>arXiv preprints</td><td>Citation-velocity-first preprint architecture</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="note"><b>Journal quick reference</b> (verified 2025 JCR release, June 2026): Nature 56.1 · Science 45.8 (2024) · NEJM 84.5 · Cell 45.1 · PNAS 9.5 · Nature Machine Intelligence 29.8. Official conference acceptance rates, latest cycles: NeurIPS 24.5% (2025) · ICML 26.9% (2025) · ICLR 32% (2025). Full table in <code>SETUP.md</code>.</p>
+</section>
+
+<!-- ==================== 10 · VERSION ==================== -->
+<section id="version">
+  <div class="sechead">
+    <div class="no">§10 · Release history</div>
+    <h2>Version 3.0 — the October 2026 rebrand release</h2>
+    <div class="tag">This is the newest version. All facts on this page were re-verified against live registries on 30 October 2026.</div>
+  </div>
+  <div class="ladder">
+    <div class="rung hl">
+      <div class="rn">v3.0<span class="lv">30 Oct 2026 · current</span></div>
+      <div class="rd"><b>Repository renamed CRES → ARES</b> to match the new GitHub home. 40+ files rebranded; six unregistered/mismatched DOIs corrected; clinical trial ID fixed to <code>NCT03745287</code>; ChEMBL updated to Release 37; PeerRead identifier corrected to <code>arXiv:1804.09635</code>; the unverifiable "Poldrack" attribution replaced with the verified AgentReview framework (Jin et al. 2024, <code>arXiv:2406.12708</code>); journal metrics refreshed to the 2025 JCR release; Nature word-limit guidance aligned with the current author guide; broken skill cross-references repaired; new beginner-first README and this page.</div>
+      <div class="rc">3.0<small>this release</small></div>
     </div>
-    <div class="matrix reveal">
-      <div class="matrix-row header"><div>Task</div><div>Skills to Activate</div></div>
-      <div class="matrix-row"><div class="matrix-task">Starting from scratch</div><div class="matrix-flow"><span class="chip">IDEATION</span><span class="arrow">&rarr;</span><span class="chip">LITERATURE</span><span class="arrow">&rarr;</span><span class="chip">METHODOLOGY</span></div></div>
-      <div class="matrix-row"><div class="matrix-task">Have data, need to write</div><div class="matrix-flow"><span class="chip">DATA</span><span class="arrow">&rarr;</span><span class="chip">WRITING</span><span class="arrow">&rarr;</span><span class="chip">QUALITY</span></div></div>
-      <div class="matrix-row"><div class="matrix-task">Almost ready to submit</div><div class="matrix-flow"><span class="chip">QUALITY</span><span class="arrow">&rarr;</span><span class="chip">JOURNAL</span><span class="arrow">&rarr;</span><span class="chip">CITATION</span></div></div>
-      <div class="matrix-row"><div class="matrix-task">Just got reviewer comments</div><div class="matrix-flow"><span class="chip">QUALITY</span> <span style="color:var(--text-mute);font-size:11px;">(revision mode)</span><span class="arrow">&rarr;</span><span class="chip">JOURNAL</span></div></div>
-      <div class="matrix-row"><div class="matrix-task">Post-acceptance</div><div class="matrix-flow"><span class="chip">IMPACT</span></div></div>
-      <div class="matrix-row"><div class="matrix-task">Rapid publication needed</div><div class="matrix-flow"><span class="chip">IDEATION</span><span class="arrow">&rarr;</span><span class="chip">LITERATURE</span><span class="arrow">&rarr;</span><span class="chip">METHODOLOGY</span><span class="arrow">&rarr;</span><span class="chip">DATA</span><span class="arrow">&rarr;</span><span class="chip">WRITING</span><span class="arrow">&rarr;</span><span class="chip">QUALITY</span> <span style="color:var(--text-mute);font-size:11px;">(compressed)</span></div></div>
-      <div class="matrix-row"><div class="matrix-task">Interdisciplinary project</div><div class="matrix-flow"><span class="chip">IDEATION</span> <span style="color:var(--text-mute);font-size:11px;">(adjacency scan)</span><span class="arrow">&rarr;</span><span class="chip">LITERATURE</span><span class="arrow">&rarr;</span><span class="chip">METHODOLOGY</span> <span style="color:var(--text-mute);font-size:11px;">(cross-domain)</span></div></div>
-      <div class="matrix-row"><div class="matrix-task">Replication study</div><div class="matrix-flow"><span class="chip">IDEATION</span><span class="arrow">&rarr;</span><span class="chip">LITERATURE</span><span class="arrow">&rarr;</span><span class="chip">METHODOLOGY</span> <span style="color:var(--text-mute);font-size:11px;">(pre-registration)</span><span class="arrow">&rarr;</span><span class="chip">ETHICS</span></div></div>
-      <div class="matrix-row"><div class="matrix-task">Full paper from idea</div><div class="matrix-flow"><span class="chip">All 10</span> <span style="color:var(--text-mute);font-size:12px;">in sequence</span></div></div>
+    <div class="rung">
+      <div class="rn">v2.4<span class="lv">September 2026</span></div>
+      <div class="rd">VLM multimodal figure review, multi-format manuscript intake (LaTeX / PDF / DOCX / MD), PeerRead 100-pool benchmark, conference-grade Quality Fortress upgrade.</div>
+      <div class="rc">2.4<small>superseded</small></div>
+    </div>
+    <div class="rung">
+      <div class="rn">v2.0<span class="lv">earlier 2026</span></div>
+      <div class="rd">The ten-skill modular architecture, four quantitative evaluators, four production workflows, seven venue templates.</div>
+      <div class="rc">2.0<small>superseded</small></div>
     </div>
   </div>
 </section>
 
-<!-- JOURNALS -->
-<section id="journals">
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="section-num">12 — Journal Quick Reference</span>
-      <h2 class="section-title">Where the <span class="italic">top 0.0001%</span> publish</h2>
-      <p class="section-lede">Accept rates, impact factors, and turnaround times for the venues CRES targets. Use this as input to Skill 07 (Journal Strategy) when scoring candidate journals on the five-dimension venue selection matrix.</p>
-    </div>
-    <div class="journal-table reveal">
-      <div class="jt-head">
-        <div>Journal / Venue</div><div>IF / Rank</div><div>Accept Rate</div><div>Turnaround</div><div>Best For</div>
-      </div>
-      <div class="jt-row" data-name="Nature">
-        <div class="jt-name">Nature</div><div class="jt-val">~69</div><div class="jt-val">~7%</div><div class="jt-val">6–8 mo</div><div class="jt-desc">Any breakthrough science</div>
-      </div>
-      <div class="jt-row" data-name="Science">
-        <div class="jt-name">Science</div><div class="jt-val">~56</div><div class="jt-val">~7%</div><div class="jt-val">6–8 mo</div><div class="jt-desc">Any breakthrough science</div>
-      </div>
-      <div class="jt-row" data-name="NEJM">
-        <div class="jt-name">NEJM</div><div class="jt-val">~200</div><div class="jt-val">~5%</div><div class="jt-val">3–4 mo</div><div class="jt-desc">Clinical medicine</div>
-      </div>
-      <div class="jt-row" data-name="Cell">
-        <div class="jt-name">Cell</div><div class="jt-val">~68</div><div class="jt-val">~7%</div><div class="jt-val">4–6 mo</div><div class="jt-desc">Life sciences</div>
-      </div>
-      <div class="jt-row" data-name="NeurIPS">
-        <div class="jt-name">NeurIPS</div><div class="jt-val">Top ML</div><div class="jt-val">~25%</div><div class="jt-val">6 mo</div><div class="jt-desc">ML, Deep Learning</div>
-      </div>
-      <div class="jt-row" data-name="ICML">
-        <div class="jt-name">ICML</div><div class="jt-val">Top ML</div><div class="jt-val">~25%</div><div class="jt-val">6 mo</div><div class="jt-desc">ML, Theory</div>
-      </div>
-      <div class="jt-row" data-name="ICLR">
-        <div class="jt-name">ICLR</div><div class="jt-val">Top ML</div><div class="jt-val">~30%</div><div class="jt-val">6 mo</div><div class="jt-desc">Representation learning</div>
-      </div>
-      <div class="jt-row" data-name="PNAS">
-        <div class="jt-name">PNAS</div><div class="jt-val">~12</div><div class="jt-val">~15%</div><div class="jt-val">4–6 mo</div><div class="jt-desc">Multidisciplinary</div>
-      </div>
-      <div class="jt-row" data-name="Nature Machine Intelligence">
-        <div class="jt-name">Nature Machine Intelligence</div><div class="jt-val">~25</div><div class="jt-val">~10%</div><div class="jt-val">4–6 mo</div><div class="jt-desc">AI</div>
-      </div>
-      <div class="jt-row" data-name="JMLR">
-        <div class="jt-name">JMLR</div><div class="jt-val">Top ML</div><div class="jt-val">~35%</div><div class="jt-val">3–6 mo</div><div class="jt-desc">ML theory &amp; methods</div>
-      </div>
-      <div class="jt-row" data-name="ACM CCS">
-        <div class="jt-name">ACM CCS</div><div class="jt-val">Top Security</div><div class="jt-val">~18%</div><div class="jt-val">4–6 mo</div><div class="jt-desc">Computer security</div>
-      </div>
-      <div class="jt-row" data-name="CHI">
-        <div class="jt-name">CHI</div><div class="jt-val">Top HCI</div><div class="jt-val">~25%</div><div class="jt-val">4–6 mo</div><div class="jt-desc">Human-computer interaction</div>
-      </div>
-    </div>
+<!-- ==================== 11 · AUTHOR + CITE ==================== -->
+<section id="author">
+  <div class="sechead">
+    <div class="no">§11 · Author &amp; citation</div>
+    <h2>Connect with the builder</h2>
+    <div class="tag">Built, learning, researching, sharing — by Adil Shamim.</div>
+  </div>
+  <div class="authors">
+    <a href="https://www.adilshamim.me">Portfolio</a>
+    <a href="https://github.com/AdilShamim8">GitHub</a>
+    <a href="https://linkedin.com/in/adilshamim8">LinkedIn</a>
+    <a href="https://adilshamim8.medium.com">Medium</a>
+    <a href="https://adilshamim.substack.com">Substack</a>
+    <a href="https://www.kaggle.com/adilshamim8">Kaggle</a>
+    <a href="https://twitter.com/adil_shamim8">X / Twitter</a>
+  </div>
+  <div class="cite">
+    <span class="cite-label">If ARES advanced your research, cite it</span>
+<pre>@software{shamim2026ares,
+  author    = {Shamim, Adil},
+  title     = {AI Research Excellence System (ARES): An Advanced AI Framework
+               for High-Impact Scientific Publishing},
+  year      = {2026},
+  month     = {October},
+  publisher = {GitHub},
+  version   = {3.0},
+  url       = {https://github.com/AdilShamim8/ARES}
+}</pre>
   </div>
 </section>
 
-<!-- DO / DON'T -->
-<section id="best-practices" class="quickstart">
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="section-num">13 — Best Practices</span>
-      <h2 class="section-title">What to do. <span class="italic">What never to do.</span></h2>
-      <p class="section-lede">Distilled from the official SETUP.md. These aren't suggestions — they're the failure modes that the framework exists to prevent.</p>
-    </div>
-    <div class="dodont">
-      <div class="dd-col do reveal">
-        <h3><span class="icon">✓</span> Do</h3>
-        <ul>
-          <li>Be specific about your research area, constraints, and target journal.</li>
-          <li>Provide your actual results, data, and text for analysis — not abstractions.</li>
-          <li>Ask for the adversarial review <em>before</em> submission, not after rejection.</li>
-          <li>Use multiple skill activations in sequence for a full paper.</li>
-          <li>Run the Quality Fortress on every manuscript before submission.</li>
-          <li>Pre-register your study design — Methodology Architect can generate the pre-registration.</li>
-          <li>Use the full five-step cognitive architecture for complex decisions.</li>
-          <li>Iterate — the best papers are never written in one pass.</li>
-        </ul>
-      </div>
-      <div class="dd-col dont reveal">
-        <h3><span class="icon">✕</span> Don't</h3>
-        <ul>
-          <li>Skip the IDEATION phase — a weak question produces a weak paper.</li>
-          <li>Skip the QUALITY phase — self-review is never sufficient.</li>
-          <li>Ask for "a complete paper" in one prompt — iterate through phases.</li>
-          <li>Ignore the adversarial feedback — it exists to save your submission.</li>
-          <li>Claim novelty without running the Novelty Certificate protocol.</li>
-          <li>Overclaim in the discussion — the Logician reviewer will catch you.</li>
-          <li>Forget to pre-register — reviewers at top journals will ask.</li>
-          <li>Submit without running the Ethics &amp; Compliance checklist.</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
+</main>
 
-<!-- TROUBLESHOOTING -->
-<section id="troubleshooting">
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="section-num">14 — Troubleshooting</span>
-      <h2 class="section-title">When the system <span class="italic">pushes back</span></h2>
-      <p class="section-lede">Common failure patterns and their fixes — drawn from the official SETUP.md. If a phase feels stuck, the answer is almost always to go deeper into a sub-phase, not to skip ahead.</p>
-    </div>
-    <div class="trouble-grid">
-      <div class="trouble-card reveal">
-        <span class="label">PROBLEM</span>
-        <p class="problem">The IDEATION phase is producing incremental questions.</p>
-        <p class="solution"><strong>Fix:</strong> Focus on the Contrarian Probe and Adjacency Scan sub-phases. Look for assumptions everyone holds and adjacent fields that have solved structurally similar problems.</p>
-      </div>
-      <div class="trouble-card reveal">
-        <span class="label">PROBLEM</span>
-        <p class="problem">The LITERATURE phase is producing summaries instead of synthesis.</p>
-        <p class="solution"><strong>Fix:</strong> Explicitly invoke the Anti-Summary Protocol. Demand that every paragraph ends with an implication for YOUR work, not just a description of prior work.</p>
-      </div>
-      <div class="trouble-card reveal">
-        <span class="label">PROBLEM</span>
-        <p class="problem">The QUALITY review is too harsh — producing REJECT verdicts.</p>
-        <p class="solution"><strong>Fix:</strong> This is working as designed. Use the Revision Priority Order to address the most critical issues first. Most papers move from REJECT to MAJOR REVISION with focused effort on the top 2–3 issues.</p>
-      </div>
-      <div class="trouble-card reveal">
-        <span class="label">PROBLEM</span>
-        <p class="problem">I'm not sure which journal to target.</p>
-        <p class="solution"><strong>Fix:</strong> Run the Journal Strategy venue selection matrix. Score 5–7 candidate journals on all 5 dimensions: Scope Fit, Audience Fit, Impact Match, Method Affinity, Strategic Value. The scores make the right choice clear.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PHILOSOPHY -->
-<section class="philosophy" id="philosophy">
-  <div class="container reveal">
-    <div class="quote-mark">&ldquo;</div>
-    <blockquote>The best research is never produced by a formula — it is produced by a <span class="em">rigorous mind</span> that knows when to follow the rules and when to break them. Use these prompts not as scripts but as frameworks.</blockquote>
-    <cite>The CRES Philosophy</cite>
-  </div>
-</section>
-
-<!-- FOOTER -->
 <footer>
-  <div class="footer-inner">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <h4><span class="mark">C</span>Claude Research Excellence</h4>
-        <p>A comprehensive, skill-based framework that transforms research ideas into papers that pass peer review at the world's most elite venues. Built for researchers who refuse to settle for "good enough."</p>
-      </div>
-      <div class="footer-col">
-        <h5>Explore</h5>
-        <ul>
-          <li><a href="#overview">Overview</a></li>
-          <li><a href="#aria">ARIA Architecture</a></li>
-          <li><a href="#workflows">Workflows</a></li>
-          <li><a href="#roadmap">Roadmap</a></li>
-          <li><a href="#skills">The 10 Skills</a></li>
-          <li><a href="#quality">Expert Review</a></li>
-          <li><a href="#evaluators">Quantitative Evaluators</a></li>
-          <li><a href="#journals">Journal Reference</a></li>
-          <li><a href="#best-practices">Best Practices</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h5>Repository</h5>
-        <ul>
-          <li><a href="https://github.com/AdilShamim8/claude-research-excellence" target="_blank" rel="noopener">GitHub &nearr;</a></li>
-          <li><a href="https://github.com/AdilShamim8/claude-research-excellence/blob/main/MASTER_PROMPT.md" target="_blank" rel="noopener">Master Prompt &nearr;</a></li>
-          <li><a href="https://github.com/AdilShamim8/claude-research-excellence/blob/main/SETUP.md" target="_blank" rel="noopener">Setup Guide &nearr;</a></li>
-          <li><a href="https://github.com/AdilShamim8/claude-research-excellence/tree/main/workflows" target="_blank" rel="noopener">Workflows &nearr;</a></li>
-          <li><a href="https://github.com/AdilShamim8/claude-research-excellence/tree/main/skills" target="_blank" rel="noopener">Skills &nearr;</a></li>
-          <li><a href="https://github.com/AdilShamim8" target="_blank" rel="noopener">Adil Shamim &nearr;</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 Claude Research Excellence System. An open framework for elite research.</p>
-      <span class="version">CRES v2.4 · ARIA v3.1</span>
-    </div>
+  <div class="f-row">
+    <span><b>ARES v3.0</b> · AI Research Excellence System</span>
+    <span>Engineered for researchers who refuse to settle for "good enough."</span>
+    <span><a href="https://github.com/AdilShamim8/ARES">github.com/AdilShamim8/ARES</a></span>
   </div>
+  <div class="fine">Release v3.0 · verified 2026-10-30 · single-file page, no frameworks, no external fonts, no network calls · typeset like a research monograph.</div>
 </footer>
 
+</div>
+
 <script>
-  // Scroll reveal
-  const reveals = document.querySelectorAll('.reveal');
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
-  }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
-  reveals.forEach(r => io.observe(r));
-
-  // Roadmap tabs
-  document.querySelectorAll('.roadmap-tab').forEach(tab => {
-    tab.addEventListener('click', () => {
-      document.querySelectorAll('.roadmap-tab').forEach(t => t.classList.remove('active'));
-      document.querySelectorAll('.roadmap-panel').forEach(p => p.classList.remove('active'));
-      tab.classList.add('active');
-      document.getElementById('panel-' + tab.dataset.panel).classList.add('active');
-    });
-  });
-
-  // Nav scroll shadow
-  const nav = document.querySelector('nav');
-  window.addEventListener('scroll', () => {
-    nav.style.boxShadow = window.scrollY > 40 ? '0 4px 30px rgba(0,0,0,0.3)' : 'none';
-  });
-
-  // Mobile menu
-  const navStyle = document.createElement('style');
-  navStyle.textContent = `
-    .nav-links.open { display: flex !important; flex-direction: column; position: absolute; top: 60px; right: 20px; background: var(--bg-elev); padding: 20px; border: 1px solid var(--border); border-radius: 4px; gap: 16px; min-width: 200px; }
-  `;
-  document.head.appendChild(navStyle);
+/* Viewport guard (simplified from the AI-Safety pattern): some in-app WebViews
+   ignore the viewport meta and lay the page out at ~980px. While a coarse-pointer
+   device with a small physical screen reports a clientWidth too wide for it,
+   constrain the layout width so the media queries behave as if it were a phone. */
+(function(){
+  function detect(){
+    var de = document.documentElement;
+    var cw = de.clientWidth;
+    var coarse = window.matchMedia && matchMedia('(pointer:coarse)').matches;
+    var sw = (screen && screen.width) || 0;
+    return !!(coarse && sw > 0 && sw <= 620 && cw > 640);
+  }
+  function apply(){
+    var de = document.documentElement;
+    if (detect()){
+      if (!de.style.maxWidth){ de.style.maxWidth = '480px'; de.style.marginLeft = 'auto'; de.style.marginRight = 'auto'; }
+    } else {
+      de.style.maxWidth = ''; de.style.marginLeft = ''; de.style.marginRight = '';
+    }
+  }
+  window.addEventListener('resize', apply, {passive:true});
+  window.addEventListener('orientationchange', apply, {passive:true});
+  apply();
+})();
 </script>
 
 </body>
