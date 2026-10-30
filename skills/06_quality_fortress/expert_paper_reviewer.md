@@ -8,8 +8,8 @@ The **Expert Paper Reviewer** transforms AI-assisted review from superficial sum
 
 Unlike synthetic evaluation rubrics, every threshold, prompt rule, and audit check in this system is calibrated against verified, open-access real-world scientific datasets and peer review corpora:
 
-1. **PeerRead Benchmark Dataset** (*Kang et al., NAACL 2018, arXiv:1804.09632*):
-   - **Corpus**: 14,784 scientific research papers with real human expert reviews, numerical scoring distributions, and official accept/reject decisions from *ICLR (2017)*, *NeurIPS (2013–2017)*, and *ACL (2017)*.
+1. **PeerRead Benchmark Dataset** (*Kang et al., NAACL 2018, arXiv:1804.09635*):
+   - **Corpus**: 14,784 scientific paper drafts (14.7K) with official accept/reject decisions from *ICLR (2017)*, *NeurIPS (2013–2017)*, and *ACL (2017)*; 10.7K of these drafts include full textual peer reviews written by experts, with numerical scoring distributions.
    - **Calibration Role**: Sets the empirical thresholds for acceptance probability, reviewer score distributions (1–10 scale), and high-frequency rejection triggers.
 2. **PeerRead 100-Pool Benchmark Validation** (*Kang et al. & Ai-Review Evaluation*):
    - **Corpus**: 100 empirical evaluation pools sampled from *ICLR 2017* accepted and rejected papers.
@@ -266,7 +266,7 @@ Drawn from the official **NeurIPS / ICML Reproducibility Benchmark** (*Pineau et
 
 ## 8. Multi-Agent Consensus Meta-Review Protocol
 
-Following the **Poldrack multi-agent review architecture**, high-stakes manuscripts are scrutinized by five independent reviewer personas, followed by an objective **Meta-Review Synthesis**:
+Following the **AgentReview multi-agent review paradigm** (*Jin et al., 2024, arXiv:2406.12708*), high-stakes manuscripts are scrutinized by five independent reviewer personas, followed by an objective **Meta-Review Synthesis**:
 
 ```
                   ┌─────────────────────────────┐
