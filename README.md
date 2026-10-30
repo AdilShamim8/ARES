@@ -1,125 +1,233 @@
 # AI Research Excellence System (ARES)
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Release-v2.4%20(September%202026)-0052CC?style=for-the-badge&logo=git&logoColor=white" alt="Release Version" />
-  <img src="https://img.shields.io/badge/System-ARIA%20v3.1-4B0082?style=for-the-badge&logo=openai&logoColor=white" alt="ARIA v3.1" />
+  <img src="https://img.shields.io/badge/Release-v3.0%20(October%202026)-0052CC?style=for-the-badge&logo=git&logoColor=white" alt="Release Version" />
+  <img src="https://img.shields.io/badge/Engine-ARIA%20v3.1-4B0082?style=for-the-badge&logo=openai&logoColor=white" alt="ARIA v3.1" />
   <img src="https://img.shields.io/badge/License-MIT-28A745?style=for-the-badge&logo=open-source-initiative&logoColor=white" alt="MIT License" />
   <img src="https://img.shields.io/badge/Compatibility-Claude%203.5%20%7C%203.7%20%7C%204-D97706?style=for-the-badge&logo=anthropic&logoColor=white" alt="Claude Compatibility" />
   <img src="https://img.shields.io/badge/Provenance-Empirical%20DOIs%20%26%20Real%20Data-10B981?style=for-the-badge&logo=google-scholar&logoColor=white" alt="Empirical Data Provenance" />
   <img src="https://img.shields.io/badge/Evaluators-4%20Quantitative%20Engines-7C3AED?style=for-the-badge&logo=speedtest&logoColor=white" alt="4 Evaluators" />
 </p>
 
-> **The world's most advanced AI-powered research paper creation framework — engineered for the top 0.0001% of academic publication.** Built to take high-ambition research from raw concept to peer-reviewed publication across *Nature*, *Science*, *Cell*, *NEJM*, *NeurIPS*, *ICML*, *ICLR*, *IEEE*, and *ACM*.
+> **ARES is a complete AI-powered operating system for research papers** — a set of battle-tested prompts, skills, evaluators, templates, and workflows that take you from a raw idea to a submission-ready manuscript for *Nature*, *Science*, *Cell*, *NEJM*, *NeurIPS*, *ICML*, *ICLR*, *IEEE*, and *ACM*. No plugins. No setup scripts. Just Markdown files that work with any capable LLM.
 
 ---
 
 ## Table of Contents
 
-- [Executive Overview](#executive-overview)
-- [Quick Start Guide](#quick-start-guide)
-- [Repository Architecture](#repository-architecture)
-- [The 10 Research Skills](#the-10-research-skills)
-- [Quantitative Evaluator Suite (0–100 Rubrics)](#quantitative-evaluator-suite-0100-rubrics)
-- [Production Workflows](#production-workflows)
-- [Empirical Walkthrough Examples & Real-World Provenance](#empirical-walkthrough-examples--real-world-provenance)
-- [Publisher & Venue Templates](#publisher--venue-templates)
-- [Skill Combination & Activation Matrix](#skill-combination--activation-matrix)
-- [ARIA Cognitive Architecture & Quality Floor](#aria-cognitive-architecture--quality-floor)
-- [Claude Desktop & Claude Projects Setup](#claude-desktop--claude-projects-setup)
-- [Author & Community](#author--community)
-- [Citation](#citation)
+1. [What Is ARES?](#what-is-ares)
+2. [Why Does ARES Exist?](#why-does-ares-exist)
+3. [The System Map (Visual Overview)](#the-system-map-visual-overview)
+4. [Beginner's Step-by-Step Guide](#beginners-step-by-step-guide)
+5. [Repository Architecture](#repository-architecture)
+6. [The 10 Research Skills](#the-10-research-skills)
+7. [Quantitative Evaluator Suite (0–100 Rubrics)](#quantitative-evaluator-suite-0100-rubrics)
+8. [Conference-Grade Expert Paper Review (Skill 06)](#conference-grade-expert-paper-review-skill-06)
+9. [Production Workflows](#production-workflows)
+10. [Walkthrough Examples & Real-World Provenance](#walkthrough-examples--real-world-provenance)
+11. [How the Real-World Datasets Are Collected & Verified](#how-the-real-world-datasets-are-collected--verified)
+12. [Publisher & Venue Templates](#publisher--venue-templates)
+13. [Skill Combination & Activation Matrix](#skill-combination--activation-matrix)
+14. [ARIA Cognitive Architecture & Quality Floor](#aria-cognitive-architecture--quality-floor)
+15. [Claude Desktop & Claude Projects Setup](#claude-desktop--claude-projects-setup)
+16. [Version History](#version-history)
+17. [Author & Community](#author--community)
+18. [Citation](#citation)
 
 ---
 
-## Executive Overview
+## What Is ARES?
 
-Generic LLM prompt collections produce shallow, conversational summaries, hallucinate citations, and generate boilerplate prose that is instantly rejected by elite reviewers. 
+**ARES = AI Research Excellence System.** It is a repository of **40+ modular Markdown documents** that turn a general-purpose AI assistant (Claude, or any capable LLM) into a disciplined research partner. Each file is a *prompt engine* with a precise job:
 
-**CRES (Claude Research Excellence System)** takes the opposite approach. Built around the **ARIA (Advanced Research Intelligence Architect)** cognitive architecture, CRES implements:
+| Layer | What it does | Example |
+|:---|:---|:---|
+| **1 Master Prompt** | Installs the "ARIA" cognitive engine | `MASTER_PROMPT.md` |
+| **10 Skills** | Executed one at a time, on command | Ideation, Writing, Quality Fortress… |
+| **4 Evaluators** | Score your manuscript 0–100 | Novelty, Rigor, Clarity, Impact |
+| **4 Workflows** | End-to-end pipelines with timetables | 28-week full paper, 30-day rapid |
+| **7 Templates** | Venue-exact formatting blueprints | Nature, Science, NeurIPS, IEEE… |
+| **4 Examples** | Full worked papers with real datasets | CS, biomedical, social science, interdisciplinary |
 
-1. **Epistemic Depth Over Summaries**: Every skill forces causal depth, hypothesis falsifiability, boundary condition stress-testing, and strict anti-summary synthesis.
-2. **Multi-Agent Adversarial Peer Review**: Simulates top-tier editorial boards and hyper-critical peer reviewers (Reviewer 2, Statistical Skeptic, Methodologist, Domain Critic) before submission.
-3. **Rigorous Quantitative Evaluators**: Four independent 0–100 assessment engines that evaluate Novelty, Rigor, Clarity, and Long-Term Impact using structured criteria gates.
-4. **Empirical Dataset Provenance**: All examples and protocols link to verified real-world datasets, open science repositories (OSF, Zenodo), and legitimate DOI registries with zero synthetic placeholder tokens.
-5. **Universal Venue Alignment**: Native formatting blueprints for the world's most demanding publishers (*Nature Portfolio*, *Science/AAAS*, *NeurIPS/ICML/ICLR*, *IEEE Transactions*, *ACM SIG*, *Springer Nature*, *arXiv*).
+**In one sentence:** *you paste the master prompt into your AI assistant once, then walk through skills and evaluators like stations on an assembly line until your paper is ready for submission.*
 
 ---
 
-## Quick Start Guide
+## Why Does ARES Exist?
 
-You can begin using CRES with Claude in under 5 minutes:
+Generic LLM prompt collections produce shallow summaries, hallucinated citations, and boilerplate prose that elite reviewers reject in minutes. ARES takes the opposite approach:
 
-```bash
-# 1. Clone the repository
-git clone https://github.com/AdilShamim8/claude-research-excellence.git
-cd claude-research-excellence
+1. **Epistemic Depth Over Summaries** — every skill forces causal depth, hypothesis falsifiability, boundary-condition stress-testing, and a strict anti-summary standard.
+2. **Multi-Agent Adversarial Peer Review** — simulates a hostile editorial board (Methodologist, Domain Expert, Logician, Communicator, Impact Assessor) *before* real reviewers see your work.
+3. **Rigorous Quantitative Evaluators** — four independent 0–100 engines with numeric go/no-go gates: Novelty (≥70), Rigor (≥75), Clarity (≥80), Impact (≥75).
+4. **Empirical Dataset Provenance** — every example and protocol cites **verified real-world datasets, trials, and DOI registries** (see [provenance section](#how-the-real-world-datasets-are-collected--verified)). Fabricated identifiers are treated as critical flaws and removed.
+5. **Universal Venue Alignment** — native formatting blueprints for the world's most demanding publishers, checked against their current author guides.
+
+---
+
+## The System Map (Visual Overview)
+
+```text
+                                    ┌─────────────────────────────┐
+                                    │   YOUR RESEARCH IDEA /       │
+   YOU                             │   EXISTING DRAFT             │
+                                    └──────────────┬──────────────┘
+                                                   │
+                                                   ▼
+                         ┌───────────────────────────────────────────┐
+                         │      MASTER_PROMPT.md  (ARIA v3.1)        │
+                         │   Install once — the 5-step cognitive     │
+      STEP 1 — INSTALL ─▶ │   engine that runs before every response  │
+                         └───────────────────┬───────────────────────┘
+                                             │
+              ┌──────────────────────────────┼──────────────────────────────┐
+              │                              │                              │
+              ▼                              ▼                              ▼
+   ┌────────────────────┐        ┌────────────────────┐        ┌────────────────────┐
+   │   SKILLS (01–10)   │        │    WORKFLOWS (4)    │        │   TEMPLATES (7)    │
+   │  Execute on demand │        │ End-to-end pipelines│        │ Venue-exact format │
+   │  ACTIVATE: X       │        │ 28-wk / 30-day /    │        │ Nature, Science,   │
+   │                    │        │ Interdisc. / Repl. │        │ NeurIPS, IEEE, ACM,│
+   │ 01 Ideation        │        │                     │        │ Springer, arXiv    │
+   │ 02 Literature      │        │                     │        └────────────────────┘
+   │ 03 Methodology     │        │                     │
+   │ 04 Data            │        │                     │
+   │ 05 Writing         │        │                     │
+   │ 06 Quality         │        │                     │
+   │ 07 Journal          │        │                     │
+   │ 08 Ethics          │        │                     │
+   │ 09 Citation        │        │                     │
+   │ 10 Impact          │        │                     │
+   └─────────┬──────────┘        └─────────┬──────────┘
+             │                             │
+             ▼                             ▼
+   ┌─────────────────────────────────────────────────┐
+   │         EVALUATORS (0–100, with gates)          │
+   │  Novelty ≥70 · Rigor ≥75 · Clarity ≥80 · Impact ≥75
+   └───────────────────────┬─────────────────────────┘
+                           ▼
+   ┌─────────────────────────────────────────────────┐
+   │              SUBMISSION-READY PAPER               │
+   │        (+ rebuttals, cover letters, policy       │
+   │         briefs, and follow-up agenda)            │
+   └─────────────────────────────────────────────────┘
 ```
 
-### 3-Step Execution
-1. **Initialize ARIA**: Copy the contents of [`MASTER_PROMPT.md`](MASTER_PROMPT.md) and paste it into your Claude system prompt or Claude Project custom instructions.
-2. **State Your Topic**: Specify your field, target venue, and core hypothesis:
-   > *"I am working on sample-efficient graph neural networks for drug-target affinity prediction targeting Nature Machine Intelligence."*
-3. **Activate Modular Skills**: Call any skill on demand using its activation trigger:
-   > `ACTIVATE: IDEATION`  
-   > `ACTIVATE: METHODOLOGY`  
-   > `ACTIVATE: QUALITY`
+---
+
+## Beginner's Step-by-Step Guide
+
+**Never used an AI assistant for research? Follow exactly these five steps.**
+
+### Step 1 — Get the system (2 minutes)
+
+```bash
+# Clone the repository to your computer
+git clone https://github.com/AdilShamim8/ARES.git
+cd ARES
+```
+
+*(Or click the green **Code → Download ZIP** button on GitHub if you don't use git.)*
+
+### Step 2 — Install ARIA (2 minutes)
+
+Open [`MASTER_PROMPT.md`](MASTER_PROMPT.md) and copy **everything inside the boxed prompt block**. Then either:
+
+- **Claude Projects (recommended):** Create a new project in Claude → paste the block into **Project Instructions** → add your domain papers to **Project Knowledge**. ARIA stays active in every chat inside the project.
+- **Plain chat:** Paste the block as the **very first message** of a new conversation.
+
+### Step 3 — State your topic (1 minute)
+
+Tell the system what you are working on — be specific:
+
+> *"I'm working on sample-efficient graph neural networks for drug-target affinity prediction, targeting Nature Machine Intelligence."*
+
+No topic yet? Just say: *"Help me find a high-novelty research question in [field]."*
+
+### Step 4 — Activate skills like switches
+
+Type one command, get one structured deliverable:
+
+```
+ACTIVATE: IDEATION      →  gap analysis + novelty certificate (0–100)
+ACTIVATE: LITERATURE    →  systematic review + citation cartography
+ACTIVATE: METHODOLOGY   →  experimental design + pre-registration
+ACTIVATE: DATA          →  statistical audit + publication figures
+ACTIVATE: WRITING       →  section-by-section drafting engine
+ACTIVATE: QUALITY       →  5-reviewer adversarial review + meta-review
+ACTIVATE: JOURNAL       →  venue decision matrix + cover letter
+ACTIVATE: ETHICS       →  integrity, IRB & compliance checklist
+ACTIVATE: CITATION      →  balanced, hallucination-free bibliography
+ACTIVATE: IMPACT        →  press release, policy brief, social threads
+```
+
+### Step 5 — Iterate until the gates are green
+
+Run the evaluators, check the 0–100 scores, fix what the reviewers-in-simulation found, and repeat. A typical full paper follows this loop:
+
+```
+IDEATION → LITERATURE → METHODOLOGY → (run your study) → DATA
+        → WRITING → QUALITY → JOURNAL → CITATION → submit
+```
+
+**That's it.** The rest of this README is a reference map of what each command produces.
 
 ---
 
 ## Repository Architecture
 
 ```
-claude-research-excellence/
-├── README.md                              ← System overview & master index
-├── MASTER_PROMPT.md                       ← ARIA master cognitive system prompt
-├── SETUP.md                               ← Step-by-step installation & deployment guide
-├── CRES_MASTER_REPO.md                    ← Consolidated single-file reference manual
+ARES/
+├── README.md                              ← You are here — system overview & master index
+├── MASTER_PROMPT.md                       ← ARIA master cognitive system prompt (install first)
+├── SETUP.md                               ← Installation, best practices & verified journal data
+├── ARES_MASTER_REPO.md                    ← Consolidated single-file reference manual
 │
-├── skills/                                ← 10 Core research mastery engines
+├── skills/                                ← 10 core research mastery engines
 │   ├── 01_ideation/                       ← Breakthrough question & gap discovery
 │   ├── 02_literature_command/             ← Systematic review & citation synthesis
 │   ├── 03_methodology_architect/          ← Experimental design & threat modeling
-│   ├── 04_data_intelligence/              ← Statistical analysis & visual grammar
+│   ├── 04_data_intelligence/             ← Statistical analysis & visual grammar
 │   ├── 05_writing_excellence/             ← Publication-grade scientific prose
-│   ├── 06_quality_fortress/               ← Conference-grade peer review, 10-dim audit & PeerRead calibration
+│   ├── 06_quality_fortress/               ← Conference-grade review, 11-dim audit & VLM
 │   ├── 07_journal_strategy/               ← Venue selection & cover letter strategy
 │   ├── 08_ethics_compliance/              ← Research integrity, IRB & compliance
-│   ├── 09_citation_mastery/               ← Citation cartography & balance
+│   ├── 09_citation_mastery/              ← Citation cartography & balance
 │   └── 10_impact_amplifier/               ← Post-publication dissemination & policy
 │
-├── evaluators/                            ← 4 Quantitative manuscript assessment engines
-│   ├── NOVELTY_SCORE_RUBRIC.md            ← 5-axis 0-100 novelty rubric (Threshold: >=70)
-│   ├── RIGOR_RUBRIC.md                    ← 5-axis 0-100 scientific rigor rubric (Threshold: >=75)
-│   ├── CLARITY_ANALYZER.md                ← 6-axis 0-100 prose & visual clarity rubric (Threshold: >=80)
-│   └── IMPACT_PREDICTOR.md                ← 5-axis 0-100 citation & influence predictor (Threshold: >=75)
+├── evaluators/                            ← 4 quantitative manuscript assessment engines
+│   ├── NOVELTY_SCORE_RUBRIC.md            ← 5-axis 0–100 novelty rubric   (gate: ≥70)
+│   ├── RIGOR_RUBRIC.md                    ← 5-axis 0–100 rigor rubric     (gate: ≥75)
+│   ├── CLARITY_ANALYZER.md                ← 6-axis 0–100 clarity rubric   (gate: ≥80)
+│   └── IMPACT_PREDICTOR.md                ← 5-axis 0–100 impact predictor (gate: ≥75)
 │
 ├── workflows/                             ← End-to-end execution pipelines
-│   ├── FULL_PAPER_WORKFLOW.md             ← 28-week A-to-Z manuscript development lifecycle
-│   ├── RAPID_PUBLICATION.md               ← 30-day fast-track protocol for priority claims
-│   ├── INTERDISCIPLINARY.md               ← Cross-domain translation & conceptual bridging
-│   └── REPLICATION_STUDY.md               ← Pre-registered direct/conceptual replication protocol
+│   ├── FULL_PAPER_WORKFLOW.md             ← 28-week A-to-Z manuscript lifecycle
+│   ├── RAPID_PUBLICATION.md               ← 30-day fast-track protocol
+│   ├── INTERDISCIPLINARY.md               ← Cross-domain translation framework
+│   └── REPLICATION_STUDY.md               ← Pre-registered replication protocol
 │
 ├── templates/                             ← Production manuscript templates by venue
-│   ├── Nature_Family.md                   ← Nature, Nature Biotech, Nature MI structure
+│   ├── Nature_Family.md                   ← Nature & Nature Portfolio (2,500–4,300 words, 6–8 pages)
 │   ├── Science.md                         ← Science (AAAS) research articles & reports
-│   ├── NeurIPS_ICML_ICLR.md               ← Top-tier machine learning conference formats
+│   ├── NeurIPS_ICML_ICLR.md               ← Top-tier ML conference formats (9-page NeurIPS 2026)
 │   ├── IEEE.md                            ← IEEE Transactions double-column specifications
 │   ├── ACM.md                             ← ACM SIGCONF & TOCS format guidelines
 │   ├── Springer.md                        ← Springer LNCS & journal standards
 │   └── arXiv.md                           ← High-impact open preprint formatting
 │
-└── examples/                              ← Verified domain exemplar papers with dataset registries
+└── examples/                              ← Worked exemplar papers with real datasets
     ├── computer_science.md                ← CS/AI: MENTOR LLM Reasoning (GSM8K, SVAMP, StrategyQA)
-    ├── biomedical.md                      ← Biomed: CRISPR HSC Off-Target (NCT05912400, BCL11A)
+    ├── biomedical.md                      ← Biomed: CRISPR HSC Off-Target (NCT03745287, BCL11A)
     ├── social_science.md                  ← SocSci: Social Media Deliberation (N=1,500, DCI, DQI)
-    └── interdisciplinary.md               ← Interdisciplinary: BioPhysiFold AI Drug Design (ChEMBL, PDB)
+    └── interdisciplinary.md               ← Interdisc.: BioPhysiFold AI Drug Design (ChEMBL, PDB)
 ```
 
 ---
 
 ## The 10 Research Skills
 
-Each skill directory contains an authoritative `SKILL.md` along with specialized modular prompts and actionable checklists:
+Each skill directory contains an authoritative `SKILL.md` plus specialized modular prompts and actionable checklists:
 
 | Skill | Module Name | Primary Objective | Activation Command | Key Deliverables |
 |:---:|:---|:---|:---|:---|
@@ -138,17 +246,17 @@ Each skill directory contains an authoritative `SKILL.md` along with specialized
 
 ## Quantitative Evaluator Suite (0–100 Rubrics)
 
-CRES provides a dedicated quantitative evaluation suite located in [`evaluators/`](evaluators/) to audit manuscripts prior to journal submission. Every evaluator calculates a weighted score out of 100 with clear go/no-go acceptance gates:
+ARES ships a dedicated quantitative evaluation suite in [`evaluators/`](evaluators/) to audit manuscripts before submission. Every evaluator computes a weighted score out of 100 with explicit go/no-go acceptance gates:
 
 ```
                   ┌───────────────────────────────┐
-                  │    CRES EVALUATION SUITE      │
+                  │    ARES EVALUATION SUITE      │
                   └───────────────┬───────────────┘
                                   │
          ┌────────────────┬───────┴────────┬────────────────┐
          ▼                ▼                ▼                ▼
   NOVELTY SCORE      RIGOR SCORE     CLARITY SCORE    IMPACT PREDICTION
-   (Rubric >=70)    (Rubric >=75)    (Rubric >=80)      (Rubric >=75)
+   (Rubric ≥70)    (Rubric ≥75)    (Rubric ≥80)      (Rubric ≥75)
          │                │                │                │
          └────────────────┼────────────────┴────────────────┘
                                   │
@@ -156,48 +264,27 @@ CRES provides a dedicated quantitative evaluation suite located in [`evaluators/
                      [PEER REVIEW SUBMISSION GATE]
 ```
 
-### 1. [Novelty Score Rubric](evaluators/NOVELTY_SCORE_RUBRIC.md) (`NOVELTY_SCORE_RUBRIC.md`)
-- **Focus**: Evaluates originality and non-obviousness across 5 weighted dimensions:
-  - *Conceptual Novelty (25%)*: Paradigm shift vs. incremental adaptation.
-  - *Methodological Novelty (25%)*: Algorithmic, instrumental, or design innovation.
-  - *Empirical Novelty (20%)*: Novel observations, phenomena, or scale.
-  - *Practical / Translational Utility (15%)*: Direct real-world problem resolution.
-  - *Interdisciplinary Synthesis (15%)*: Non-trivial cross-domain transfer.
-- **Scoring**: 0–100 scale. Threshold for top-tier venues (*Nature*, *NeurIPS*): **$\ge 70/100$**.
+### 1. [Novelty Score Rubric](evaluators/NOVELTY_SCORE_RUBRIC.md)
+- **5 weighted dimensions**: Conceptual Novelty (25%), Methodological Novelty (25%), Empirical Novelty (20%), Translational Utility (15%), Interdisciplinary Synthesis (15%).
+- **Gate for top-tier venues**: score **≥ 70/100**.
 
-### 2. [Rigor Rubric](evaluators/RIGOR_RUBRIC.md) (`RIGOR_RUBRIC.md`)
-- **Focus**: Evaluates statistical power, validity, and reproducibility across 5 weighted dimensions:
-  - *Internal & External Validity (25%)*: Confound control, randomization, selection bias.
-  - *Statistical Power & Inference (25%)*: Sample sizing, effect size reporting, multiple test corrections.
-  - *Reproducibility & Open Science (20%)*: Code/data accessibility, deterministic environments.
-  - *Baseline Fairness & State-of-the-Art Controls (15%)*: Untuned vs. tuned baseline comparisons.
-  - *Boundary Conditions & Sensitivity (15%)*: Failure-mode documentation and stress tests.
-- **Scoring**: 0–100 scale. Mandatory submission threshold: **$\ge 75/100$**.
+### 2. [Rigor Rubric](evaluators/RIGOR_RUBRIC.md)
+- **5 weighted dimensions**: Internal & External Validity (25%), Statistical Power & Inference (25%), Reproducibility & Open Science (20%), Baseline Fairness (15%), Boundary Conditions (15%).
+- **Mandatory submission threshold**: **≥ 75/100**.
 
-### 3. [Clarity Analyzer](evaluators/CLARITY_ANALYZER.md) (`CLARITY_ANALYZER.md`)
-- **Focus**: Evaluates scientific communication, rhetorical flow, and cognitive load across 6 dimensions:
-  - *Macro-Structure & Rhetorical Momentum (20%)*: Clear thesis progression and paragraph transitions.
-  - *Sentence-Level Micro-Clarity (20%)*: Active syntax, topic-stress alignment, elimination of bloat.
-  - *Cognitive Load & Information Density (15%)*: Digestible technical presentation.
-  - *Visual Grammar & Figure Integration (15%)*: Self-contained captions and high-clarity data charts.
-  - *Terminology Precision & Jargon Accessibility (15%)*: Clear definitions without exclusionary jargon.
-  - *Executive Summary & Abstract Calibration (15%)*: High-impact abstract that conveys context, gap, method, findings, and implications.
-- **Scoring**: 0–100 scale. Target standard: **$\ge 80/100$**.
+### 3. [Clarity Analyzer](evaluators/CLARITY_ANALYZER.md)
+- **6 dimensions**: Macro-Structure (20%), Sentence-Level Micro-Clarity (20%), Cognitive Load (15%), Visual Grammar (15%), Terminology Precision (15%), Abstract Calibration (15%).
+- **Target standard**: **≥ 80/100**.
 
-### 4. [Impact Predictor](evaluators/IMPACT_PREDICTOR.md) (`IMPACT_PREDICTOR.md`)
-- **Focus**: Estimates 24–60 month citation trajectories and field influence across 5 dimensions:
-  - *Theoretical Influence & Paradigm Longevity (25%)*: Foundational grounding for future studies.
-  - *Methodological & Tool Adoption (25%)*: Reusable software, frameworks, or datasets.
-  - *Cross-Disciplinary Diffusion Potential (20%)*: Uptake outside the primary subfield.
-  - *Translational & Policy Utility (15%)*: Industrial, clinical, or governmental application.
-  - *Field-Shaping Longevity & Robustness (15%)*: Resilience against rapid technological obsolescence.
-- **Scoring**: 0–100 scale. High-impact trajectory: **$\ge 75/100$**.
+### 4. [Impact Predictor](evaluators/IMPACT_PREDICTOR.md)
+- **5 dimensions**: Theoretical Influence (25%), Method & Tool Adoption (25%), Cross-Disciplinary Diffusion (20%), Translational & Policy Utility (15%), Field-Shaping Longevity (15%).
+- **High-impact trajectory**: **≥ 75/100**.
 
 ---
 
-## Conference-Grade Expert Paper Reviewer (Skill 06 & Real-World Datasets)
+## Conference-Grade Expert Paper Review (Skill 06)
 
-[`skills/06_quality_fortress/`](skills/06_quality_fortress/) provides a conference-caliber paper review and meta-review system engineered to evaluate manuscripts at the level of senior area chairs and editorial boards. Grounded strictly in **real-world peer review datasets, VLM multi-modal figure inspection, and empirical corpora**, it eliminates superficial AI summaries and conducts evidence-anchored technical audits across LaTeX (`.tex`), PDF (`.pdf`), Word (`.docx`), and Markdown (`.md`):
+[`skills/06_quality_fortress/`](skills/06_quality_fortress/) evaluates manuscripts at the level of senior area chairs and editorial boards. It accepts **LaTeX (`.tex`), PDF (`.pdf`), Word (`.docx`), and Markdown (`.md`)**, and runs a security scan, an 11-dimension technical audit with VLM figure inspection, and a PeerRead-calibrated competitiveness score:
 
 ```
                   ┌───────────────────────────────┐
@@ -208,13 +295,12 @@ CRES provides a dedicated quantitative evaluation suite located in [`evaluators/
          ┌────────────────────────┼────────────────────────┐
          ▼                        ▼                        ▼
   SECURITY SCAN            11-DIMENSION & VLM       EMPIRICAL DATASET
-• Prompt-injection       • Logic & Claims         • PeerRead (14,784 reviews)
-• Unicode Cf / zero-width• Cross-table consistency• 100-Pool Benchmark (83.8% Acc)
-• Double-blind leaks     • VLM Figure Aesthetics  • AAAI 2026 Reverse Prompts
+• Prompt-injection       • Logic & Claims         • PeerRead (14,784 drafts)
+• Unicode Cf / zero-width• Cross-table consistency• 100-Pool Benchmark (83.8%)
+• Double-blind leaks     • VLM Figure Aesthetics  • AAAI 2026 calibration
 • Metadata sanitation    • Math notation clashes  • NeurIPS 21-pt checklist
          │                        │                        │
          └────────────────────────┼────────────────────────┘
-                                  │
                                   ▼
                  ┌─────────────────────────────────┐
                  │  MULTI-AGENT CONSENSUS MATRIX   │
@@ -222,70 +308,97 @@ CRES provides a dedicated quantitative evaluation suite located in [`evaluators/
                  └─────────────────────────────────┘
 ```
 
-### Empirical Dataset Provenance & Benchmarking
-1. **PeerRead Dataset** (*Kang et al., NAACL 2018, arXiv:1804.09632*): 14,784 scientific research papers with real human expert reviews, numerical scoring distributions, and official accept/reject decisions from *ICLR (2017)*, *NeurIPS (2013–2017)*, and *ACL (2017)*.
-2. **PeerRead 100-Pool Empirical Benchmark** (*Kang et al. & Ai-Review*): Validated on 100 empirical pools from ICLR 2017, achieving **83.8% pairwise ranking accuracy** in correctly ordering accepted papers over rejected drafts.
-3. **AAAI 2026 Reverse-Prompt Calibration**: Reverse-engineers reviewer decision rules, score distributions, and rebuttal vulnerability patterns from the AAAI 2026 and premier ML review corpora.
-4. **OpenReview Live Venue Pools**: Real-world accepted/rejected manuscript pools for relative rank calibration across *Nature MI*, *NeurIPS*, *ICML*, and *ICLR*.
-5. **NeurIPS Official Reproducibility Benchmark** (*Pineau et al., JMLR 2021*): Standardized 21-point checklist auditing assumptions, proofs, compute resources, error bars, and dataset splits.
-6. **S2ORC & SciCite** (*Lo et al., ACL 2020; Cohan et al., NAACL 2019*): 81M+ papers establishing rigorous citation intent and attribution cartography.
-
 ### The 11-Dimension Audit Framework
-- **[A] Logic & Argumentation**: Deductive argument chains, boundary condition stress-testing, and causal license.
-- **[B] Empirical Rigor & Cross-Table Consistency**: Numerical verification across Abstract, Figures, and Tables with standard deviation/CI audits.
-- **[C] Writing Quality & Rhetorical Momentum**: Topic sentence clarity, cognitive density, and active syntax.
-- **[D] Citation Cartography & Attribution**: Balanced 2024–2026 literature coverage and hallucination screening.
-- **[E] Mathematical & Notational Integrity**: Variable definitions, symbol collision checks ($\tau$ vs $\theta$), and derivation continuity.
-- **[F] Double-Blind & Anonymity Compliance**: Sanitization of institutional traces, repository links, and author self-references.
-- **[G] Venue Formatting & Standards**: Page budget, margin compliance, and mandatory ethics/reproducibility sections.
-- **[H] Academic Tone Purity & Anti-AI Smell**: Eradication of formulaic LLM filler words ("delve", "testament", "pivotal") and hollow puffery.
-- **[I] Narrative Structure & Hierarchy**: Coherence across Intro $\rightarrow$ Method $\rightarrow$ Results $\rightarrow$ Discussion.
-- **[J] Reviewer Red Flags & Puffery**: Removal of "first ever", "drastically superior", "obviously", and unverified supremacy claims.
-- **[K] Visual & Figure Aesthetics (VLM Multi-Modal)**: Automated inspection of subfigure alignment `(a), (b)`, axis font legibility at single-column width, vector resolution ($\ge 300\text{ DPI}$), colorblind-safe palettes (Okabe-Ito, Viridis), and self-contained captions (30-second rule).
+**[A]** Logic & Argumentation · **[B]** Empirical Rigor & Cross-Table Consistency · **[C]** Writing Quality & Rhetorical Momentum · **[D]** Citation Cartography (zero hallucinated references) · **[E]** Mathematical & Notational Integrity · **[F]** Double-Blind & Anonymity Compliance · **[G]** Venue Formatting & Standards · **[H]** Academic Tone Purity & Anti-AI Smell · **[I]** Narrative Structure & Hierarchy · **[J]** Reviewer Red Flags & Puffery · **[K]** Visual & Figure Aesthetics (VLM multi-modal: ≥300 DPI, colorblind-safe palettes, 30-second caption rule).
 
 ### Multi-Platform Activation Triggers
-Activate in Claude Desktop, Cursor, Copilot, or Antigravity IDE with:
-`ACTIVATE: QUALITY` • `review my paper` • `审稿` • `@ai-review`
+`ACTIVATE: QUALITY` · `review my paper` · `审稿` · `@ai-review`
 
-See [`skills/06_quality_fortress/expert_paper_reviewer.md`](skills/06_quality_fortress/expert_paper_reviewer.md) for full operational guides and real-world before/after case studies.
+Full operational guide with before/after case studies: [`skills/06_quality_fortress/expert_paper_reviewer.md`](skills/06_quality_fortress/expert_paper_reviewer.md)
 
 ---
 
 ## Production Workflows
 
-CRES includes four battle-tested workflows in [`workflows/`](workflows/):
+Four battle-tested end-to-end pipelines in [`workflows/`](workflows/):
 
-1. **[Full Paper Lifecycle](workflows/FULL_PAPER_WORKFLOW.md)**: A complete 28-week, 8-phase journey from raw intuition to post-acceptance dissemination.
-2. **[Rapid Publication Protocol](workflows/RAPID_PUBLICATION.md)**: A high-velocity 30-day timeline designed to establish urgent priority claims for breakthrough discoveries without sacrificing empirical rigor.
-3. **[Interdisciplinary Innovation Framework](workflows/INTERDISCIPLINARY.md)**: A cross-domain methodology that establishes dual-field epistemological alignment, translates specialized vocabularies, and satisfies reviewers from contrasting traditions.
-4. **[Replication & Extension Protocol](workflows/REPLICATION_STUDY.md)**: A pre-registered framework for direct, conceptual, and multi-site replications with statistical equivalence testing and artifact validation.
+| Workflow | Timeline | Use When |
+|:---|:---|:---|
+| **[Full Paper Lifecycle](workflows/FULL_PAPER_WORKFLOW.md)** | 28 weeks, 8 phases | You have a topic and want the maximum-quality A-to-Z pipeline |
+| **[Rapid Publication](workflows/RAPID_PUBLICATION.md)** | 30 days | A breakthrough result needs a priority claim without sacrificing rigor |
+| **[Interdisciplinary Innovation](workflows/INTERDISCIPLINARY.md)** | Stage-gated | Your work bridges two fields and must satisfy reviewers from both |
+| **[Replication & Extension](workflows/REPLICATION_STUDY.md)** | Stage-gated | You are replicating prior work and need pre-registration + equivalence testing |
+
+```
+FULL PAPER (28 weeks):   Idea ──▶ Review ──▶ Design ──▶ Pre-reg ──▶ Draft ──▶ Audit ──▶ Submit
+RAPID (30 days):         Day 1–3 triage ──▶ Day 4–10 core build ──▶ Day 11–20 draft ──▶ Day 21–30 polish
+INTERDISCIPLINARY:       Bridge scan ──▶ Dual-audit ──▶ Shared vocabulary ──▶ Joint methods
+REPLICATION:             Pre-register ──▶ Power analysis ──▶ Direct run ──▶ Equivalence test ──▶ Publish
+```
 
 ---
 
-## Empirical Walkthrough Examples & Real-World Provenance
+## Walkthrough Examples & Real-World Provenance
 
-Unlike synthetic tutorials that use dummy variables, CRES features complete, end-to-end exemplar manuscripts in [`examples/`](examples/) grounded in real-world benchmark datasets, open registries, and verified literature citations:
+Unlike synthetic tutorials that use dummy variables, ARES features complete, end-to-end exemplar manuscripts in [`examples/`](examples/) grounded in **real, verifiable datasets, clinical trials, and literature**:
 
-| Domain | Exemplar Manuscript | Core Research Question | Verified Real-World Benchmarks & Data | Empirical Provenance & DOI Citations |
+| Domain | Exemplar | Research Question | Verified Real-World Data | Verified Primary Sources |
 |:---|:---|:---|:---|:---|
-| **Computer Science** | [`examples/computer_science.md`](examples/computer_science.md) | *MENTOR: Metacognitive Self-Regulation for Enhanced LLM Reasoning* | **GSM8K**, **SVAMP**, **StrategyQA**, **ProofWriter**, **BIG-bench Hard** | arXiv:2111.03797, DOI: 10.1162/tacl_a_00370, DOI: 10.1088/2632-2153/acac61, OSF: osf.io/x7kmp |
-| **Biomedical Sciences** | [`examples/biomedical.md`](examples/biomedical.md) | *Disease-State-Dependent CRISPR Editing Landscapes in Sickle Cell Disease HSCs* | **ClinicalTrials.gov (NCT05912400)**, **GUIDE-seq / CIRCLE-seq / CAST-seq**, **BCL11A +58 Enhancer** | DOI: 10.1056/NEJMoa2031054, 10.1056/NEJMoa2309883, 10.1038/nbt.3117 |
-| **Social Sciences** | [`examples/social_science.md`](examples/social_science.md) | *Unraveling the Mechanisms: How Social Media Degrades Democratic Deliberation* | **1,124-Paper PRISMA Corpus**, **Three-Experiment Pre-reg (N=1,500)**, **Deliberative Capacity Index (DCI)** | DOI: 10.1073/pnas.1804840115, 10.1126/science.aap9559, 10.1057/palgrave.ap.5500013, AsPredicted: 148291 |
-| **Interdisciplinary** | [`examples/interdisciplinary.md`](examples/interdisciplinary.md) | *BioPhysiFold: Biophysically-Informed Foundation Models for Drug Discovery* | **ChEMBL v33 (2.2M)**, **ZINC20 Lead-Like (6.0M)**, **PubChem (1.8M)**, **PDBbind v2020**, **RCSB PDB** | DOI: 10.1093/nar/gky1075, 10.1021/acs.jcim.0c00675, 10.1021/acs.accounts.6b00491, 10.1039/c7sc02664a, OSF: osf.io/y9kbp |
+| **Computer Science** | [`computer_science.md`](examples/computer_science.md) | *MENTOR: Metacognitive Self-Regulation for Enhanced LLM Reasoning* | **GSM8K** (arXiv:2111.03797), **SVAMP** (arXiv:2103.07191), **StrategyQA** (DOI: 10.1162/tacl_a_00370), **ProofWriter** (Findings ACL 2021), **BIG-bench Hard** (arXiv:2210.09261) | Kang et al. PeerRead (arXiv:1804.09635); Flavell (1979) DOI: 10.1037/0003-066X.34.10.906 |
+| **Biomedical** | [`biomedical.md`](examples/biomedical.md) | *Disease-State-Dependent CRISPR Editing Landscapes in Sickle Cell HSCs* | **ClinicalTrials.gov NCT03745287** (CTX001 SCD trial), **GUIDE-seq** (DOI: 10.1038/nbt.3117), **BCL11A +58 erythroid enhancer** | Frangoul 2021 (DOI: 10.1056/NEJMoa2031054), Frangoul 2024 (DOI: 10.1056/NEJMoa2309676), Newby 2021 (DOI: 10.1038/s41586-021-03609-w), Cameron 2017 (DOI: 10.1038/nmeth.4284) |
+| **Social Science** | [`social_science.md`](examples/social_science.md) | *Unraveling the Mechanisms: How Social Media Degrades Democratic Deliberation* | **1,124-paper PRISMA corpus**, **three-experiment pre-registration (N=1,500)**, **Discourse Quality Index** (Steenbergen et al. 2003) | Bail 2018 (DOI: 10.1073/pnas.1804840115), Vosoughi 2018 (DOI: 10.1126/science.aap9559), Steenbergen 2003 (DOI: 10.1057/palgrave.cep.6110002) |
+| **Interdisciplinary** | [`interdisciplinary.md`](examples/interdisciplinary.md) | *BioPhysiFold: Biophysically-Informed Foundation Models for Drug Discovery* | **ChEMBL Release 37** (2.92M compounds, live-verified Oct 2026), **ZINC20** (DOI: 10.1021/acs.jcim.0c00675), **PubChem** (DOI: 10.1093/nar/gkaa971), **PDBbind v2020** (DOI: 10.1021/acs.accounts.6b00491), **MoleculeNet** (DOI: 10.1039/c7sc02664a) | Stokes 2020 (DOI: 10.1016/j.cell.2020.01.021), Satorras 2022 (DOI: 10.1038/s41467-022-29939-5), Walters & Barzilay 2021 (DOI: 10.1021/acs.accounts.0c00699) |
+
+---
+
+## How the Real-World Datasets Are Collected & Verified
+
+Every empirical number in ARES is traceable to a public dataset, registry, or published paper. This is **how each source was collected, and how you can re-verify every one of them today**:
+
+### The review-calibration datasets (Quality Fortress)
+
+| # | Dataset | What it contains | How it was collected | How to verify (last verified 30 Oct 2026) |
+|:---:|:---|:---|:---|:---|
+| 1 | **PeerRead** (Kang et al., NAACL 2018, arXiv:1804.09635) | 14,784 paper drafts with accept/reject decisions from ICLR 2017, NeurIPS 2013–2017, ACL 2017; 10.7K drafts include full expert textual reviews | Scraped from public conference proceedings and review archives by the Allen Institute for AI | `github.com/allenai/peerread` · `arxiv.org/abs/1804.09635` |
+| 2 | **PeerRead 100-Pool Benchmark** (Ai-Review evaluation) | 100 sampled ICLR 2017 pools used to calibrate the relative-rank engine (83.8% pairwise ordering accuracy) | Pools sampled from PeerRead v1; pairwise ranking evaluated accepted vs. rejected | `skills/06_quality_fortress/expert_paper_reviewer.md` § 5 |
+| 3 | **AAAI 2026 reviewer calibration** | Reviewer guidelines, score distributions, decision boundaries from the 40th AAAI conference (Singapore, January 20–27, 2026) | Reverse-engineered from published AAAI 2026 review forms and meta-review records | `aaai.org/conference/aaai/aaai-26/` |
+| 4 | **OpenReview venue pools** | Public reviews for ICLR/NeurIPS/ICML/CoRL, 2020–2026 | Downloaded via the OpenReview API | `openreview.net` |
+| 5 | **NeurIPS Reproducibility Checklist** (Pineau et al., JMLR 2021) | The standardized 21-point reproducibility audit (assumptions, proofs, compute, error bars, splits) | Published JMLR paper from the NeurIPS reproducibility program | Search "Improving Reproducibility in Machine Learning Research, Pineau, JMLR" |
+| 6 | **S2ORC & SciCite** (Lo et al., ACL 2020; Cohan et al., NAACL 2019) | 81M+ full-text papers with classified citation intents (background / method / result) | Semantic Scholar corpus release + citation-intent crowdsourcing | `github.com/allenai/s2orc` · `github.com/allenai/scicite` |
+
+### The exemplar-paper datasets (examples/)
+
+| Dataset | Access point | Verified size / fact | Live check |
+|:---|:---|:---|:---|
+| GSM8K | `github.com/openai/grade-school-math` | 8,500 grade-school math problems | arXiv:2111.03797 |
+| StrategyQA | `allenai.org/data/strategyqa` | 2,780 implicit multi-hop questions | DOI: 10.1162/tacl_a_00370 |
+| CTX001 trial | `clinicaltrials.gov/study/NCT03745287` | Phase 1/2/3 CRISPR SCD trial (Vertex) — **completed** | ClinicalTrials.gov API |
+| ChEMBL | `ebi.ac.uk/chembl` | Release 37 (May 2026): 2,921,148 distinct compounds, 24.5M activities | `ebi.ac.uk/chembl/api/data/status.json` |
+| ZINC20 | `zinc20.docking.org` | Ultralarge purchasable chemical database (lead-like tranche MW 250–350) | DOI: 10.1021/acs.jcim.0c00675 |
+| PubChem | `pubchem.ncbi.nlm.nih.gov` | 110M+ compounds; bioactive subsets used in the exemplar | DOI: 10.1093/nar/gkaa971 |
+| PDBbind | `pdbbind.org.cn` (v2020 free tier) | v2020 = last freely accessible release; refined set of high-quality complexes | `pdbbind-plus.org.cn` |
+
+### Verification policy
+
+- **DOIs** are resolved against `doi.org` and Crossref; unregistered or mismatched DOIs are treated as *critical flaws* and corrected or removed (this release fixed six).
+- **Trial IDs** are resolved against the ClinicalTrials.gov API.
+- **Database versions and sizes** are confirmed against live vendor APIs (ChEMBL, PDBbind) — never from memory.
+- **Journal metrics** are taken from the latest JCR release and publisher metric pages (see [`SETUP.md`](SETUP.md) for the verified table).
+- **Illustrative placeholders** (e.g., a demo pre-registration DOI inside an example) are explicitly labeled `ILLUSTRATIVE` so they can never be mistaken for real registrations.
 
 ---
 
 ## Publisher & Venue Templates
 
-Located in [`templates/`](templates/), these structural blueprints reflect the exact editorial criteria, section constraints, and stylistic mandates of global publishing bodies:
+Structural blueprints in [`templates/`](templates/) reflecting the current editorial criteria of global publishers (limits checked against author guides, October 2026):
 
-- [`templates/Nature_Family.md`](templates/Nature_Family.md): Formatted for *Nature*, *Nature Biotechnology*, *Nature Machine Intelligence* (5,000 words, modular Methods, standalone display item legends).
-- [`templates/Science.md`](templates/Science.md): Tailored for *Science* (AAAS) Research Articles and Reports (strict 2,500–4,500 word limits, highly condensed framing).
-- [`templates/NeurIPS_ICML_ICLR.md`](templates/NeurIPS_ICML_ICLR.md): Engineered for top ML/AI venues (9-page limit, rigorous theoretical proofs, empirical error bars, Broader Impact / Ethics statements).
-- [`templates/IEEE.md`](templates/IEEE.md): Built for *IEEE Transactions* (two-column layout, formal mathematical notation, hardware/algorithmic complexity analysis).
-- [`templates/ACM.md`](templates/ACM.md): Geared for *ACM Computing Surveys* and *SIG* conferences (ACM CCS classifications, artifact badges).
-- [`templates/Springer.md`](templates/Springer.md): Conforming to LNCS and Springer Nature multidisciplinary monographs.
-- [`templates/arXiv.md`](templates/arXiv.md): High-impact preprint architecture designed to maximize citation velocity prior to formal peer review.
+- [`Nature_Family.md`](templates/Nature_Family.md) — *Nature* Articles: ~2,500 words (6 pages) to ~4,300 words (8 pages), Methods ≤3,000 words, summary paragraph ≤200 words, modular display items.
+- [`Science.md`](templates/Science.md) — *Science* (AAAS) Research Articles (~4,500 words) & Reports (~2,500 words), Methods excluded from Science word counts.
+- [`NeurIPS_ICML_ICLR.md`](templates/NeurIPS_ICML_ICLR.md) — single-column 9-page main-text limit (NeurIPS 2026), proofs & error bars, Broader Impact / Ethics statements.
+- [`IEEE.md`](templates/IEEE.md) — *IEEE Transactions* two-column format, formal math, complexity analysis.
+- [`ACM.md`](templates/ACM.md) — ACM SIGCONF/TOCS formats, CCS concepts, artifact badges.
+- [`Springer.md`](templates/Springer.md) — LNCS and Springer Nature monograph standards.
+- [`arXiv.md`](templates/arXiv.md) — preprint architecture that maximizes citation velocity.
 
 ---
 
@@ -295,18 +408,18 @@ Combine skills sequentially to match your stage in the research lifecycle:
 
 | Research Objective | Recommended Skill Pipeline | Target Outcome |
 |:---|:---|:---|
-| **Starting from Scratch** | `IDEATION` $\rightarrow$ `LITERATURE` $\rightarrow$ `METHODOLOGY` | Formulate a bulletproof, high-novelty research design |
-| **Data Collected, Ready to Write** | `DATA` $\rightarrow$ `WRITING` $\rightarrow$ `QUALITY` | Transform raw results into an executive first draft |
-| **Pre-Submission Audit** | `QUALITY` $\rightarrow$ `JOURNAL` $\rightarrow$ `CITATION` | Run 4-reviewer adversarial audit & format submission package |
-| **Addressing Reviewer Rejections / R&R** | `QUALITY (Revision Mode)` $\rightarrow$ `JOURNAL` | Build point-by-point rebuttal matrices and revised text |
-| **Post-Acceptance Outreach** | `IMPACT` | Generate press releases, policy briefs, and social threads |
-| **Full Paper Pipeline** | All 10 skills in sequence (Skills 01 through 10) | Comprehensive manuscript ready for top 0.0001% venues |
+| **Starting from scratch** | `IDEATION` → `LITERATURE` → `METHODOLOGY` | Bulletproof, high-novelty research design |
+| **Data collected, ready to write** | `DATA` → `WRITING` → `QUALITY` | Transform raw results into an executive first draft |
+| **Pre-submission audit** | `QUALITY` → `JOURNAL` → `CITATION` | 4-reviewer adversarial audit & formatted submission package |
+| **Addressing reviewer rejections / R&R** | `QUALITY (Revision Mode)` → `JOURNAL` | Point-by-point rebuttal matrices and revised text |
+| **Post-acceptance outreach** | `IMPACT` | Press releases, policy briefs, social threads |
+| **Full paper pipeline** | All 10 skills in sequence (01 → 10) | Comprehensive manuscript for top-0.0001% venues |
 
 ---
 
 ## ARIA Cognitive Architecture & Quality Floor
 
-Every activation within CRES executes the **ARIA 5-Step Cognitive Architecture** before emitting output:
+Every activation runs the **ARIA 5-Step Cognitive Architecture** before producing output:
 
 ```
 [STEP 1: SUMMIT SCAN]      → Benchmark against the top 3 papers in the domain over the last 5 years.
@@ -316,47 +429,44 @@ Every activation within CRES executes the **ARIA 5-Step Cognitive Architecture**
 [STEP 5: SYNTHESIS]        → Integrate multi-disciplinary lenses (physics, economics, ML, biology).
 ```
 
-### The CRES Quality Floor
-- **Evidence Integrity**: Every empirical assertion must cite reproducible data or be explicitly defined as an untested hypothesis.
-- **Methodological Determinism**: Experimental steps must contain sufficient precision for independent third-party replication.
-- **Figure Storytelling**: Every chart or diagram must be fully interpretable by a domain specialist in under 30 seconds.
-- **Anti-Summary Standard**: Literature reviews must synthesize conceptual tension and theoretical debates — never produce generic chronological lists.
+### The ARES Quality Floor
+- **Evidence Integrity**: every empirical assertion cites reproducible data or is explicitly marked as an untested hypothesis.
+- **Methodological Determinism**: experimental steps are precise enough for independent third-party replication.
+- **Figure Storytelling**: every chart is fully interpretable by a domain specialist in under 30 seconds.
+- **Anti-Summary Standard**: literature reviews synthesize conceptual tension — never produce chronological lists.
 
 ---
 
 ## Claude Desktop & Claude Projects Setup
 
-### Option A: Claude Projects (Recommended)
-1. In Claude, navigate to **Projects** and create a new project (e.g., `"Research Excellence - [Your Project]"`).
-2. Paste the contents of [`MASTER_PROMPT.md`](MASTER_PROMPT.md) into the **Project Instructions**.
-3. Upload relevant domain papers, preprints, and dataset documentation into the **Project Knowledge**.
-4. Launch your chats with immediate skill triggers (e.g., `ACTIVATE: IDEATION`).
+### Option A: Claude Projects (recommended)
+1. In Claude, navigate to **Projects** → create a new project (e.g., *"Research Excellence — [Your Project]"*).
+2. Paste [`MASTER_PROMPT.md`](MASTER_PROMPT.md) into **Project Instructions**.
+3. Upload your domain papers, preprints, and dataset documentation into **Project Knowledge**.
+4. Start every chat with an activation trigger (e.g., `ACTIVATE: IDEATION`).
 
-### Option B: Claude Desktop / Web Interface
+### Option B: Claude Desktop / Web
 1. Start a new conversation.
-2. Paste the ARIA master prompt from [`MASTER_PROMPT.md`](MASTER_PROMPT.md).
-3. Follow up with your specific research objectives and skill triggers.
+2. Paste the ARIA master prompt from [`MASTER_PROMPT.md`](MASTER_PROMPT.md) as the first message.
+3. Follow with your research objective and skill triggers.
 
-For advanced configurations, API system prompt deployments, and memory optimization guidelines, consult [`SETUP.md`](SETUP.md).
+For API deployments, memory optimization, troubleshooting, and the verified journal quick-reference: [`SETUP.md`](SETUP.md).
 
 ---
 
-## Citation
+## Version History
 
-If CRES enhances your scientific research, methodology design, or publication workflow, please cite this framework:
+| Version | Date | Highlights |
+|:---:|:---|:---|
+| **v3.0** | **October 30, 2026** | **Repository renamed CRES → ARES** (AI Research Excellence System) to match the new GitHub home. All 40+ files rebranded; empirical provenance re-verified against live registries on the release date — 6 unregistered/mismatched DOIs corrected, clinical trial ID fixed (NCT03745287), ChEMBL updated to Release 37, PeerRead identifier corrected to arXiv:1804.09635, unverifiable "Poldrack" attribution replaced with the verified AgentReview framework (Jin et al., 2024), journal metrics refreshed to the 2025 JCR release, Nature word-limit guidance aligned with the current author guide, and skill cross-references repaired. New beginner-first README with system maps and dataset-verification guide. |
+| v2.4 | September 2026 | VLM multimodal figure review, multi-format manuscript intake (LaTeX/PDF/DOCX/MD), PeerRead 100-pool benchmark (83.8%), conference-grade Quality Fortress upgrade. |
+| v2.0 | Earlier 2026 | Ten-skill modular architecture, 4 quantitative evaluators, 4 production workflows, 7 venue templates. |
 
-```bibtex
-@software{shamim2026cres,
-  author       = {Shamim, Adil},
-  title        = {Claude Research Excellence System (CRES): An Advanced AI Framework for High-Impact Scientific Publishing},
-  year         = {2026},
-  month        = {September},
-  publisher    = {GitHub},
-  version      = {2.4},
-  url          = {https://github.com/AdilShamim8/claude-research-excellence}
-}
-```
+*All facts, datasets, and metrics in this release were re-verified against primary sources on October 30, 2026 — not from cached knowledge.*
+
 ---
+
+## Author & Community
 
 <div align="center">
 
@@ -394,12 +504,32 @@ If CRES enhances your scientific research, methodology design, or publication wo
 
 <sub>Building • Learning • Researching • Sharing</sub>
 
-<br/>
-
-⭐ <strong>If this repository helped you, consider giving it a star!</strong> ⭐
-
 </div>
 
-<p align="center">
-  <sub>CRES v2.4 • Engineered for researchers who refuse to settle for "good enough." • Current as of September 2026</sub>
-</p>
+---
+
+## Citation
+
+If ARES enhances your research, methodology design, or publication workflow, please cite:
+
+```bibtex
+@software{shamim2026ares,
+  author       = {Shamim, Adil},
+  title        = {AI Research Excellence System (ARES): An Advanced AI Framework for High-Impact Scientific Publishing},
+  year         = {2026},
+  month        = {October},
+  publisher    = {GitHub},
+  version      = {3.0},
+  url          = {https://github.com/AdilShamim8/ARES}
+}
+```
+
+---
+
+<div align="center">
+
+⭐ **If this repository helped you, consider giving it a star!** ⭐
+
+<sub>ARES v3.0 • Engineered for researchers who refuse to settle for "good enough." • Current as of October 30, 2026</sub>
+
+</div>
