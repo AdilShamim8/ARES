@@ -22,7 +22,7 @@ This document demonstrates a complete walkthrough of the AI Research Excellence 
 | Off-Target Assessment in HSCs | MEDIUM (0.58) | Growing | Nat. Biotech., Blood | Tsai et al. 2015; Cameron et al. 2019 |
 | In Vivo HSC Editing | VERY LOW (0.15) | Nascent | Nat. Med., Mol. Ther. | Rurik et al. 2022 (in vivo CAR-T); no SCD in vivo yet |
 | Long-Term Durability of Gene-Corrected HSCs | LOW (0.31) | Growing | Blood, Lancet Haematol. | Frangoul et al. 2024 (2-year follow-up); limited beyond 3 years |
-| Access & Equity in Gene Therapy | LOW (0.26) | Accelerating | Lancet, Health Affairs | Salzman et al. 2023; Bender 2024 |
+| Access & Equity in Gene Therapy | LOW (0.26) | Accelerating | Lancet, J. Manag. Care Pharm. | Nikitin et al. 2023; Bender 2024 |
 | Fetal Hemoglobin Induction Strategies | MEDIUM (0.61) | Plateau | NEJM, Blood | Frangoul et al. 2021; Bushman et al. 2023 |
 
 **Frontier Verdict:** The most promising unsaturated zones are **in vivo HSC editing** (0.15 saturation, nascent growth), **long-term durability assessment** (0.31 saturation, growing), and **access equity** (0.26 saturation, accelerating). Base editing (0.52) and prime editing (0.29) also present strong translational opportunities.
@@ -94,7 +94,7 @@ All foundational and frontier papers benchmarked in Table 1.1 and Section 2.1 ar
 **Gap 3: Access Equity — CRISPR Gene Therapy Is Effectively Unavailable in Sub-Saharan Africa Where SCD Burden Is Highest**
 - **Type:** Implementation Science + Health Equity Gap
 - **Description:** Over 75% of global SCD births occur in sub-Saharan Africa, where the infrastructure for autologous HSC transplant (apheresis, cryopreservation, myeloablative conditioning, BMT units) is largely absent. The current cost of ex vivo CRISPR gene therapy ($2.2–3.1 million per patient; Casgevy pricing) makes it inaccessible in low- and middle-income countries (LMICs). No study has systematically evaluated adapted delivery models, simplified conditioning regimens, or in vivo approaches that could be feasibly deployed in resource-limited settings.
-- **Evidence of Gap:** WHO (2024) gene therapy access report highlights the disparity. Salzman et al. (2023) discusses cost barriers but offers no implementation framework for LMICs. Piel et al. (2013) maps SCD burden but the therapeutic gap is unaddressed.
+- **Evidence of Gap:** WHO (2024) gene therapy access report highlights the disparity. Nikitin et al. (2023) discusses cost and value barriers but offers no implementation framework for LMICs. Piel et al. (2013) maps SCD burden but the therapeutic gap is unaddressed.
 - **Opportunity Score:** 8.9/10
 
 ---
