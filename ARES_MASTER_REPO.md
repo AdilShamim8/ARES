@@ -1,5 +1,5 @@
-# 🧬 CLAUDE RESEARCH EXCELLENCE SYSTEM (CRES)
-### `github.com/AdilShamim8/claude-research-excellence`
+# 🧬 AI RESEARCH EXCELLENCE SYSTEM (ARES)
+### `github.com/AdilShamim8/ARES`
 > *The world's most advanced AI-powered research paper creation framework — built for the top 0.0001%*
 
 ---
@@ -7,7 +7,7 @@
 ## 📐 REPOSITORY ARCHITECTURE
 
 ```
-claude-research-excellence/
+ARES/
 │
 ├── 📋 README.md
 ├── 🧠 MASTER_PROMPT.md                    ← Start here. The ARIA activation system.
@@ -47,7 +47,7 @@ claude-research-excellence/
 │   │   └── conclusion_impact.md
 │   │
 │   ├── 06_quality_fortress/
-│   │   ├── SKILL.md                       ← Conference-grade peer review & 10-dim audit
+│   │   ├── SKILL.md                       ← Conference-grade peer review, 11-dim audit & VLM inspection
 │   │   ├── expert_paper_reviewer.md       ← PeerRead & OpenReview benchmark review engine
 │   │   ├── adversarial_peer_review.md
 │   │   ├── logic_validator.md
@@ -116,7 +116,7 @@ Copy this entire block as your system prompt when using Claude for research:
 ```
 ════════════════════════════════════════════════════
 ARIA: ADVANCED RESEARCH INTELLIGENCE ARCHITECT
-System Prompt v3.1 — Claude Research Excellence System
+System Prompt v3.1 — AI Research Excellence System (ARES)
 ════════════════════════════════════════════════════
 
 You are ARIA, a convergence of the world's most elite research capabilities:
@@ -818,7 +818,7 @@ PARAGRAPH STRUCTURE:
 ## 🏰 SKILL 06: QUALITY FORTRESS (CONFERENCE-GRADE EXPERT PEER REVIEW)
 ### `skills/06_quality_fortress/SKILL.md`
 
-**PURPOSE:** Subject your paper to conference-caliber adversarial peer review and meta-review grounded in real-world benchmark datasets (**PeerRead corpus: 14,784 human reviews**, **OpenReview venue pools**, **NeurIPS 21-point checklist**) before submission.
+**PURPOSE:** Subject your paper to conference-caliber adversarial peer review and meta-review grounded in real-world benchmark datasets (**PeerRead corpus: 14,784 paper drafts with 10.7K human reviews**, **OpenReview venue pools**, **NeurIPS 21-point checklist**) before submission.
 
 ### ACTIVATION PROMPT:
 ```
@@ -1381,22 +1381,22 @@ TOTAL NOVELTY SCORE INTERPRETATION:
 
 ## 📊 JOURNAL QUICK REFERENCE
 
-| Journal/Venue | IF/Rank | Accept Rate | Turnaround | Best For |
-|---------------|---------|-------------|------------|----------|
-| Nature | ~69 | ~7% | 6-8mo | Any breakthrough science |
-| Science | ~56 | ~7% | 6-8mo | Any breakthrough science |
-| NEJM | ~200 | ~5% | 3-4mo | Clinical medicine |
-| Cell | ~68 | ~7% | 4-6mo | Life sciences |
-| NeurIPS | Top ML | ~25% | 6mo | ML, Deep Learning |
-| ICML | Top ML | ~25% | 6mo | ML, Theory |
-| ICLR | Top ML | ~30% | 6mo | Representation learning |
-| PNAS | ~12 | ~15% | 4-6mo | Multidisciplinary |
-| Nature Machine Intelligence | ~25 | ~10% | 4-6mo | AI |
-| JMLR | Top ML | ~35% | 3-6mo | ML theory/methods |
+| Journal/Venue | Impact Factor (2025 JCR) | Accept Rate (latest cycle) | Turnaround | Best For |
+|---------------|--------------------------|----------------------------|------------|----------|
+| Nature | 56.1 | ~7% | 6-8 mo | Any breakthrough science |
+| Science | 45.8 (2024 JCR) | ~7% | 6-8 mo | Any breakthrough science |
+| NEJM | 84.5 | ~5% | 3-4 mo | Clinical medicine |
+| Cell | 45.1 | ~7% | 4-6 mo | Life sciences |
+| NeurIPS | Premier ML conference | 24.5% (2025) | ~6 mo | ML, Deep Learning |
+| ICML | Premier ML conference | 26.9% (2025) | ~6 mo | ML, Theory |
+| ICLR | Premier ML conference | 32% (2025) | ~6 mo | Representation learning |
+| PNAS | 9.5 | ~13% (direct submissions) | 4-6 mo | Multidisciplinary |
+| Nature Machine Intelligence | 29.8 | ~10% | 4-6 mo | AI |
+| JMLR | Premier ML journal | selective | 3-6 mo | ML theory/methods |
 
 ---
 
-*CRES v2.4 — Built for researchers who refuse to settle for "good enough."*
+*ARES v3.0 — October 2026 — Built for researchers who refuse to settle for "good enough."*
 *Every skill prompt in this repository represents the distillation of 
 thousands of successful publications, reviewer reports, and editorial decisions.*
 
