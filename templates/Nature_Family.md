@@ -1,6 +1,6 @@
 # Nature Family Journal Format Template
 
-> **CRES Template — Nature Family Style**
+> **ARES Template — Nature Family Style**
 > Covers Nature, Nature Medicine, Nature Neuroscience, Nature Biotechnology, Nature Methods, Nature Physics, Nature Chemistry, and all Nature Research journals.
 
 ---
@@ -15,7 +15,7 @@ Nature Research journals are among the most selective and impactful scientific p
 
 | Article Type           | Main Text | Methods | Abstract | Figures/Tables |
 |------------------------|-----------|---------|----------|----------------|
-| Article (Nature)       | 2,500     | 3,000   | 150      | 4–6 display items |
+| Article (Nature)       | 2,500–4,300 (6–8 pages) | 3,000 | ~150–200 | 4–6 display items |
 | Letter (Nature)        | 1,500     | 2,000   | 150      | 3–4 display items |
 | Article (Nature Med.)  | 3,500     | 3,000   | 150      | 6–8 display items |
 | Article (Nature Neuro.)| 3,000     | 2,500   | 150      | 5–7 display items |
@@ -74,7 +74,7 @@ William T. Johnson¹²*
 Nature's abstract requirements are among the most restrictive in scientific publishing:
 
 ### Rules
-- **Maximum 150 words** (strictly enforced)
+- **No more than 200 words** (ideally ~150; per Nature formatting guide, verified October 2026)
 - **No citations** whatsoever
 - **No specialized terminology** without explanation
 - **No abbreviations** unless universally understood (DNA, RNA)
@@ -438,7 +438,7 @@ Statistical methods: Two-tailed t-test, one-way ANOVA with Tukey's
 | # | Mistake | Correction |
 |---|---------|-----------|
 | 1 | Using numbered sections in main text | Use bold paragraph leads instead |
-| 2 | Abstract over 150 words | Strictly enforced; trim to ≤150 |
+| 2 | Abstract over 200 words | Trim to ≤200 words (ideally ~150) |
 | 3 | Jargon in abstract | Must be accessible to all scientists |
 | 4 | First person in abstract | Use passive/third person |
 | 5 | Too many display items | Stay within the limit for article type |
@@ -459,7 +459,7 @@ Statistical methods: Two-tailed t-test, one-way ANOVA with Tukey's
 
 ### Pre-Submission Content
 - [ ] Main text within word limit (2,500 for Nature Article)
-- [ ] Abstract ≤150 words, no citations, no jargon
+- [ ] Abstract ≤200 words (ideally ~150), no citations, no jargon
 - [ ] Title ≤90 characters
 - [ ] Display items within limit (4–6 for Nature Article)
 - [ ] Methods section separate, detailed, ≤3,000 words
@@ -544,4 +544,4 @@ Statistical methods: Two-tailed t-test, one-way ANOVA with Tukey's
 
 ---
 
-*Last updated: 2026 | CRES Template Version 1.0*
+*Last updated: October 2026 | ARES Template Version 1.0*

@@ -1,6 +1,6 @@
 # IEEE Journal & Conference Paper Format Template
 
-> **CRES Template — IEEE Style**
+> **ARES Template — IEEE Style**
 > Covers IEEE Transactions, Journals, Magazines, and Conference proceedings format requirements.
 
 ---
@@ -497,4 +497,4 @@ The authors would like to thank...
 
 ---
 
-*Last updated: 2026 | CRES Template Version 1.0*
+*Last updated: October 2026 | ARES Template Version 1.0*

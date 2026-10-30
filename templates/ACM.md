@@ -1,6 +1,6 @@
 # ACM Digital Library Paper Format Template
 
-> **CRES Template — ACM Style**
+> **ARES Template — ACM Style**
 > Covers ACM journal and conference proceedings format requirements for the ACM Digital Library.
 
 ---
@@ -520,4 +520,4 @@ This work was supported by...
 
 ---
 
-*Last updated: 2026 | CRES Template Version 1.0*
+*Last updated: October 2026 | ARES Template Version 1.0*

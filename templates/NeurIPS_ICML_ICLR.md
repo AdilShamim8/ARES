@@ -1,6 +1,6 @@
 # NeurIPS / ICML / ICLR Conference Paper Format Template
 
-> **CRES Template — ML Conference Style**
+> **ARES Template — ML Conference Style**
 > Covers NeurIPS (Neural Information Processing Systems), ICML (International Conference on Machine Learning), and ICLR (International Conference on Learning Representations).
 
 ---
@@ -716,4 +716,4 @@ All three venues enforce double-blind review:
 
 ---
 
-*Last updated: 2026 | CRES Template Version 1.0*
+*Last updated: October 2026 | ARES Template Version 1.0*

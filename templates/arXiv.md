@@ -1,6 +1,6 @@
 # arXiv Preprint Format Template
 
-> **CRES Template — arXiv Style**
+> **ARES Template — arXiv Style**
 > Covers arXiv.org preprint formatting, submission, and best practices across all subject areas.
 
 ---
@@ -216,7 +216,7 @@ arXiv does not enforce a specific citation style. Choose one consistent style:
 - **Specific journal style** — if targeting a particular journal
 
 ### arXiv-Specific Citation Best Practices
-- Always include arXiv IDs for preprints: `arXiv:2401.12345`
+- Always include arXiv IDs for preprints: `arXiv:YYMM.NNNNN`
 - Use the `biblatex` or `natbib` package
 - Cite the published version when available (not just the arXiv preprint)
 - Include DOIs when available
@@ -227,10 +227,10 @@ arXiv does not enforce a specific citation style. Choose one consistent style:
   title         = {Contrastive Learning with Adaptive Margins},
   author        = {Smith, John A. and Doe, Jane B.},
   year          = {2024},
-  eprint        = {2401.12345},
+  eprint        = {YYMM.NNNNN},
   archivePrefix = {arXiv},
   primaryClass  = {cs.LG},
-  url           = {https://arxiv.org/abs/2401.12345}
+  url           = {https://arxiv.org/abs/YYMM.NNNNN}
 }
 ```
 
@@ -450,8 +450,8 @@ arXiv supports versioning — each submission creates a new version (v1, v2, v3,
 - **v4+:** Bug fixes, additional references, corrected errors
 
 ### Best Practices
-- **Always link to the latest version** in communications: `arxiv.org/abs/2401.12345` (defaults to latest)
-- **Link to a specific version** when referencing: `arxiv.org/abs/2401.12345v2`
+- **Always link to the latest version** in communications: `arxiv.org/abs/YYMM.NNNNN` (defaults to latest)
+- **Link to a specific version** when referencing: `arxiv.org/abs/YYMM.NNNNNv2`
 - **Add a comment** for each version explaining changes:
   - v1: "Submitted to NeurIPS 2024"
   - v2: "Updated with additional experiments and corrected typos"
@@ -571,7 +571,7 @@ Pre-trained models and datasets are available at
 - [ ] Verify the compiled PDF on arXiv
 - [ ] Check all figures rendered correctly
 - [ ] Confirm metadata (title, authors, abstract)
-- [ ] Share the arXiv link: `arxiv.org/abs/2401.12345`
+- [ ] Share the arXiv link: `arxiv.org/abs/YYMM.NNNNN`
 - [ ] Update when accepted to a venue (add comment + version)
 - [ ] Add published DOI when available
 
@@ -617,4 +617,4 @@ Pre-trained models and datasets are available at
 
 ---
 
-*Last updated: 2026 | CRES Template Version 1.0*
+*Last updated: October 2026 | ARES Template Version 1.0*

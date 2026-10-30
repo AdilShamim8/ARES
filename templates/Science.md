@@ -1,6 +1,6 @@
 # Science & Science Advances Format Template
 
-> **CRES Template — Science Family Style**
+> **ARES Template — Science Family Style**
 > Covers Science Research Articles, Reports, and Science Advances Research Articles.
 
 ---
@@ -479,4 +479,4 @@ J.A.S. wrote the manuscript with input from all authors.
 
 ---
 
-*Last updated: 2026 | CRES Template Version 1.0*
+*Last updated: October 2026 | ARES Template Version 1.0*

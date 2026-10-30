@@ -1,6 +1,6 @@
 # Springer Journal Format Template
 
-> **CRES Template — Springer Style**
+> **ARES Template — Springer Style**
 > Covers Springer Nature journal articles including LNCS (Lecture Notes in Computer Science), Springer Nature mathematics, engineering, and science journals.
 
 ---
@@ -747,4 +747,4 @@ This work was supported by...
 
 ---
 
-*Last updated: 2026 | CRES Template Version 1.0*
+*Last updated: October 2026 | ARES Template Version 1.0*
