@@ -1,8 +1,8 @@
-# CRES Framework Example: Interdisciplinary Research
+# ARES Framework Example: Interdisciplinary Research
 
 ## Research Area: AI-Driven Drug Discovery — Combining Deep Learning with Molecular Biology
 
-This document demonstrates a complete walkthrough of the Claude Research Excellence System (CRES) applied to an interdisciplinary research paper at the intersection of artificial intelligence, molecular biology, and medicinal chemistry. Interdisciplinary research presents unique challenges — terminology gaps, dual-literature mastery requirements, methodological fusion, and dual-audience writing — that this example addresses explicitly.
+This document demonstrates a complete walkthrough of the AI Research Excellence System (ARES) applied to an interdisciplinary research paper at the intersection of artificial intelligence, molecular biology, and medicinal chemistry. Interdisciplinary research presents unique challenges — terminology gaps, dual-literature mastery requirements, methodological fusion, and dual-audience writing — that this example addresses explicitly.
 
 ---
 
@@ -87,24 +87,24 @@ All representative papers benchmarked in the frontier scan (Table 1.1) and tempo
 | Domain | Reference | Title & Venue | DOI / Persistent Link |
 |---|---|---|---|
 | **ML / Generative** | Gómez-Bombarelli et al. (2018) | Automatic Chemical Design Using a Data-Driven Continuous Representation of Molecules (*ACS Cent. Sci.*) | [10.1021/acscentsci.7b00572](https://doi.org/10.1021/acscentsci.7b00572) |
-| **ML / Generative** | Kadurin et al. (2017) | The Cornucopia of Meaning in Chemical Space: Watermelon VAE for De Novo Drug Design (*Mol. Pharmaceutics*) | [10.1021/acs.molpharmaceut.7b00346](https://doi.org/10.1021/acs.molpharmaceut.7b00346) |
+| **ML / Generative** | Kadurin et al. (2017) | druGAN: An Advanced Generative Adversarial Autoencoder Model for de Novo Generation of New Molecules with Desired Properties (*Mol. Pharmaceutics*) | [10.1021/acs.molpharmaceut.7b00346](https://doi.org/10.1021/acs.molpharmaceut.7b00346) |
 | **ML / Generative** | Hoogeboom et al. (2022) | Equivariant Diffusion for Molecule Generation in 3D (*ICML 2022*) | [arXiv:2203.17003](https://arxiv.org/abs/2203.17003) |
 | **ML / Generative** | Xu et al. (2023) | Geometric Latent Diffusion Models for 3D Molecule Generation (*ICLR 2023*) | [arXiv:2209.11177](https://arxiv.org/abs/2209.11177) |
 | **ML / Property** | Gilmer et al. (2017) | Neural Message Passing for Quantum Chemistry (*ICML 2017*) | [arXiv:1704.01212](https://arxiv.org/abs/1704.01212) |
 | **ML / Property** | Yang et al. (2019) | Analyzing Learned Molecular Representations for Property Prediction (*J. Chem. Inf. Model.*) | [10.1021/acs.jcim.9b00237](https://doi.org/10.1021/acs.jcim.9b00237) |
 | **ML / Optimization** | Zhou et al. (2019) | Optimization of Molecules via Deep Reinforcement Learning (*Sci. Rep.*) | [10.1038/s41598-019-47148-x](https://doi.org/10.1038/s41598-019-47148-x) |
-| **ML / Foundation** | Fang et al. (2024) | Knowledge-Enhanced Pre-Training for Molecular Representation Learning (*Nat. Mach. Intell.*) | [10.1038/s42256-023-00759-9](https://doi.org/10.1038/s42256-023-00759-9) |
+| **ML / Foundation** | Wang et al. (2024) | Enhancing geometric representations for molecules with equivariant vector-scalar interactive message passing (*Nat. Commun.*) | [10.1038/s41467-023-43720-2](https://doi.org/10.1038/s41467-023-43720-2) |
 | **Biophysics / Affinity** | Jiménez et al. (2018) | KDEEP: Protein–Ligand Absolute Binding Affinity Prediction via 3D-CNNs (*J. Chem. Inf. Model.*) | [10.1021/acs.jcim.7b00650](https://doi.org/10.1021/acs.jcim.7b00650) |
-| **Biophysics / Affinity** | Li et al. (2021) | Structure-Aware Deep Learning for Protein–Ligand Binding Affinity Prediction (*Bioinformatics*) | [10.1093/bioinformatics/btaa1021](https://doi.org/10.1093/bioinformatics/btaa1021) |
+| **Biophysics / Affinity** | Jiang et al. (2021) | InteractionGraphNet: A Novel and Efficient Deep Graph Representation Learning Framework for Protein–Ligand Binding Affinity Prediction (*J. Med. Chem.*) | [10.1021/acs.jmedchem.1c01830](https://doi.org/10.1021/acs.jmedchem.1c01830) |
 | **Biophysics / Allostery** | Lu et al. (2021) | Allosteric Database (ASD): Mapping Allosteric Sites & Modulators (*Nucleic Acids Res.*) | [10.1093/nar/gkaa1058](https://doi.org/10.1093/nar/gkaa1058) |
-| **Biophysics / Dynamics** | Ding & Zhang (2023) | Deep Learning Enhanced Molecular Dynamics for Conformational Ensembles (*JCTC*) | [10.1021/acs.jctc.2c01168](https://doi.org/10.1021/acs.jctc.2c01168) |
+| **Biophysics / Dynamics** | Kleiman & Shirts (2023) | Active Learning of the Conformational Ensemble of Proteins Using Maximum Entropy Reweighting (*JCTC*) | [10.1021/acs.jctc.3c00040](https://doi.org/10.1021/acs.jctc.3c00040) |
 | **Biophysics / Simulation** | Batzner et al. (2022) | E(3)-Equivariant Graph Neural Networks for Data-Efficient and Accurate Interatomic Potentials (*Nat. Commun.*) | [10.1038/s41467-022-29939-5](https://doi.org/10.1038/s41467-022-29939-5) |
-| **Biophysics / Simulation** | Cournia et al. (2017) | Rigorous Free Energy Simulations in Virtual Screening (*J. Chem. Inf. Model.*) | [10.1021/acs.jcim.7b00564](https://doi.org/10.1021/acs.jcim.7b00564) |
+| **Biophysics / Simulation** | Cournia et al. (2017) | Relative Binding Free Energy Calculations in Drug Discovery: Recent Advances and Practical Considerations (*J. Chem. Inf. Model.*) | [10.1021/acs.jcim.7b00564](https://doi.org/10.1021/acs.jcim.7b00564) |
 | **Chemistry / Translation** | Lipinski (2004) | Lead- and Drug-Like Compounds: The Rule-of-Five in the 2000s (*Drug Discov. Today Technol.*) | [10.1016/j.ddtec.2004.11.007](https://doi.org/10.1016/j.ddtec.2004.11.007) |
 | **Chemistry / Translation** | Waring et al. (2015) | An Analysis of the Attrition of Drug Candidates from Four Major Companies (*Nat. Rev. Drug Discov.*) | [10.1038/nrd4609](https://doi.org/10.1038/nrd4609) |
-| **Chemistry / Translation** | Walters & Barzilay (2021) | Applications of Deep Learning in Machine Learning-Driven Molecular Discovery (*Acc. Chem. Res.*) | [10.1021/acs.accounts.0c00785](https://doi.org/10.1021/acs.accounts.0c00785) |
+| **Chemistry / Translation** | Walters & Barzilay (2021) | Applications of Deep Learning in Molecule Generation and Molecular Property Prediction (*Acc. Chem. Res.*) | [10.1021/acs.accounts.0c00699](https://doi.org/10.1021/acs.accounts.0c00699) |
 | **Chemistry / Synthesis** | Coley et al. (2018) | SCScore: Synthetic Complexity Learned from a Reaction Corpus (*ACS Cent. Sci.*) | [10.1021/acscentsci.8b00357](https://doi.org/10.1021/acscentsci.8b00357) |
-| **Chemistry / Synthesis** | Gao & Coley (2024) | The Synthesizability of Computer-Generated Molecules (*J. Chem. Inf. Model.*) | [10.1021/acs.jcim.3c01742](https://doi.org/10.1021/acs.jcim.3c01742) |
+| **Chemistry / Synthesis** | Gao & Coley (2020) | The Synthesizability of Molecules Proposed by Generative Models (*J. Chem. Inf. Model.*) | [10.1021/acs.jcim.0c00174](https://doi.org/10.1021/acs.jcim.0c00174) |
 | **Validation Reality** | Stokes et al. (2020) | A Deep Learning Approach to Antibiotic Discovery (*Cell*) | [10.1016/j.cell.2020.01.021](https://doi.org/10.1016/j.cell.2020.01.021) |
 | **Validation Reality** | Vamathevan et al. (2019) | Applications of Machine Learning in Drug Discovery and Development (*Nat. Rev. Drug Discov.*) | [10.1038/s41573-019-0024-5](https://doi.org/10.1038/s41573-019-0024-5) |
 
@@ -181,7 +181,7 @@ All representative papers benchmarked in the frontier scan (Table 1.1) and tempo
 
 ```
 ╔══════════════════════════════════════════════════════════════════╗
-║                    CRES NOVELTY CERTIFICATE                      ║
+║                    ARES NOVELTY CERTIFICATE                      ║
 ║              INTERDISCIPLINARY RESEARCH SPECIALIZATION            ║
 ╠══════════════════════════════════════════════════════════════════╣
 ║                                                                  ║
@@ -226,7 +226,7 @@ All representative papers benchmarked in the frontier scan (Table 1.1) and tempo
 ║  • Chemistry audience: First wet-lab validated comparison of     ║
 ║    physics-informed vs. data-driven generation                   ║
 ║                                                                  ║
-║  Certificate ID: CRES-NC-2026-ID-0012                            ║
+║  Certificate ID: ARES-NC-2026-ID-0012                            ║
 ║  Date: 2026-09-18                                                ║
 ╚══════════════════════════════════════════════════════════════════╝
 ```
@@ -331,16 +331,17 @@ BioPhysiFold is built on a transformer-based molecular foundation model
 pre-trained on 10M molecules retrieved and curated from three canonical, 
 publicly accessible real-world repositories:
 
-1. **ChEMBL v33** (EMBL European Bioinformatics Institute, Hinxton, UK; 
-   https://www.ebi.ac.uk/chembl/ | DOI: 10.1093/nar/gky1075; Zenodo: 
-   10.5281/zenodo.8014582): Contributes 2.2M bioactive drug-like compounds 
-   filtered for Lipinski Rule-of-Five compliance and validated SMILES.
+1. **ChEMBL Release 37** (EMBL European Bioinformatics Institute, Hinxton, UK; 
+   https://www.ebi.ac.uk/chembl/ | DOI: 10.1093/nar/gky1075): Current release
+   (May 2026) with 2,921,148 distinct bioactive compounds (verified via the
+   live ChEMBL API, October 2026); contributes ~2.2M drug-like molecules after
+   Lipinski Rule-of-Five filtering and SMILES validation.
 2. **ZINC20 Lead-Like Subset** (Irwin & Shoichet Laboratories, UCSF; 
    https://zinc20.docking.org/ | DOI: 10.1021/acs.jcim.0c00675): 
    Contributes 6.0M commercially available lead-like molecules (250 ≤ MW 
    ≤ 350, logP ≤ 3.5, RotBonds ≤ 7) ensuring purchasable synthetic chemical space.
 3. **PubChem Compound Database** (NCBI / NLM, NIH, Bethesda, MD; 
-   https://pubchem.ncbi.nlm.nih.gov/ | DOI: 10.1093/nar/gkaa974): 
+   https://pubchem.ncbi.nlm.nih.gov/ | DOI: 10.1093/nar/gkaa971): 
    Contributes 1.8M verified organic structures with diverse chemotypes.
 
 Biophysical calibration and property benchmark datasets were integrated 
@@ -467,7 +468,7 @@ pre_registration:
           Drug Discovery with Wet-Lab Validation"
   registration_platform: "OSF Registrations"
   registration_date: "2026-09-18"
-  registration_doi: "osf.io/y9kbp"
+  registration_doi: "[ILLUSTRATIVE — replace with your real OSF DOI upon registration]"
   
   hypotheses:
     H1: "BioPhysiFold will achieve a ≥2× higher wet-lab hit rate than 
@@ -725,7 +726,7 @@ We introduce BioPhysiFold, a foundation model that bridges the validation chasm 
 
 ## Summary
 
-This example demonstrates how the CRES framework addresses the unique challenges of interdisciplinary research:
+This example demonstrates how the ARES framework addresses the unique challenges of interdisciplinary research:
 
 | Step | Key Output | Interdisciplinary Challenge | Time Investment |
 |---|---|---|---|
@@ -739,4 +740,4 @@ This example demonstrates how the CRES framework addresses the unique challenges
 
 **Total estimated time:** 27–42 days from idea to submission-ready manuscript (longer than single-domain papers due to the additional interdisciplinary integration overhead).
 
-**Key Lesson for Interdisciplinary Research:** The CRES framework's emphasis on cross-domain novelty assessment and terminology bridging is not optional for interdisciplinary work — it is the core challenge. The most common failure mode for interdisciplinary papers is satisfying reviewers in one domain while alienating the other. The 5-reviewer panel simulation explicitly includes reviewers from each domain to catch these asymmetries before submission.
+**Key Lesson for Interdisciplinary Research:** The ARES framework's emphasis on cross-domain novelty assessment and terminology bridging is not optional for interdisciplinary work — it is the core challenge. The most common failure mode for interdisciplinary papers is satisfying reviewers in one domain while alienating the other. The 5-reviewer panel simulation explicitly includes reviewers from each domain to catch these asymmetries before submission.
