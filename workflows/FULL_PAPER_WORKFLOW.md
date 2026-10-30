@@ -1,6 +1,6 @@
 # FULL PAPER WORKFLOW — 28-Week End-to-End Research Publication Protocol
 
-> **CRES Workflow v1.0** | The definitive guide to producing a rigorous, high-impact research paper from initial spark to journal submission. This workflow integrates all 10 CRES skill modules into a coherent, phase-gated process.
+> **ARES Workflow v1.0** | The definitive guide to producing a rigorous, high-impact research paper from initial spark to journal submission. This workflow integrates all 10 ARES skill modules into a coherent, phase-gated process.
 
 ---
 
@@ -29,7 +29,7 @@
 
 ## Phase Overview & 28-Week Timeline
 
-| Phase | Weeks | Focus Area | CRES Skills Engaged | Key Output |
+| Phase | Weeks | Focus Area | ARES Skills Engaged | Key Output |
 |-------|-------|------------|---------------------|------------|
 | IDEATION | 1–2 | Gap identification, hypothesis formation | 01_Ideation | Research question + hypothesis document |
 | LITERATURE | 3–6 | Systematic review, synthesis, positioning | 02_Literature Command, 09_Citation Mastery | Literature review draft + citation network map |
@@ -46,7 +46,7 @@
 
 ## Master Workflow Prompt Sequence
 
-The CRES system operates through an 8-step prompt chain. Each step activates the relevant skill modules and produces specific deliverables that feed into the next step.
+The ARES system operates through an 8-step prompt chain. Each step activates the relevant skill modules and produces specific deliverables that feed into the next step.
 
 ### Step 1: INITIATE (Week 1–2)
 ```
@@ -886,4 +886,4 @@ RATIONALE: [why this change improves the paper]
 
 *This workflow is designed to be adapted, not followed rigidly. Adjust timelines, add phases, or compress steps based on your specific research context. The key principle: quality gates must be respected even if timelines shift.*
 
-**CRES Full Paper Workflow v1.0** | Part of the Claude Research Excellence System
+**ARES Full Paper Workflow v1.0** | Part of the AI Research Excellence System

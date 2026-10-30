@@ -1,6 +1,6 @@
 # REPLICATION STUDY WORKFLOW — Replication and Extension Protocol
 
-> **CRES Workflow v1.0** | A comprehensive guide to designing, conducting, and publishing replication research. In an era of replication crisis, well-executed replications are among the most valuable scientific contributions — yet they remain among the most challenging to publish. This workflow provides the structure to maximize both rigor and impact.
+> **ARES Workflow v1.0** | A comprehensive guide to designing, conducting, and publishing replication research. In an era of replication crisis, well-executed replications are among the most valuable scientific contributions — yet they remain among the most challenging to publish. This workflow provides the structure to maximize both rigor and impact.
 
 ---
 
@@ -511,7 +511,7 @@ One of the most consequential decisions in replication research is how to define
 | **Bayesian** | Bayes factor supports same direction | Provides evidence for and against | Requires specifying prior |
 | **Practical significance** | Effect size exceeds SESOI | Focuses on what matters | Requires defining SESOI |
 
-**CRES Recommendation:** Use a multi-criteria approach. Report ALL of the above. Do not reduce replication assessment to a single binary judgment.
+**ARES Recommendation:** Use a multi-criteria approach. Report ALL of the above. Do not reduce replication assessment to a single binary judgment.
 
 **Suggested reporting:**
 ```
@@ -1184,4 +1184,4 @@ Prediction interval: [X.XX, X.XX]
 
 *Replication is not the enemy of originality — it is its foundation. A science that cannot verify its own findings is a science built on sand. By conducting rigorous, transparent replications, you are performing one of the most important services a researcher can provide: ensuring that the knowledge we build upon is solid enough to support the structures we place on top of it.*
 
-**CRES Replication Study Workflow v1.0** | Part of the Claude Research Excellence System
+**ARES Replication Study Workflow v1.0** | Part of the AI Research Excellence System

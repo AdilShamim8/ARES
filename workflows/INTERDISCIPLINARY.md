@@ -1,6 +1,6 @@
 # INTERDISCIPLINARY RESEARCH WORKFLOW — Cross-Domain Innovation Framework
 
-> **CRES Workflow v1.0** | A structured approach to conducting research at the intersection of two or more disciplines. Interdisciplinary work carries extraordinary potential for breakthrough contributions — and extraordinary risk of failure. This workflow provides the scaffolding to navigate both.
+> **ARES Workflow v1.0** | A structured approach to conducting research at the intersection of two or more disciplines. Interdisciplinary work carries extraordinary potential for breakthrough contributions — and extraordinary risk of failure. This workflow provides the scaffolding to navigate both.
 
 ---
 
@@ -47,7 +47,7 @@ Yet interdisciplinary research fails at significantly higher rates than single-d
 - **Publication limbo:** Too disciplinary for interdisciplinary journals; too interdisciplinary for disciplinary journals
 - **Career risk:** Interdisciplinary scholars may struggle with promotion in discipline-specific departments
 
-### The CRES Interdisciplinary Advantage
+### The ARES Interdisciplinary Advantage
 
 This workflow addresses these risks systematically by:
 
@@ -78,7 +78,7 @@ Adjacency scanning is the systematic search for productive intersections between
    - What phenomena in Field A are isomorphic to phenomena in Field B?
 
 ```
-CRES PROMPT: Use gap_analysis_prompt (interdisciplinary mode)
+ARES PROMPT: Use gap_analysis_prompt (interdisciplinary mode)
 "I work in [FIELD A]. Identify the top 5 research gaps at the
 intersection of [FIELD A] and [FIELD B] where:
 1) Methods from [FIELD B] could solve problems in [FIELD A]
@@ -901,4 +901,4 @@ For each strategy, verify:
 
 *Interdisciplinary research is not for the faint of heart. It requires intellectual humility (acknowledging what you don't know about the other field), methodological pluralism (respecting different standards of evidence), and persistent translation work (making your ideas accessible across boundaries). The reward is the opportunity to see connections that no single-discipline researcher can see — and to create knowledge that no single discipline could produce alone.*
 
-**CRES Interdisciplinary Workflow v1.0** | Part of the Claude Research Excellence System
+**ARES Interdisciplinary Workflow v1.0** | Part of the AI Research Excellence System

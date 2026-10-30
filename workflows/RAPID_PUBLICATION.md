@@ -1,6 +1,6 @@
 # RAPID PUBLICATION WORKFLOW — 30-Day Fast-Track Protocol
 
-> **CRES Workflow v1.0** | A compressed, high-intensity publication protocol for time-sensitive research. This workflow trades comprehensive depth for strategic focus, maintaining a rigorous quality floor while dramatically accelerating the timeline from ideation to submission.
+> **ARES Workflow v1.0** | A compressed, high-intensity publication protocol for time-sensitive research. This workflow trades comprehensive depth for strategic focus, maintaining a rigorous quality floor while dramatically accelerating the timeline from ideation to submission.
 
 ---
 
@@ -155,7 +155,7 @@ Day 29──30 ████ FINAL SUBMISSION
 - Rank by feasibility (data availability × method readiness × ethics status)
 
 ```
-CRES PROMPT: Use gap_analysis_prompt (compressed mode)
+ARES PROMPT: Use gap_analysis_prompt (compressed mode)
 "Given my expertise in [DOMAIN] and access to [DATASETS/RESOURCES],
 identify the top 5 most impactful research questions I could address
 within a 30-day timeline. For each, rate: feasibility (1-10),
@@ -168,7 +168,7 @@ impact potential (1-10), and time-to-completion estimate."
 - Confirm no identical study exists; identify closest related work
 
 ```
-CRES PROMPT: Use novelty_calculator (rapid mode)
+ARES PROMPT: Use novelty_calculator (rapid mode)
 "Assess the novelty of this research question: [QUESTION].
 Compare against these related studies: [LIST]. What is the
 incremental contribution? Rate novelty on dimensions:
@@ -187,7 +187,7 @@ conceptual, methodological, empirical, theoretical."
 - Specify expected direction and magnitude of effects
 
 ```
-CRES PROMPT: Use hypothesis_forge
+ARES PROMPT: Use hypothesis_forge
 "Given the research question [QUESTION] and these key findings
 from the literature [FINDINGS], formulate 2-3 testable hypotheses.
 For each, specify: the predicted relationship, the mechanism,
@@ -215,7 +215,7 @@ the expected effect size range, and potential boundary conditions."
 - This forces specificity before any analysis begins
 
 ```
-CRES PRE-REGISTRATION TEMPLATE (Rapid):
+ARES PRE-REGISTRATION TEMPLATE (Rapid):
 1. Study title
 2. Research question
 3. Hypotheses (with predicted direction)
@@ -251,7 +251,7 @@ CRES PRE-REGISTRATION TEMPLATE (Rapid):
 - Search strategy: 2–3 targeted database searches with precise keywords
 
 ```
-CRES PROMPT: Use systematic_review_prompt (rapid mode)
+ARES PROMPT: Use systematic_review_prompt (rapid mode)
 "Conduct a targeted search for literature on [TOPIC]. Focus on:
 1) The 10 most-cited papers from the last 5 years
 2) The 5 most directly relevant recent studies
@@ -278,7 +278,7 @@ CRES PROMPT: Use systematic_review_prompt (rapid mode)
 - Write a 1,500–2,000 word literature synthesis (not a full review — this will become your Introduction)
 
 ```
-CRES PROMPT: Use synthesis_engine (rapid mode)
+ARES PROMPT: Use synthesis_engine (rapid mode)
 "Synthesize these [N] papers into a coherent narrative that:
 1) Establishes the importance of [DOMAIN]
 2) Identifies the specific gap my study addresses
@@ -342,7 +342,7 @@ CRES PROMPT: Use synthesis_engine (rapid mode)
 - Define all measures and their psychometric properties
 
 ```
-CRES PROMPT: Use experimental_design_prompt (rapid mode)
+ARES PROMPT: Use experimental_design_prompt (rapid mode)
 "Design the methodology for [RESEARCH QUESTION] using [DATA SOURCE].
 Specify: (1) sample characteristics and selection criteria,
 (2) variable operationalization, (3) analysis plan with
@@ -412,7 +412,7 @@ statistical tests, (4) assumptions and how to verify them,
 - Calculate effect sizes and confidence intervals
 
 ```
-CRES PROMPT: Use analysis_engine_prompt (rapid mode)
+ARES PROMPT: Use analysis_engine_prompt (rapid mode)
 "Analyze [DATA] to test the hypothesis: [HYPOTHESIS].
 Primary analysis: [SPECIFIED TEST].
 Report: test statistic, df, p-value, effect size (Cohen's d / η² / r),
@@ -455,7 +455,7 @@ Report: test statistic, df, p-value, effect size (Cohen's d / η² / r),
 - Follow journal formatting guidelines
 
 ```
-CRES PROMPT: Use visualization_master
+ARES PROMPT: Use visualization_master
 "Create publication-quality visualizations for these results:
 [RESULTS]. Requirements: (1) journal-standard format,
 (2) color-blind friendly palette, (3) clear axis labels,
@@ -555,7 +555,7 @@ In the full 28-week workflow, you write sections sequentially. In rapid mode, yo
 - Write practical implications: What should practitioners/policymakers do differently?
 
 ```
-CRES PROMPT: Use discussion_depth (rapid mode)
+ARES PROMPT: Use discussion_depth (rapid mode)
 "Given these results [RESULTS] and this literature context [CONTEXT],
 write a Discussion section that: (1) interprets findings beyond
 mere restatement, (2) connects to theory, (3) identifies practical
@@ -598,7 +598,7 @@ specific future research directions."
 - Most important 300 words in the paper — spend time here
 
 ```
-CRES PROMPT: Use abstract_mastery (rapid mode)
+ARES PROMPT: Use abstract_mastery (rapid mode)
 "Write a structured abstract for this manuscript: [SUMMARY].
 Include: (1) 1-sentence context, (2) 1-sentence gap/purpose,
 (3) 2-3 sentences method, (4) 2-3 sentences key results
@@ -673,7 +673,7 @@ Maximum 250 words."
 - Check: Are statistical tests appropriate? Assumptions met? Multiple comparisons corrected?
 
 ```
-CRES PROMPT: Use adversarial_peer_review (rapid mode)
+ARES PROMPT: Use adversarial_peer_review (rapid mode)
 "Review this methodology as a hostile Reviewer #2: [METHODS].
 Identify: (1) the 3 most damaging criticisms, (2) the 3 most
 likely questions from reviewers, (3) any fatal flaws.
@@ -698,7 +698,7 @@ Be ruthless. This paper will be rejected if you miss something."
 - Check: Does the Discussion overclaim relative to Results?
 
 ```
-CRES PROMPT: Use logic_validator (rapid mode)
+ARES PROMPT: Use logic_validator (rapid mode)
 "Validate the logical chain in this manuscript: [MANUSCRIPT].
 For each section, check: (1) Does each claim follow from
 preceding evidence? (2) Are there logical gaps? (3) Are there
@@ -756,7 +756,7 @@ the evidence? Flag any logical violations."
   - Match the paper's scope and impact level
 
 ```
-CRES PROMPT: Use venue_matcher (rapid mode)
+ARES PROMPT: Use venue_matcher (rapid mode)
 "Given this manuscript [ABSTRACT + KEY FINDINGS], identify
 5-8 target journals that: (1) have average first-decision times
 under 4 weeks, (2) accept short communications or rapid
@@ -784,7 +784,7 @@ average review time, acceptance rate, and relevant format options."
 - Write cover letter emphasizing timeliness, significance, and fit
 
 ```
-CRES PROMPT: Use cover_letter_engine (rapid mode)
+ARES PROMPT: Use cover_letter_engine (rapid mode)
 "Write a cover letter for submission to [JOURNAL] for this
 manuscript: [TITLE]. Emphasize: (1) timeliness and significance
 of findings, (2) fit with [JOURNAL]'s scope and readership,
@@ -1101,7 +1101,7 @@ STEP 5: If scooped on the core contribution: ABORT rapid track
 3. **Write while analyzing** — Draft Methods and Results framework while analyses are running
 4. **Parallel processing** — Literature review and methodology can overlap; figure creation and writing can overlap
 5. **Time-box every task** — Use Pomodoro technique (25 min work / 5 min break); set hard limits on literature reading (skimming > deep reading in rapid mode)
-6. **Use AI assistance strategically** — CRES prompts can accelerate literature synthesis, argument construction, and drafting. Always verify AI-generated content.
+6. **Use AI assistance strategically** — ARES prompts can accelerate literature synthesis, argument construction, and drafting. Always verify AI-generated content.
 
 ### Cognitive Strategies
 
@@ -1125,7 +1125,7 @@ STEP 5: If scooped on the core contribution: ABORT rapid track
 18. **Use git version control** — Track every change; easy rollback if needed
 19. **Use reference managers** — Zotero, Mendeley, or Paperpile for one-click citation insertion
 20. **Use Grammarly or similar** — Automated grammar and style checking saves revision time
-21. **Use the CRES prompt chain** — Each prompt is designed to produce publication-quality output in minutes rather than hours
+21. **Use the ARES prompt chain** — Each prompt is designed to produce publication-quality output in minutes rather than hours
 
 ---
 
@@ -1159,4 +1159,4 @@ For many researchers, the optimal strategy is a **hybrid**:
 
 *The rapid publication workflow is a tool, not a shortcut. It accelerates the process through strategic compression, not through cutting corners on rigor. When in doubt, slow down. A delayed publication is recoverable; a retracted publication is not.*
 
-**CRES Rapid Publication Workflow v1.0** | Part of the Claude Research Excellence System
+**ARES Rapid Publication Workflow v1.0** | Part of the AI Research Excellence System
