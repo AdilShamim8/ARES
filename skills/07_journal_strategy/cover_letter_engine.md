@@ -583,4 +583,4 @@ previously infeasible with existing approaches.
 
 ---
 
-*Last updated: 2026 | CRES v2.0 | Skill 07: Journal Strategy*
+*Last updated: October 2026 | ARES v3.0 | Skill 07: Journal Strategy*

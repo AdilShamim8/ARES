@@ -414,10 +414,10 @@ is provided in the repository README.
 ([Registration DOI/URL]).
 
 **Reproducibility score**: This study achieved a reproducibility score
-of [X]/100 based on the CRES Reproducibility Audit Framework. Detailed
+of [X]/100 based on the ARES Reproducibility Audit Framework. Detailed
 audit results are available in Supplementary Table S[X].
 ```
 
 ---
 
-*Last updated: 2026 | CRES v2.0 | Skill 08: Ethics & Compliance*
+*Last updated: October 2026 | ARES v3.0 | Skill 08: Ethics & Compliance*

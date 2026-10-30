@@ -442,4 +442,4 @@ method that requires only 100 labeled examples...
 
 ---
 
-*Last updated: 2026 | CRES v2.0 | Skill 09: Citation Mastery*
+*Last updated: October 2026 | ARES v3.0 | Skill 09: Citation Mastery*

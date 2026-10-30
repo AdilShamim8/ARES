@@ -577,4 +577,4 @@ At each stage, assess whether to continue, pivot, or exit:
 
 ---
 
-*Last updated: 2026 | CRES v2.0 | Skill 10: Impact Amplifier*
+*Last updated: October 2026 | ARES v3.0 | Skill 10: Impact Amplifier*

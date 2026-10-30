@@ -577,4 +577,4 @@ Target: ROI > 3:1 (dissemination effort pays for itself in citation value)
 
 ---
 
-*Last updated: 2026 | CRES v2.0 | Skill 10: Impact Amplifier*
+*Last updated: October 2026 | ARES v3.0 | Skill 10: Impact Amplifier*
