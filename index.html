@@ -263,6 +263,19 @@ section:first-of-type{border-top:none;margin-top:0;padding-top:0}
 }
 .authors a:hover{color:var(--accent);border-color:var(--accent);background:var(--accent-wash)}
 
+/* ---------- back-to-top ---------- */
+#toTop{
+  position:fixed;right:18px;bottom:18px;z-index:70;
+  width:44px;height:44px;border-radius:50%;
+  border:1px solid var(--rule-2);background:var(--paper);color:var(--ink-2);
+  font-family:var(--serif);font-size:19px;line-height:1;cursor:pointer;
+  opacity:0;pointer-events:none;transition:opacity .25s ease;
+  box-shadow:0 2px 10px rgba(33,29,22,.18);
+}
+#toTop.on{opacity:1;pointer-events:auto}
+#toTop:hover{color:var(--accent);border-color:var(--accent)}
+.topbar .acts a.cur{color:var(--accent);border-bottom-color:var(--accent);font-weight:600}
+
 /* ---------- footer ---------- */
 footer{
   margin-top:70px;padding:26px 0 40px;border-top:1px solid var(--rule-2);
@@ -369,7 +382,7 @@ footer .fine{margin-top:14px;font-family:var(--mono);font-size:11px;color:var(--
   html{scroll-behavior:auto}
 }
 @media print{
-  .topbar,.authors{display:none}
+  .topbar,.authors,#toTop{display:none}
   body{font-size:12px}
   section{page-break-inside:avoid}
 }
@@ -961,6 +974,44 @@ footer .fine{margin-top:14px;font-family:var(--mono);font-size:11px;color:var(--
 </footer>
 
 </div>
+
+<button id="toTop" aria-label="Back to top" title="Back to top">&uarr;</button>
+
+<script>
+/* Back-to-top + nav scrollspy (progressive enhancement; no dependencies). */
+(function(){
+  var btn = document.getElementById('toTop');
+  if (!btn) return;
+  var onScroll = function(){
+    var show = (window.scrollY || document.documentElement.scrollTop) > 600;
+    if (show) btn.classList.add('on'); else btn.classList.remove('on');
+  };
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+  btn.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+  var links = Array.prototype.slice.call(document.querySelectorAll('.topbar .acts a[href^="#"]'));
+  if ('IntersectionObserver' in window && links.length){
+    var map = {};
+    links.forEach(function(a){ map[a.getAttribute('href').substring(1)] = a; });
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        var a = map[e.target.id];
+        if (!a) return;
+        if (e.isIntersecting){
+          links.forEach(function(l){ l.classList.remove('cur'); });
+          a.classList.add('cur');
+        }
+      });
+    }, {rootMargin:'-30% 0px -60% 0px'});
+    Object.keys(map).forEach(function(id){
+      var el = document.getElementById(id);
+      if (el) io.observe(el);
+    });
+  }
+})();
+</script>
 
 <script>
 /* Viewport guard (simplified from the AI-Safety pattern): some in-app WebViews
