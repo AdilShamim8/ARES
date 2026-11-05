@@ -53,6 +53,15 @@ format:
 | **Exit test** | Checkboxes that must all pass before the next step |
 | Going deeper | Library links *only if* you want more than the step |
 
+## Your companion manual — THE WRITING ROADMAP
+
+While the steps above give you the *schedule*, [`../THE_WRITING_ROADMAP.md`](../THE_WRITING_ROADMAP.md)
+is the *manual*: how to actually write each part of the paper — the reading-note template,
+the RQ ladder, the academic writing style (clutter, verbs, sentences — the Stanford craft),
+and one full section-by-section treatment (abstract, introduction, methods, results,
+discussion, and the rest) with each rule traced to the course, video, or book it comes
+from. Open it whenever a step says "write" and you want the how.
+
 ## Start now
 
 Open [Step 1 — Set up your toolkit](step_01_set_up_your_toolkit.md). It takes one hour, and
