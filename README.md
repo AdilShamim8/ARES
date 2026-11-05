@@ -26,19 +26,20 @@
 9. [Production Workflows](#production-workflows)
 10. [Walkthrough Examples & Real-World Provenance](#walkthrough-examples--real-world-provenance)
 11. [How the Real-World Datasets Are Collected & Verified](#how-the-real-world-datasets-are-collected--verified)
-12. [Publisher & Venue Templates](#publisher--venue-templates)
-13. [Skill Combination & Activation Matrix](#skill-combination--activation-matrix)
-14. [ARIA Cognitive Architecture & Quality Floor](#aria-cognitive-architecture--quality-floor)
-15. [Claude Desktop & Claude Projects Setup](#claude-desktop--claude-projects-setup)
-16. [Version History](#version-history)
-17. [Author & Community](#author--community)
-18. [Citation](#citation)
+12. [The Research Paper Writing Learning Library](#the-research-paper-writing-learning-library)
+13. [Publisher & Venue Templates](#publisher--venue-templates)
+14. [Skill Combination & Activation Matrix](#skill-combination--activation-matrix)
+15. [ARIA Cognitive Architecture & Quality Floor](#aria-cognitive-architecture--quality-floor)
+16. [Claude Desktop & Claude Projects Setup](#claude-desktop--claude-projects-setup)
+17. [Version History](#version-history)
+18. [Author & Community](#author--community)
+19. [Citation](#citation)
 
 ---
 
 ## What Is ARES?
 
-**ARES = AI Research Excellence System.** It is a repository of **40+ modular Markdown documents** that turn a general-purpose AI assistant (Claude, or any capable LLM) into a disciplined research partner. Each file is a *prompt engine* with a precise job:
+**ARES = AI Research Excellence System.** It is a repository of **150+ modular Markdown documents** that turn a general-purpose AI assistant (Claude, or any capable LLM) into a disciplined research partner. Each file is a *prompt engine* with a precise job:
 
 | Layer | What it does | Example |
 |:---|:---|:---|
@@ -216,11 +217,23 @@ ARES/
 │   ├── Springer.md                        ← Springer LNCS & journal standards
 │   └── arXiv.md                           ← High-impact open preprint formatting
 │
-└── examples/                              ← Worked exemplar papers with real datasets
-    ├── computer_science.md                ← CS/AI: MENTOR LLM Reasoning (GSM8K, SVAMP, StrategyQA)
-    ├── biomedical.md                      ← Biomed: CRISPR HSC Off-Target (NCT03745287, BCL11A)
-    ├── social_science.md                  ← SocSci: Social Media Deliberation (N=1,500, DCI, DQI)
-    └── interdisciplinary.md               ← Interdisc.: BioPhysiFold AI Drug Design (ChEMBL, PDB)
+├── examples/                              ← Worked exemplar papers with real datasets
+│   ├── computer_science.md                ← CS/AI: MENTOR LLM Reasoning (GSM8K, SVAMP, StrategyQA)
+│   ├── biomedical.md                      ← Biomed: CRISPR HSC Off-Target (NCT03745287, BCL11A)
+│   ├── social_science.md                  ← SocSci: Social Media Deliberation (N=1,500, DCI, DQI)
+│   └── interdisciplinary.md               ← Interdisc.: BioPhysiFold AI Drug Design (ChEMBL, PDB)
+│
+└── research_paper_writing/                ← Learning library: worldwide courses, videos, books,
+    ├── 00_GETTING_STARTED/                ←   mentors & tools for research paper writing
+    ├── 01_COURSES/                        ←   25 verified course profiles (Stanford, École
+    ├── 02_VIDEO_COURSES/                  ←   Polytechnique, Nature, Elsevier, Wiley, CDC…)
+    ├── 03_BOOKS/                          ←   8 canonical books (Gastel & Day, Schimel…)
+    ├── 04_FREE_GUIDES/                    ←   8 free guides (Purdue OWL, Phrasebank…)
+    ├── 05_MENTORSHIP/                     ←   5 mentorship programs (AuthorAID…)
+    ├── 06_TOOLS/                          ←   6 software tools + comparison matrix
+    ├── 07_SECTION_GUIDES/                 ←   13 manuscript-section guides
+    ├── 08_LEARNING_PATHS/                 ←   7 career-stage learning paths
+    └── 09_SOURCE_VERIFICATION/            ←   audit trail: how every fact was verified
 ```
 
 ---
@@ -385,6 +398,25 @@ Every empirical number in ARES is traceable to a public dataset, registry, or pu
 - **Database versions and sizes** are confirmed against live vendor APIs (ChEMBL, PDBbind) — never from memory.
 - **Journal metrics** are taken from the latest JCR release and publisher metric pages (see [`SETUP.md`](SETUP.md) for the verified table).
 - **Illustrative placeholders** (e.g., a demo pre-registration DOI inside an example) are explicitly labeled `ILLUSTRATIVE` so they can never be mistaken for real registrations.
+
+---
+
+## The Research Paper Writing Learning Library
+
+ARES automates the production of papers; the [`research_paper_writing/`](research_paper_writing/) folder educates the person driving it. It is a curated worldwide library of **110 files** covering the best research-paper-writing resources on the web — every course rating, module count, price, and subscriber figure read from the live web on **5 November 2026** and documented in a full verification audit trail ([`research_paper_writing/09_SOURCE_VERIFICATION/`](research_paper_writing/09_SOURCE_VERIFICATION/)).
+
+| Folder | Files | Highlights |
+|:---|:---:|:---|
+| [`01_COURSES/`](research_paper_writing/01_COURSES/) | 25 | Stanford *Writing in the Sciences* (4.9★, 9,859 reviews), École Polytechnique project course, UC Irvine specialization, Nature Masterclasses, Elsevier/Wiley academies, CDC/TEPHINET, MIT OCW, AuthorAID/Rising Scholars |
+| [`02_VIDEO_COURSES/`](research_paper_writing/02_VIDEO_COURSES/) | 19 | The **Ref-n-Write 9-video playlist** (the library's anchor, with one study-note file per video) + 6 expert channels recommended by university writing centers |
+| [`03_BOOKS/`](research_paper_writing/03_BOOKS/) | 8 | Gastel & Day 9th ed., Schimel, Alley, Wallwork, Glasman-Deal, Heard, Williams & Bizup, Swales & Feak |
+| [`04_FREE_GUIDES/`](research_paper_writing/04_FREE_GUIDES/) | 8 | Purdue OWL, Duke Graduate School, Manchester Academic Phrasebank, IEEE Author Center |
+| [`05_MENTORSHIP/`](research_paper_writing/05_MENTORSHIP/) | 5 | AuthorAID (free, LMIC), Grad Coach, The Page Doctor, Nature editor workshops, Editage Insights |
+| [`06_TOOLS/`](research_paper_writing/06_TOOLS/) | 6 | Ref-n-Write, Paperpal, SciSpace, Overleaf, Zotero + comparison matrix |
+| [`07_SECTION_GUIDES/`](research_paper_writing/07_SECTION_GUIDES/) | 13 | One guide per manuscript section, each paired to its video + ARES skill |
+| [`08_LEARNING_PATHS/`](research_paper_writing/08_LEARNING_PATHS/) | 7 | Undergraduate → PhD/ECR → specialist paths (ESL, clinical, engineering) + 30-day sprint |
+
+Start with [`research_paper_writing/README.md`](research_paper_writing/README.md) — its "ten fastest picks" gets you moving in under an hour.
 
 ---
 
