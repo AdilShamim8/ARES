@@ -1,8 +1,16 @@
 # How to use this library
 
-## Pick your reading mode
+## Mode 0 — the roadmap (the default)
+
+**If you are writing your first paper, do not read this library — *work* it.** Open
+[`00_START_HERE.md`](00_START_HERE.md) and follow the 12 steps in order, one
+exit test at a time. This is what the library is built around; everything else is support
+material for the steps.
+
+## The other reading modes
 
 **Mode A — "I'm writing a section tonight."**
+
 Open [`../07_SECTION_GUIDES/`](../07_SECTION_GUIDES/), read the one file for that section
 (they are numbered in manuscript order), watch the matching Ref-n-Write video, and then run the
 matching ARES skill. Each section guide lists its video, courses, book chapters by topic, and
