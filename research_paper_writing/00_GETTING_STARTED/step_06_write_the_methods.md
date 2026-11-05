@@ -85,4 +85,6 @@ Same study, 4 lines instead of 1 — and zero questions left for a reviewer to a
 - Grad Coach's methodology videos (strongest free treatment):
   [`../02_VIDEO_COURSES/03_grad_coach.md`](../02_VIDEO_COURSES/03_grad_coach.md)
 
+**Companion manual:** [Roadmap §3.5 Materials & Methods](../THE_WRITING_ROADMAP.md#35-materials--methods--written-first) — the full treatment with sources.
+
 **Next:** [Step 7 — Write the results →](step_07_write_the_results.md)
