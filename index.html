@@ -274,6 +274,51 @@ footer .f-row{
 footer .f-row b{color:var(--ink-2)}
 footer .fine{margin-top:14px;font-family:var(--mono);font-size:11px;color:var(--ink-3)}
 
+/* ---------- roadmap (learn section) ---------- */
+.phase{margin-top:18px;border:1px solid var(--rule-2);background:var(--paper)}
+.phase-head{
+  display:flex;align-items:baseline;gap:10px;padding:12px 18px;
+  background:var(--paper-2);border-bottom:1px solid var(--rule);
+}
+.phase-head .ph-no{
+  font-family:var(--sans);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--accent);font-weight:700;white-space:nowrap;
+}
+.phase-head b{font-family:var(--serif);font-size:16.5px;letter-spacing:-.01em}
+.phase-head .ph-when{margin-left:auto;font-family:var(--mono);font-size:11px;color:var(--ink-3);white-space:nowrap}
+.phase-intro{
+  font-family:var(--sans);font-size:12.5px;color:var(--ink-2);padding:12px 18px 0;
+  margin:0;max-width:72ch;
+}
+.steps{display:flex;flex-direction:column;margin-top:6px}
+.step{
+  display:grid;grid-template-columns:46px 1fr 70px;gap:4px 14px;
+  padding:14px 18px;border-bottom:1px solid var(--rule);align-items:start;
+}
+.step:last-child{border-bottom:none}
+.step .st-no{
+  font-family:var(--serif);font-size:27px;font-weight:700;color:var(--accent);
+  line-height:1;font-variant-numeric:tabular-nums;
+}
+.step .st-t{font-family:var(--serif);font-weight:700;font-size:16.5px;letter-spacing:-.01em;line-height:1.25}
+.step .st-t a{color:var(--ink);border-bottom-color:transparent}
+.step .st-t a:hover{color:var(--accent);border-bottom-color:var(--accent)}
+.step .st-d{font-family:var(--sans);font-size:12.5px;color:var(--ink-2);line-height:1.5;margin-top:4px}
+.step .st-del{font-family:var(--sans);font-size:11.5px;color:var(--ink-3);margin-top:6px}
+.step .st-del b{color:var(--ok);font-weight:600}
+.step .st-time{
+  font-family:var(--mono);font-size:11.5px;color:var(--ink-3);text-align:right;
+  white-space:nowrap;padding-top:5px;
+}
+@media(max-width:640px){
+  .step{grid-template-columns:34px 1fr;padding:12px 14px}
+  .step .st-no{font-size:22px}
+  .step .st-time{grid-column:2;text-align:left;padding-top:0}
+  .phase-head{padding:10px 14px;gap:8px}
+  .phase-head b{font-size:14.5px}
+  .phase-intro{padding:10px 14px 0}
+}
+
 /* ---------- responsive ---------- */
 @media (max-width:960px){
   .topbar{flex-wrap:wrap;gap:8px 16px}
@@ -392,6 +437,8 @@ footer .fine{margin-top:14px;font-family:var(--mono);font-size:11px;color:var(--
     <div class="cell"><div class="v">7</div><div class="l">Venue templates</div></div>
     <div class="cell"><div class="v">4</div><div class="l">Worked exemplar papers</div></div>
     <div class="cell accent"><div class="v">11</div><div class="l">Audit dimensions (Skill 06)</div></div>
+    <div class="cell"><div class="v">12</div><div class="l">Roadmap steps (v3.2)</div></div>
+    <div class="cell"><div class="v">124</div><div class="l">Learning library files</div></div>
     <div class="cell"><div class="v">14,784</div><div class="l">PeerRead paper drafts</div></div>
     <div class="cell"><div class="v">83.8<small>%</small></div><div class="l">Pairwise rank accuracy</div></div>
   </div>
@@ -610,32 +657,173 @@ footer .fine{margin-top:14px;font-family:var(--mono);font-size:11px;color:var(--
   </div>
 </section>
 
-<!-- ==================== 09b · RESEARCH PAPER WRITING LIBRARY ==================== -->
+<!-- ==================== 09 · RESEARCH PAPER WRITING ROADMAP ==================== -->
 <section id="learn">
   <div class="sechead">
     <div class="no">§09 · Learn the craft</div>
-    <h2>The Research Paper Writing learning library</h2>
-    <div class="tag">110 files of the world's best courses, video trainings, books, free guides, mentorship programs, and tools — every fact read from the live web on 5 November 2026.</div>
+    <h2>The 12-step roadmap: blank page to submitted paper</h2>
+    <div class="tag">Three phases · eight weeks part-time · every step has hands-on work and an exit test. Beginner-friendly by design.</div>
   </div>
-  <p class="note">ARES automates the production of papers; <code>research_paper_writing/</code> educates the person driving it. The anchor is the free nine-video <b>Ref-n-Write "Research Paper Writing Course"</b> playlist (≈195,450 views) — one video per manuscript section — surrounded by a worldwide best-of catalog with a full verification audit trail in <code>research_paper_writing/09_SOURCE_VERIFICATION/</code>.</p>
+  <p class="note">The library's entry point is <a href="https://github.com/AdilShamim8/ARES/blob/main/research_paper_writing/00_GETTING_STARTED/00_START_HERE.md" target="_blank" rel="noopener"><b>START_HERE.md</b></a> — a five-minute orientation, then twelve steps you work in order. Each step file teaches <b>one idea</b>, assigns <b>real work</b> (exercises and fill-in templates, not just reading), shows a worked example, and ends with an <b>exit test</b> that gates the next step. Click any step below to open it on GitHub.</p>
+  <div class="phase">
+    <div class="phase-head">
+      <span class="ph-no">Phase 1</span>
+      <b>Foundations</b>
+      <span class="ph-when">Week 1</span>
+    </div>
+    <p class="phase-intro">Before you write a sentence: install the professional's tools, learn the paper's anatomy by dissecting one, build an evidence pile, and forge a research question that passes four hard tests.</p>
+    <div class="steps">
+        <div class="step">
+          <div class="st-no">1</div>
+          <div class="st-body">
+            <div class="st-t"><a href="https://github.com/AdilShamim8/ARES/blob/main/research_paper_writing/00_GETTING_STARTED/step_01_set_up_your_toolkit.md" target="_blank" rel="noopener">Set up your toolkit</a></div>
+            <div class="st-d">Install Zotero and the Manchester Phrasebank; save your first three papers.</div>
+            <div class="st-del">You produce: <b>3 papers in a synced reference library</b></div>
+          </div>
+          <div class="st-time">1 h</div>
+        </div>
+        <div class="step">
+          <div class="st-no">2</div>
+          <div class="st-body">
+            <div class="st-t"><a href="https://github.com/AdilShamim8/ARES/blob/main/research_paper_writing/00_GETTING_STARTED/step_02_know_the_paper_anatomy.md" target="_blank" rel="noopener">Know the paper's anatomy</a></div>
+            <div class="st-d">Dissect one real published paper: label all nine parts, find the gap sentence.</div>
+            <div class="st-del">You produce: <b>An annotated paper + a word-count ledger</b></div>
+          </div>
+          <div class="st-time">45 min</div>
+        </div>
+        <div class="step">
+          <div class="st-no">3</div>
+          <div class="st-body">
+            <div class="st-t"><a href="https://github.com/AdilShamim8/ARES/blob/main/research_paper_writing/00_GETTING_STARTED/step_03_read_papers_like_a_researcher.md" target="_blank" rel="noopener">Read papers like a researcher</a></div>
+            <div class="st-d">Three-pass reading with a note template: design, finding, limitation — per paper.</div>
+            <div class="st-del">You produce: <b>Five reading notes (your first evidence pile)</b></div>
+          </div>
+          <div class="st-time">90 min</div>
+        </div>
+        <div class="step">
+          <div class="st-no">4</div>
+          <div class="st-body">
+            <div class="st-t"><a href="https://github.com/AdilShamim8/ARES/blob/main/research_paper_writing/00_GETTING_STARTED/step_04_find_your_research_question.md" target="_blank" rel="noopener">Find your research question</a></div>
+            <div class="st-d">The topic-to-RQ ladder, the four tests, and the three-sentence gap statement.</div>
+            <div class="st-del">You produce: <b>One RQ that passes focused / answerable / falsifiable / sized</b></div>
+          </div>
+          <div class="st-time">90 min</div>
+        </div>
+    </div>
+  </div>
+
+  <div class="phase">
+    <div class="phase-head">
+      <span class="ph-no">Phase 2</span>
+      <b>Write the paper</b>
+      <span class="ph-when">Weeks 2–5</span>
+    </div>
+    <p class="phase-intro">Each manuscript section gets its own step, in the order professionals draft: review, methods, results, then the argument sections, then the miniature (abstract, title) last.</p>
+    <div class="steps">
+        <div class="step">
+          <div class="st-no">5</div>
+          <div class="st-body">
+            <div class="st-t"><a href="https://github.com/AdilShamim8/ARES/blob/main/research_paper_writing/00_GETTING_STARTED/step_05_write_the_literature_review.md" target="_blank" rel="noopener">Write the literature review</a></div>
+            <div class="st-d">The synthesis matrix: 8–10 papers compared by theme, then two synthesis paragraphs.</div>
+            <div class="st-del">You produce: <b>A completed matrix + paragraphs that compare, not list</b></div>
+          </div>
+          <div class="st-time">2–3 h</div>
+        </div>
+        <div class="step">
+          <div class="st-no">6</div>
+          <div class="st-body">
+            <div class="st-t"><a href="https://github.com/AdilShamim8/ARES/blob/main/research_paper_writing/00_GETTING_STARTED/step_06_write_the_methods.md" target="_blank" rel="noopener">Write the methods</a></div>
+            <div class="st-d">Draft to the reproducibility contract; audit materials, procedure, parameters, statistics, ethics.</div>
+            <div class="st-del">You produce: <b>Methods a competent stranger could rerun</b></div>
+          </div>
+          <div class="st-time">2 h</div>
+        </div>
+        <div class="step">
+          <div class="st-no">7</div>
+          <div class="st-body">
+            <div class="st-t"><a href="https://github.com/AdilShamim8/ARES/blob/main/research_paper_writing/00_GETTING_STARTED/step_07_write_the_results.md" target="_blank" rel="noopener">Write the results</a></div>
+            <div class="st-d">Finding → evidence → pointer, one figure built to checklist, zero bare numbers.</div>
+            <div class="st-del">You produce: <b>Three results paragraphs + one audited figure</b></div>
+          </div>
+          <div class="st-time">2–3 h</div>
+        </div>
+        <div class="step">
+          <div class="st-no">8</div>
+          <div class="st-body">
+            <div class="st-t"><a href="https://github.com/AdilShamim8/ARES/blob/main/research_paper_writing/00_GETTING_STARTED/step_08_write_introduction_and_discussion.md" target="_blank" rel="noopener">Introduction & Discussion</a></div>
+            <div class="st-d">The introduction funnel on your gap statement; the six-move discussion; strike overclaims.</div>
+            <div class="st-del">You produce: <b>A funnel intro + a discussion that survives hostile reading</b></div>
+          </div>
+          <div class="st-time">3 h</div>
+        </div>
+        <div class="step">
+          <div class="st-no">9</div>
+          <div class="st-body">
+            <div class="st-t"><a href="https://github.com/AdilShamim8/ARES/blob/main/research_paper_writing/00_GETTING_STARTED/step_09_write_conclusion_abstract_title.md" target="_blank" rel="noopener">Conclusion, abstract, title</a></div>
+            <div class="st-d">Three-sentence conclusion, five-move abstract within the venue cap, six-point title check.</div>
+            <div class="st-del">You produce: <b>A standalone abstract + a title that survives the search-result test</b></div>
+          </div>
+          <div class="st-time">2 h</div>
+        </div>
+    </div>
+  </div>
+
+  <div class="phase">
+    <div class="phase-head">
+      <span class="ph-no">Phase 3</span>
+      <b>Finish and submit</b>
+      <span class="ph-when">Weeks 6–8</span>
+    </div>
+    <p class="phase-intro">Revision as three disciplined passes, a venue choice you can defend, a cover letter that argues fit — and a rehearsed answer to your harshest reviewer.</p>
+    <div class="steps">
+        <div class="step">
+          <div class="st-no">10</div>
+          <div class="st-body">
+            <div class="st-t"><a href="https://github.com/AdilShamim8/ARES/blob/main/research_paper_writing/00_GETTING_STARTED/step_10_edit_and_self_review.md" target="_blank" rel="noopener">Edit and self-review</a></div>
+            <div class="st-d">Three passes — structure, clarity, surface — plus the read-aloud test and the ≥10% cut.</div>
+            <div class="st-del">You produce: <b>A measurably shorter, cleaner manuscript</b></div>
+          </div>
+          <div class="st-time">3 h</div>
+        </div>
+        <div class="step">
+          <div class="st-no">11</div>
+          <div class="st-body">
+            <div class="st-t"><a href="https://github.com/AdilShamim8/ARES/blob/main/research_paper_writing/00_GETTING_STARTED/step_11_choose_journal_and_cover_letter.md" target="_blank" rel="noopener">Choose the journal & cover letter</a></div>
+            <div class="st-d">Three-venue comparison worksheet; the four-paragraph cover letter that argues fit.</div>
+            <div class="st-del">You produce: <b>A defensible venue choice + a letter for one journal only</b></div>
+          </div>
+          <div class="st-time">2 h</div>
+        </div>
+        <div class="step">
+          <div class="st-no">12</div>
+          <div class="st-body">
+            <div class="st-t"><a href="https://github.com/AdilShamim8/ARES/blob/main/research_paper_writing/00_GETTING_STARTED/step_12_submit_and_survive_peer_review.md" target="_blank" rel="noopener">Submit and survive peer review</a></div>
+            <div class="st-d">The submission packet checklist; rehearse the reviewer response; plan the waiting months.</div>
+            <div class="st-del">You produce: <b>A complete packet + a rehearsed point-by-point response</b></div>
+          </div>
+          <div class="st-time">2 h</div>
+        </div>
+    </div>
+  </div>
+
+  <div class="judgebox ok">
+    <div class="jb-k">How the roadmap was built — and how to trust it</div>
+    <p>Every course, video, book, and tool the steps point to lives in the <b>124-file reference library</b> behind the roadmap (<code>research_paper_writing/</code>), and every external fact — ratings, module counts, prices, channel statistics — was read from the live web on <b>5 November 2026</b> and is documented in the library's verification audit trail (<code>09_SOURCE_VERIFICATION/</code>). Practice examples inside the steps are labeled hypothetical: they demonstrate craft, never report findings.</p>
+  </div>
   <div class="tbl-scroll">
     <table class="tbl">
-      <thead><tr><th>Folder</th><th>Files</th><th>What you will find</th></tr></thead>
+      <thead><tr><th>Reference shelf</th><th>Files</th><th>Open it when you need…</th></tr></thead>
       <tbody>
-        <tr><td><b>01_COURSES/</b></td><td>25</td><td>Stanford <i>Writing in the Sciences</i> (4.9&#9733;, 9,859 reviews, free to audit) · École Polytechnique project-centered course · UC Irvine specialization · Lund · TU Munich · Yale · MIT OCW · Nature Masterclasses · Elsevier &amp; Wiley academies · CDC/TEPHINET · AuthorAID/Rising Scholars · ACS · Springer Nature · and more</td></tr>
-        <tr><td><b>02_VIDEO_COURSES/</b></td><td>19</td><td>The Ref-n-Write 9-video playlist with one study-note file per video, plus six expert YouTube channels recommended by university writing centers (Andy Stapleton ≈390K subs, Grad Coach, Dr Amina Yonis, Karen McKee, ACS Author University…)</td></tr>
-        <tr><td><b>03_BOOKS/</b></td><td>8</td><td>Gastel &amp; Day 9th ed. (Cambridge) · Schimel · Alley · Wallwork · Glasman-Deal · Heard · Williams &amp; Bizup · Swales &amp; Feak</td></tr>
-        <tr><td><b>04_FREE_GUIDES/</b></td><td>8</td><td>Purdue OWL · Duke Graduate School · Manchester Academic Phrasebank · IEEE Author Center · Harvard Writing Project · UCI LibGuide · Ref-n-Write blog · Lund open-courses page</td></tr>
-        <tr><td><b>05_MENTORSHIP/</b></td><td>5</td><td>AuthorAID/Rising Scholars (free, LMIC-focused) · Grad Coach · The Page Doctor · Nature editor workshops with one-to-one abstract review · Editage Insights</td></tr>
-        <tr><td><b>06_TOOLS/</b></td><td>6</td><td>Ref-n-Write · Paperpal · SciSpace · Overleaf · Zotero — plus a comparison matrix and a $0 recommended stack</td></tr>
-        <tr><td><b>07_SECTION_GUIDES/</b></td><td>13</td><td>One guide per manuscript section (title → abstract → intro → … → authorship), each paired to its Ref-n-Write video, its Wiley course module, and the ARES skill that enforces it</td></tr>
-        <tr><td><b>08_LEARNING_PATHS/</b></td><td>7</td><td>Sequences by career stage: undergraduate → master's → PhD/ECR, plus ESL, clinical &amp; public health, engineering &amp; CS, and a 30-day deadline sprint</td></tr>
+        <tr><td><b>01_COURSES/</b></td><td>25</td><td>A full course — Stanford's free <i>Writing in the Sciences</i> (4.9&#9733;, 9,859 reviews), École Polytechnique, Nature Masterclasses, Wiley's 14-module guide, CDC/TEPHINET…</td></tr>
+        <tr><td><b>02_VIDEO_COURSES/</b></td><td>19</td><td>The anchor Ref-n-Write 9-video playlist with study notes, plus six expert channels</td></tr>
+        <tr><td><b>03_BOOKS/</b></td><td>8</td><td>The canonical bookshelf — Gastel &amp; Day 9th ed., Schimel, Wallwork, Glasman-Deal…</td></tr>
+        <tr><td><b>04_FREE_GUIDES/</b></td><td>8</td><td>Free references — Purdue OWL, Duke, the Manchester Phrasebank, IEEE Author Center</td></tr>
+        <tr><td><b>05_MENTORSHIP/</b></td><td>5</td><td>A human to read your draft — AuthorAID (free), Grad Coach, Nature editor workshops</td></tr>
+        <tr><td><b>06_TOOLS/</b></td><td>6</td><td>Software while you write — Zotero, Overleaf, Paperpal, SciSpace + comparison matrix</td></tr>
+        <tr><td><b>07_SECTION_GUIDES/</b></td><td>13</td><td>Deeper written treatment of one manuscript section</td></tr>
+        <tr><td><b>08_LEARNING_PATHS/</b></td><td>7</td><td>A sequence by career stage (undergraduate → PhD, ESL, clinical, CS) or the 30-day sprint</td></tr>
       </tbody>
     </table>
-  </div>
-  <div class="judgebox ok">
-    <div class="jb-k">Provenance rule — how this library was built</div>
-    <p>No claim about an external resource enters the library without having been read from the live web during verification: platform pages for ratings, module counts, and prices; third-party corroboration (Class Central, university LibGuides, publisher announcements) for availability and scope; a rendered playlist page for the video data. Anything not confirmable is recorded as such in <code>09_SOURCE_VERIFICATION/03_known_limitations.md</code> rather than guessed.</p>
   </div>
 </section>
 
