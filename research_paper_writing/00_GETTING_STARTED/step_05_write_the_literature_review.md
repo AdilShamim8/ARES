@@ -92,4 +92,6 @@ flag summary-sentences (single-source, no comparison) that slipped through. Fix 
 - Wallwork's ESL-standard book treats review phrasing in depth:
   [`../03_BOOKS/04_wallwork_english_for_writing_research_papers.md`](../03_BOOKS/04_wallwork_english_for_writing_research_papers.md)
 
+**Companion manual:** [Roadmap §3.4 Literature review](../THE_WRITING_ROADMAP.md#34-literature-review--written-early-from-the-matrix) — the full treatment with sources.
+
 **Next:** [Step 6 — Write the methods →](step_06_write_the_methods.md)
