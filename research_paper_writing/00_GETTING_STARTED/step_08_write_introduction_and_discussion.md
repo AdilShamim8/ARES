@@ -87,4 +87,6 @@ have ARES loaded — it automates exactly this pass. Then fix what it flags.
 - Swales & Feak — the origin of the CARS funnel:
   [`../03_BOOKS/08_swales_feak_academic_writing_graduate_students.md`](../03_BOOKS/08_swales_feak_academic_writing_graduate_students.md)
 
+**Companion manual:** [Roadmap §3.3 Introduction](../THE_WRITING_ROADMAP.md#33-introduction--written-after-the-results-exist) and [§3.7 Discussion](../THE_WRITING_ROADMAP.md#37-discussion--written-after-the-results) — the full treatments with sources.
+
 **Next:** [Step 9 — Conclusion, abstract, and title →](step_09_write_conclusion_abstract_title.md)
