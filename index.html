@@ -274,6 +274,24 @@ footer .f-row{
 footer .f-row b{color:var(--ink-2)}
 footer .fine{margin-top:14px;font-family:var(--mono);font-size:11px;color:var(--ink-3)}
 
+/* ---------- mobile: stacked tables ---------- */
+@media(max-width:640px){
+  .tbl-scroll{overflow-x:visible;margin-top:14px}
+  table.tbl{font-size:13px}
+  table.tbl thead{display:none}
+  table.tbl,table.tbl tbody{display:block;width:100%}
+  table.tbl tr{display:block;border:1px solid var(--rule-2);background:var(--paper);padding:4px 12px;margin-top:12px}
+  table.tbl tr:first-child{margin-top:0}
+  table.tbl td{display:block;border-bottom:1px dashed var(--rule);padding:9px 2px}
+  table.tbl td:last-child{border-bottom:none}
+  table.tbl td[data-label]:not([data-label=""])::before{
+    content:attr(data-label);display:block;
+    font-family:var(--sans);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--accent);font-weight:700;margin-bottom:3px;
+  }
+  table.tbl tr:hover td{background:transparent}
+}
+
 /* ---------- roadmap (learn section) ---------- */
 .phase{margin-top:18px;border:1px solid var(--rule-2);background:var(--paper)}
 .phase-head{
@@ -598,12 +616,12 @@ footer .fine{margin-top:14px;font-family:var(--mono);font-size:11px;color:var(--
     <table class="tbl">
       <thead><tr><th>Empirical grounding</th><th>What it is</th><th>Role in the system</th><th>Verified via</th></tr></thead>
       <tbody>
-        <tr><td><b>PeerRead</b> (Kang et al., NAACL 2018)</td><td>14,784 paper drafts with accept/reject decisions from ICLR 2017, NeurIPS 2013–2017, ACL 2017; 10.7K with full expert reviews</td><td>Empirical thresholds for acceptance probability and rejection triggers</td><td><code>arXiv:1804.09635</code></td></tr>
-        <tr><td><b>PeerRead 100-pool benchmark</b></td><td>100 sampled ICLR 2017 pools</td><td>Validates the relative-rank engine: <b>83.8% pairwise ordering accuracy</b></td><td>skills/06 docs</td></tr>
-        <tr><td><b>AAAI 2026 calibration</b></td><td>Reviewer guidelines &amp; decision boundaries, 40th AAAI (Singapore, Jan 20–27, 2026)</td><td>Reverse-engineered reviewer decision probes</td><td><code>aaai.org/conference/aaai/aaai-26</code></td></tr>
-        <tr><td><b>OpenReview venue pools</b></td><td>Public review archives, ICLR / NeurIPS / ICML / CoRL, 2020–2026</td><td>Relative rank against the live accepted-paper distribution</td><td><code>openreview.net</code></td></tr>
-        <tr><td><b>NeurIPS reproducibility checklist</b> (Pineau et al., JMLR 2021)</td><td>The standardized 21-point artifact audit</td><td>Reproducibility &amp; open-science scoring</td><td>JMLR 22 (164)</td></tr>
-        <tr><td><b>S2ORC + SciCite</b> (Lo 2020; Cohan 2019)</td><td>81M+ full-text papers with classified citation intents</td><td>Citation cartography &amp; attribution auditing</td><td>ACL Anthology</td></tr>
+        <tr><td data-label="Empirical grounding"><b>PeerRead</b> (Kang et al., NAACL 2018)</td><td data-label="What it is">14,784 paper drafts with accept/reject decisions from ICLR 2017, NeurIPS 2013–2017, ACL 2017; 10.7K with full expert reviews</td><td data-label="Role in the system">Empirical thresholds for acceptance probability and rejection triggers</td><td data-label="Verified via"><code>arXiv:1804.09635</code></td></tr>
+        <tr><td data-label="Empirical grounding"><b>PeerRead 100-pool benchmark</b></td><td data-label="What it is">100 sampled ICLR 2017 pools</td><td data-label="Role in the system">Validates the relative-rank engine: <b>83.8% pairwise ordering accuracy</b></td><td data-label="Verified via">skills/06 docs</td></tr>
+        <tr><td data-label="Empirical grounding"><b>AAAI 2026 calibration</b></td><td data-label="What it is">Reviewer guidelines &amp; decision boundaries, 40th AAAI (Singapore, Jan 20–27, 2026)</td><td data-label="Role in the system">Reverse-engineered reviewer decision probes</td><td data-label="Verified via"><code>aaai.org/conference/aaai/aaai-26</code></td></tr>
+        <tr><td data-label="Empirical grounding"><b>OpenReview venue pools</b></td><td data-label="What it is">Public review archives, ICLR / NeurIPS / ICML / CoRL, 2020–2026</td><td data-label="Role in the system">Relative rank against the live accepted-paper distribution</td><td data-label="Verified via"><code>openreview.net</code></td></tr>
+        <tr><td data-label="Empirical grounding"><b>NeurIPS reproducibility checklist</b> (Pineau et al., JMLR 2021)</td><td data-label="What it is">The standardized 21-point artifact audit</td><td data-label="Role in the system">Reproducibility &amp; open-science scoring</td><td data-label="Verified via">JMLR 22 (164)</td></tr>
+        <tr><td data-label="Empirical grounding"><b>S2ORC + SciCite</b> (Lo 2020; Cohan 2019)</td><td data-label="What it is">81M+ full-text papers with classified citation intents</td><td data-label="Role in the system">Citation cartography &amp; attribution auditing</td><td data-label="Verified via">ACL Anthology</td></tr>
       </tbody>
     </table>
   </div>
@@ -625,28 +643,28 @@ footer .fine{margin-top:14px;font-family:var(--mono);font-size:11px;color:var(--
       <thead><tr><th>Domain</th><th>Exemplar study</th><th>Verified datasets &amp; registries</th><th>Primary sources (resolvable)</th></tr></thead>
       <tbody>
         <tr>
-          <td><b>Computer Science</b></td>
-          <td><b>MENTOR</b> — metacognitive self-regulation for LLM reasoning</td>
-          <td>GSM8K · SVAMP · StrategyQA · ProofWriter · BIG-bench Hard</td>
-          <td><code>arXiv:2111.03797</code> · <code>arXiv:2103.07191</code> · <code>10.1162/tacl_a_00370</code> · <code>10.18653/v1/2021.findings-acl.317</code> · <code>arXiv:2210.09261</code></td>
+          <td data-label="Domain"><b>Computer Science</b></td>
+          <td data-label="Exemplar study"><b>MENTOR</b> — metacognitive self-regulation for LLM reasoning</td>
+          <td data-label="Verified datasets &amp; registries">GSM8K · SVAMP · StrategyQA · ProofWriter · BIG-bench Hard</td>
+          <td data-label="Primary sources (resolvable)"><code>arXiv:2111.03797</code> · <code>arXiv:2103.07191</code> · <code>10.1162/tacl_a_00370</code> · <code>10.18653/v1/2021.findings-acl.317</code> · <code>arXiv:2210.09261</code></td>
         </tr>
         <tr>
-          <td><b>Biomedical</b></td>
-          <td><b>CRISPR editing landscapes</b> in sickle-cell HSCs</td>
-          <td>CTX001 trial (Phase 1/2/3, Vertex) · GUIDE-seq · BCL11A +58 erythroid enhancer</td>
-          <td><code>NCT03745287</code> · <code>10.1038/nbt.3117</code> · Frangoul 2021 <code>10.1056/NEJMoa2031054</code> · Frangoul 2024 <code>10.1056/NEJMoa2309676</code></td>
+          <td data-label="Domain"><b>Biomedical</b></td>
+          <td data-label="Exemplar study"><b>CRISPR editing landscapes</b> in sickle-cell HSCs</td>
+          <td data-label="Verified datasets &amp; registries">CTX001 trial (Phase 1/2/3, Vertex) · GUIDE-seq · BCL11A +58 erythroid enhancer</td>
+          <td data-label="Primary sources (resolvable)"><code>NCT03745287</code> · <code>10.1038/nbt.3117</code> · Frangoul 2021 <code>10.1056/NEJMoa2031054</code> · Frangoul 2024 <code>10.1056/NEJMoa2309676</code></td>
         </tr>
         <tr>
-          <td><b>Social Science</b></td>
-          <td><b>Social media &amp; democratic deliberation</b>, N = 1,500 three-experiment design</td>
-          <td>1,124-paper PRISMA corpus · Discourse Quality Index · pre-registered panel</td>
-          <td>Bail 2018 <code>10.1073/pnas.1804840115</code> · Vosoughi 2018 <code>10.1126/science.aap9559</code> · Steenbergen 2003 <code>10.1057/palgrave.cep.6110002</code></td>
+          <td data-label="Domain"><b>Social Science</b></td>
+          <td data-label="Exemplar study"><b>Social media &amp; democratic deliberation</b>, N = 1,500 three-experiment design</td>
+          <td data-label="Verified datasets &amp; registries">1,124-paper PRISMA corpus · Discourse Quality Index · pre-registered panel</td>
+          <td data-label="Primary sources (resolvable)">Bail 2018 <code>10.1073/pnas.1804840115</code> · Vosoughi 2018 <code>10.1126/science.aap9559</code> · Steenbergen 2003 <code>10.1057/palgrave.cep.6110002</code></td>
         </tr>
         <tr>
-          <td><b>Interdisciplinary</b></td>
-          <td><b>BioPhysiFold</b> — biophysically-informed foundation models for drug discovery</td>
-          <td>ChEMBL Release 37 (2.92M compounds) · ZINC20 · PubChem · PDBbind v2020 · MoleculeNet</td>
-          <td><code>10.1093/nar/gky1075</code> · <code>10.1021/acs.jcim.0c00675</code> · <code>10.1093/nar/gkaa971</code> · <code>10.1021/acs.accounts.6b00491</code> · <code>10.1039/c7sc02664a</code></td>
+          <td data-label="Domain"><b>Interdisciplinary</b></td>
+          <td data-label="Exemplar study"><b>BioPhysiFold</b> — biophysically-informed foundation models for drug discovery</td>
+          <td data-label="Verified datasets &amp; registries">ChEMBL Release 37 (2.92M compounds) · ZINC20 · PubChem · PDBbind v2020 · MoleculeNet</td>
+          <td data-label="Primary sources (resolvable)"><code>10.1093/nar/gky1075</code> · <code>10.1021/acs.jcim.0c00675</code> · <code>10.1093/nar/gkaa971</code> · <code>10.1021/acs.accounts.6b00491</code> · <code>10.1039/c7sc02664a</code></td>
         </tr>
       </tbody>
     </table>
@@ -814,14 +832,14 @@ footer .fine{margin-top:14px;font-family:var(--mono);font-size:11px;color:var(--
     <table class="tbl">
       <thead><tr><th>Reference shelf</th><th>Files</th><th>Open it when you need…</th></tr></thead>
       <tbody>
-        <tr><td><b>01_COURSES/</b></td><td>25</td><td>A full course — Stanford's free <i>Writing in the Sciences</i> (4.9&#9733;, 9,859 reviews), École Polytechnique, Nature Masterclasses, Wiley's 14-module guide, CDC/TEPHINET…</td></tr>
-        <tr><td><b>02_VIDEO_COURSES/</b></td><td>19</td><td>The anchor Ref-n-Write 9-video playlist with study notes, plus six expert channels</td></tr>
-        <tr><td><b>03_BOOKS/</b></td><td>8</td><td>The canonical bookshelf — Gastel &amp; Day 9th ed., Schimel, Wallwork, Glasman-Deal…</td></tr>
-        <tr><td><b>04_FREE_GUIDES/</b></td><td>8</td><td>Free references — Purdue OWL, Duke, the Manchester Phrasebank, IEEE Author Center</td></tr>
-        <tr><td><b>05_MENTORSHIP/</b></td><td>5</td><td>A human to read your draft — AuthorAID (free), Grad Coach, Nature editor workshops</td></tr>
-        <tr><td><b>06_TOOLS/</b></td><td>6</td><td>Software while you write — Zotero, Overleaf, Paperpal, SciSpace + comparison matrix</td></tr>
-        <tr><td><b>07_SECTION_GUIDES/</b></td><td>13</td><td>Deeper written treatment of one manuscript section</td></tr>
-        <tr><td><b>08_LEARNING_PATHS/</b></td><td>7</td><td>A sequence by career stage (undergraduate → PhD, ESL, clinical, CS) or the 30-day sprint</td></tr>
+        <tr><td data-label="Reference shelf"><b>01_COURSES/</b></td><td data-label="Files">25</td><td data-label="Open it when you need…">A full course — Stanford's free <i>Writing in the Sciences</i> (4.9&#9733;, 9,859 reviews), École Polytechnique, Nature Masterclasses, Wiley's 14-module guide, CDC/TEPHINET…</td></tr>
+        <tr><td data-label="Reference shelf"><b>02_VIDEO_COURSES/</b></td><td data-label="Files">19</td><td data-label="Open it when you need…">The anchor Ref-n-Write 9-video playlist with study notes, plus six expert channels</td></tr>
+        <tr><td data-label="Reference shelf"><b>03_BOOKS/</b></td><td data-label="Files">8</td><td data-label="Open it when you need…">The canonical bookshelf — Gastel &amp; Day 9th ed., Schimel, Wallwork, Glasman-Deal…</td></tr>
+        <tr><td data-label="Reference shelf"><b>04_FREE_GUIDES/</b></td><td data-label="Files">8</td><td data-label="Open it when you need…">Free references — Purdue OWL, Duke, the Manchester Phrasebank, IEEE Author Center</td></tr>
+        <tr><td data-label="Reference shelf"><b>05_MENTORSHIP/</b></td><td data-label="Files">5</td><td data-label="Open it when you need…">A human to read your draft — AuthorAID (free), Grad Coach, Nature editor workshops</td></tr>
+        <tr><td data-label="Reference shelf"><b>06_TOOLS/</b></td><td data-label="Files">6</td><td data-label="Open it when you need…">Software while you write — Zotero, Overleaf, Paperpal, SciSpace + comparison matrix</td></tr>
+        <tr><td data-label="Reference shelf"><b>07_SECTION_GUIDES/</b></td><td data-label="Files">13</td><td data-label="Open it when you need…">Deeper written treatment of one manuscript section</td></tr>
+        <tr><td data-label="Reference shelf"><b>08_LEARNING_PATHS/</b></td><td data-label="Files">7</td><td data-label="Open it when you need…">A sequence by career stage (undergraduate → PhD, ESL, clinical, CS) or the 30-day sprint</td></tr>
       </tbody>
     </table>
   </div>
@@ -838,10 +856,10 @@ footer .fine{margin-top:14px;font-family:var(--mono);font-size:11px;color:var(--
     <table class="tbl">
       <thead><tr><th>Workflow</th><th>Timeline</th><th>Use when</th><th></th></tr></thead>
       <tbody>
-        <tr><td><b>Full Paper Lifecycle</b></td><td>28 weeks · 8 phases</td><td>You have a topic and want the maximum-quality pipeline</td><td><span class="badge b-ac">comprehensive</span></td></tr>
-        <tr><td><b>Rapid Publication</b></td><td>30 days</td><td>A breakthrough needs a priority claim — without sacrificing rigor</td><td><span class="badge b-wa">compressed</span></td></tr>
-        <tr><td><b>Interdisciplinary Innovation</b></td><td>stage-gated</td><td>The work bridges two fields and must satisfy reviewers from both</td><td><span class="badge b-ac">cross-domain</span></td></tr>
-        <tr><td><b>Replication &amp; Extension</b></td><td>stage-gated</td><td>Replicating prior work with pre-registration and equivalence testing</td><td><span class="badge b-ok">pre-registered</span></td></tr>
+        <tr><td data-label="Workflow"><b>Full Paper Lifecycle</b></td><td data-label="Timeline">28 weeks · 8 phases</td><td data-label="Use when">You have a topic and want the maximum-quality pipeline</td><td data-label=""><span class="badge b-ac">comprehensive</span></td></tr>
+        <tr><td data-label="Workflow"><b>Rapid Publication</b></td><td data-label="Timeline">30 days</td><td data-label="Use when">A breakthrough needs a priority claim — without sacrificing rigor</td><td data-label=""><span class="badge b-wa">compressed</span></td></tr>
+        <tr><td data-label="Workflow"><b>Interdisciplinary Innovation</b></td><td data-label="Timeline">stage-gated</td><td data-label="Use when">The work bridges two fields and must satisfy reviewers from both</td><td data-label=""><span class="badge b-ac">cross-domain</span></td></tr>
+        <tr><td data-label="Workflow"><b>Replication &amp; Extension</b></td><td data-label="Timeline">stage-gated</td><td data-label="Use when">Replicating prior work with pre-registration and equivalence testing</td><td data-label=""><span class="badge b-ok">pre-registered</span></td></tr>
       </tbody>
     </table>
   </div>
@@ -849,13 +867,13 @@ footer .fine{margin-top:14px;font-family:var(--mono);font-size:11px;color:var(--
     <table class="tbl">
       <thead><tr><th>Template</th><th>Venue</th><th>Current limit (checked Oct 2026)</th></tr></thead>
       <tbody>
-        <tr><td><b>Nature_Family.md</b></td><td>Nature &amp; Nature Portfolio</td><td>Article ≈ 2,500 words (6 pages) to 4,300 words (8 pages); Methods ≤ 3,000; summary ≤ 200</td></tr>
-        <tr><td><b>Science.md</b></td><td>Science (AAAS)</td><td>Research Article ~4,500 words; Report ~2,500 words</td></tr>
-        <tr><td><b>NeurIPS_ICML_ICLR.md</b></td><td>Top ML conferences</td><td>9-page main text (NeurIPS 2026), proofs &amp; error bars, ethics statement</td></tr>
-        <tr><td><b>IEEE.md</b></td><td>IEEE Transactions</td><td>Two-column, formal math, complexity analysis</td></tr>
-        <tr><td><b>ACM.md</b></td><td>ACM SIGCONF / TOCS</td><td>CCS concepts, artifact badges</td></tr>
-        <tr><td><b>Springer.md</b></td><td>LNCS &amp; Springer journals</td><td>Monograph &amp; journal standards</td></tr>
-        <tr><td><b>arXiv.md</b></td><td>arXiv preprints</td><td>Citation-velocity-first preprint architecture</td></tr>
+        <tr><td data-label="Template"><b>Nature_Family.md</b></td><td data-label="Venue">Nature &amp; Nature Portfolio</td><td data-label="Current limit (checked Oct 2026)">Article ≈ 2,500 words (6 pages) to 4,300 words (8 pages); Methods ≤ 3,000; summary ≤ 200</td></tr>
+        <tr><td data-label="Template"><b>Science.md</b></td><td data-label="Venue">Science (AAAS)</td><td data-label="Current limit (checked Oct 2026)">Research Article ~4,500 words; Report ~2,500 words</td></tr>
+        <tr><td data-label="Template"><b>NeurIPS_ICML_ICLR.md</b></td><td data-label="Venue">Top ML conferences</td><td data-label="Current limit (checked Oct 2026)">9-page main text (NeurIPS 2026), proofs &amp; error bars, ethics statement</td></tr>
+        <tr><td data-label="Template"><b>IEEE.md</b></td><td data-label="Venue">IEEE Transactions</td><td data-label="Current limit (checked Oct 2026)">Two-column, formal math, complexity analysis</td></tr>
+        <tr><td data-label="Template"><b>ACM.md</b></td><td data-label="Venue">ACM SIGCONF / TOCS</td><td data-label="Current limit (checked Oct 2026)">CCS concepts, artifact badges</td></tr>
+        <tr><td data-label="Template"><b>Springer.md</b></td><td data-label="Venue">LNCS &amp; Springer journals</td><td data-label="Current limit (checked Oct 2026)">Monograph &amp; journal standards</td></tr>
+        <tr><td data-label="Template"><b>arXiv.md</b></td><td data-label="Venue">arXiv preprints</td><td data-label="Current limit (checked Oct 2026)">Citation-velocity-first preprint architecture</td></tr>
       </tbody>
     </table>
   </div>
