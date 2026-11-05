@@ -82,4 +82,6 @@ Search your draft for every bare number. Attach, or note why not attachable, one
 - Ref-n-Write video #6 + notes: [`../02_VIDEO_COURSES/video_notes/video_06_results.md`](../02_VIDEO_COURSES/video_notes/video_06_results.md)
 - Alley's book on figure-text economy: [`../03_BOOKS/03_alley_craft_of_scientific_writing.md`](../03_BOOKS/03_alley_craft_of_scientific_writing.md)
 
+**Companion manual:** [Roadmap §3.6 Results](../THE_WRITING_ROADMAP.md#36-results--written-second) — the full treatment with sources.
+
 **Next:** [Step 8 — Introduction and Discussion →](step_08_write_introduction_and_discussion.md)
