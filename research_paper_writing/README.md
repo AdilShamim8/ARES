@@ -1,87 +1,79 @@
-# Research Paper Writing — The Worldwide Learning Library
+# Research Paper Writing — learn it step by step
 
-> **One folder. One hundred files. Every resource real, every link checked.**
-> This is ARES's curated learning library for research paper writing: the best courses, video
-> trainings, books, free guides, mentorship programs, and software tools from around the world —
-> each one profiled in its own file with provider, cost, format, coverage, and the exact sources
-> we verified it against. Nothing here is remembered from training data; everything was
-> re-checked against the live web on **5 November 2026**.
+> **New here?** You are 12 steps from your first submitted paper. Follow the roadmap below —
+> one step at a time, real work at every step, nothing assumed.
 
----
+## The 12-step roadmap (8 weeks, 3 phases)
 
-## Why this folder exists
+Every step lives in [`00_GETTING_STARTED/`](00_GETTING_STARTED/) and ends with an exit test —
+you never move on until your work passes. Track your progress right here in the checkboxes:
 
-ARES gives you an *AI-powered pipeline* for writing papers (skills, evaluators, templates,
-workflows). But a pipeline works best when the person driving it understands *why* each station
-exists. This library is the human half of the system: the courses you can take, the mentors you
-can ask, and the references you can keep open while ARES drafts, scores, and stress-tests your
-manuscript.
+### Phase 1 · Foundations — Week 1
 
-The anchor resource is the **Ref-n-Write "Research Paper Writing Course"** playlist on YouTube —
-a free 9-video walkthrough of every section of a research paper (course URL:
-<https://www.youtube.com/playlist?list=PL-W1Hxv8i_Lc5n-uT52HLY2wh8xaiaHzc>). Around that
-anchor we assembled the worldwide best-of catalog below.
+- [ ] **Step 1** · [Set up your toolkit](00_GETTING_STARTED/step_01_set_up_your_toolkit.md) — 1 h
+- [ ] **Step 2** · [Know the paper's anatomy](00_GETTING_STARTED/step_02_know_the_paper_anatomy.md) — 45 min
+- [ ] **Step 3** · [Read papers like a researcher](00_GETTING_STARTED/step_03_read_papers_like_a_researcher.md) — 90 min
+- [ ] **Step 4** · [Find your research question](00_GETTING_STARTED/step_04_find_your_research_question.md) — 90 min
 
----
+### Phase 2 · Write the paper — Weeks 2–5
 
-## What is inside (100 files)
+- [ ] **Step 5** · [Write the literature review](00_GETTING_STARTED/step_05_write_the_literature_review.md) — 2–3 h
+- [ ] **Step 6** · [Write the methods](00_GETTING_STARTED/step_06_write_the_methods.md) — 2 h
+- [ ] **Step 7** · [Write the results](00_GETTING_STARTED/step_07_write_the_results.md) — 2–3 h
+- [ ] **Step 8** · [Write Introduction & Discussion](00_GETTING_STARTED/step_08_write_introduction_and_discussion.md) — 3 h
+- [ ] **Step 9** · [Write conclusion, abstract, title](00_GETTING_STARTED/step_09_write_conclusion_abstract_title.md) — 2 h
 
-| Folder | Files | What you will find |
+### Phase 3 · Finish and submit — Weeks 6–8
+
+- [ ] **Step 10** · [Edit and self-review](00_GETTING_STARTED/step_10_edit_and_self_review.md) — 3 h
+- [ ] **Step 11** · [Choose the journal & cover letter](00_GETTING_STARTED/step_11_choose_journal_and_cover_letter.md) — 2 h
+- [ ] **Step 12** · [Submit and survive peer review](00_GETTING_STARTED/step_12_submit_and_survive_peer_review.md) — 2 h
+
+**In a hurry?** The [30-day sprint](08_LEARNING_PATHS/07_thirty_day_sprint.md) is the
+deadline-rescue compression. **Already experienced?** Skim Steps 1–4, start writing at Step 5.
+
+## What each step gives you
+
+| Every step file contains | Why it is there |
+|:---|:---|
+| The one idea | One principle — stated before anything else |
+| Why this step matters | The reviewer's failure mode it prevents |
+| What you will do | Numbered actions, nothing vague |
+| **Your work** | Exercises with fill-in templates — the actual learning |
+| Practice example | A hypothetical study showing the artifact done right |
+| **Exit test** | Checkboxes that gate the next step |
+| Going deeper | Library links, *only if* you want more |
+
+## The reference shelves (when a step needs more)
+
+The steps point here on demand — you never browse these cold:
+
+| Shelf | Files | What it holds |
 |:---|:---:|:---|
-| [`00_GETTING_STARTED/`](00_GETTING_STARTED/) | 4 | Orientation: what this library is, how to use it, a 30-minute quick start, and a glossary |
-| [`01_COURSES/`](01_COURSES/) | 25 | Structured courses and MOOCs — Stanford, École Polytechnique, UC Irvine, Lund, TU Munich, Yale, MIT OCW, Nature Masterclasses, Elsevier, Wiley, CDC/TEPHINET, AuthorAID/Rising Scholars, ACS, Springer Nature, Researcher.Life, Enago, Web of Science Academy |
-| [`02_VIDEO_COURSES/`](02_VIDEO_COURSES/) | 19 | The Ref-n-Write 9-video playlist (with one study-note file per video) plus six expert YouTube channels recommended by university writing centers |
-| [`03_BOOKS/`](03_BOOKS/) | 8 | The canonical bookshelf — Gastel & Day, Schimel, Alley, Wallwork, Glasman-Deal, Heard, Williams & Bizup, Swales & Feak |
-| [`04_FREE_GUIDES/`](04_FREE_GUIDES/) | 8 | Free reference guides — Purdue OWL, Duke Graduate School, Manchester Academic Phrasebank, UCLA Graduate Writing Center, IEEE Author Center, UCI LibGuide, Harvard Writing Project, Ref-n-Write blog |
-| [`05_MENTORSHIP/`](05_MENTORSHIP/) | 5 | Programs where a human reviews your work — AuthorAID mentoring, Grad Coach, The Page Doctor, Nature Masterclasses workshops, Editage Insights |
-| [`06_TOOLS/`](06_TOOLS/) | 6 | Software that helps while you write — Ref-n-Write, Paperpal, SciSpace, Overleaf, Zotero, and a comparison matrix |
-| [`07_SECTION_GUIDES/`](07_SECTION_GUIDES/) | 13 | One mini-guide per manuscript section — title, abstract, introduction, literature review, research questions, methods, results, discussion, conclusion, references, figures, cover letter, authorship & ethics |
-| [`08_LEARNING_PATHS/`](08_LEARNING_PATHS/) | 7 | Curated sequences by career stage — undergraduate, master's, PhD/ECR, non-native English speakers, clinical/public health, engineering & CS, and a 30-day sprint |
-| [`09_SOURCE_VERIFICATION/`](09_SOURCE_VERIFICATION/) | 4 | How every fact in this library was verified, the master URL list, the update policy, and known limitations |
-| this file | 1 | The hub you are reading |
-
----
-
-## The ten fastest picks (if you only have one hour)
-
-1. **Watch** the Ref-n-Write playlist video #1 (1:48) to see the whole paper at a glance — [`02_VIDEO_COURSES/video_notes/video_01_course_introduction.md`](02_VIDEO_COURSES/video_notes/video_01_course_introduction.md)
-2. **Skim** a section guide for the part you are writing right now — [`07_SECTION_GUIDES/`](07_SECTION_GUIDES/)
-3. **Enroll free** in Stanford's *Writing in the Sciences* — [`01_COURSES/01_stanford_writing_in_the_sciences.md`](01_COURSES/01_stanford_writing_in_the_sciences.md)
-4. **Bookmark** the Manchester Academic Phrasebank — [`04_FREE_GUIDES/03_manchester_academic_phrasebank.md`](04_FREE_GUIDES/03_manchester_academic_phrasebank.md)
-5. **Take** the free Wiley 14-module research-article course — [`01_COURSES/14_wiley_complete_guide_research_article.md`](01_COURSES/14_wiley_complete_guide_research_article.md)
-6. **Browse** the Elsevier Researcher Academy (free) — [`01_COURSES/11_elsevier_researcher_academy.md`](01_COURSES/11_elsevier_researcher_academy.md)
-7. **Get a mentor** through AuthorAID / Rising Scholars — [`05_MENTORSHIP/01_authoraid_mentoring.md`](05_MENTORSHIP/01_authoraid_mentoring.md)
-8. **Read one book** — start with Gastel & Day, 9th edition — [`03_BOOKS/01_gastel_day_how_to_write_and_publish.md`](03_BOOKS/01_gastel_day_how_to_write_and_publish.md)
-9. **Pick a citation manager** — [`06_TOOLS/05_zotero.md`](06_TOOLS/05_zotero.md)
-10. **Choose your path** by career stage — [`08_LEARNING_PATHS/`](08_LEARNING_PATHS/)
-
----
+| [`00_GETTING_STARTED/`](00_GETTING_STARTED/) | 18 | The 12 steps + orientation, quick start, glossary |
+| [`01_COURSES/`](01_COURSES/) | 25 | Structured courses & MOOCs — Stanford, École Polytechnique, UC Irvine, Lund, TUM, Yale, MIT OCW, Nature Masterclasses, Elsevier, Wiley, CDC/TEPHINET, AuthorAID, ACS, Springer Nature… |
+| [`02_VIDEO_COURSES/`](02_VIDEO_COURSES/) | 19 | The anchor **Ref-n-Write 9-video playlist** (≈195,450 views) with one study-note file per video, plus six expert channels |
+| [`03_BOOKS/`](03_BOOKS/) | 8 | The canonical bookshelf — Gastel & Day 9th ed., Schimel, Alley, Wallwork, Glasman-Deal, Heard, Williams & Bizup, Swales & Feak |
+| [`04_FREE_GUIDES/`](04_FREE_GUIDES/) | 8 | Purdue OWL, Duke, Manchester Academic Phrasebank, IEEE Author Center, Harvard, UCI, Ref-n-Write blog, Lund |
+| [`05_MENTORSHIP/`](05_MENTORSHIP/) | 5 | Humans who read your work — AuthorAID (free, LMIC), Grad Coach, The Page Doctor, Nature editor workshops, Editage Insights |
+| [`06_TOOLS/`](06_TOOLS/) | 6 | Ref-n-Write, Paperpal, SciSpace, Overleaf, Zotero + comparison matrix and a $0 stack |
+| [`07_SECTION_GUIDES/`](07_SECTION_GUIDES/) | 13 | One written guide per manuscript section, each paired to its video + ARES skill |
+| [`08_LEARNING_PATHS/`](08_LEARNING_PATHS/) | 7 | Career-stage sequences: undergraduate → master's → PhD/ECR + ESL, clinical, engineering/CS paths |
+| [`09_SOURCE_VERIFICATION/`](09_SOURCE_VERIFICATION/) | 4 | The audit trail: method, URL master list, limitations, update policy |
 
 ## How this library pairs with ARES
 
-The library teaches *you*; ARES disciplines *your manuscript*. Use them together:
-
-| You are working on… | Learn from (this library) | Then run (ARES) |
-|:---|:---|:---|
-| Finding a research gap | Ref-n-Write video #4, Grad Coach channel | `skills/01_ideation/` |
-| Reading the field | Video #3 + Wallwork (book) | `skills/02_literature_command/` |
-| Designing the study | Yale & CDC/TEPHINET courses | `skills/03_methodology_architect/` |
-| Writing each section | Section guides 01–09 here | `skills/05_writing_excellence/` |
-| Figures & tables | Section guide 11 + Alley (book) | `skills/04_data_intelligence/visualization_master.md` |
-| Surviving peer review | Nature *Focus on Peer Review*, ACS Reviewer Lab | `skills/06_quality_fortress/` |
-| Choosing a journal | Nature *Publishing a Research Paper*, Springer tutorials | `skills/07_journal_strategy/` |
-| Citations & ethics | Section guides 10 & 13, Zotero guide | `skills/08_ethics_compliance/`, `skills/09_citation_mastery/` |
-
----
+The library teaches *you*; the parent repository disciplines *your manuscript*. Steps 4–11
+each name the ARES command to run on your own artifact (e.g., Step 5's synthesis paragraphs →
+`skills/02_literature_command/synthesis_engine.md`; Step 10 → `evaluators/CLARITY_ANALYZER.md`
+at the ≥80 gate). Learn manually first, automate second — that ordering is deliberate.
 
 ## Data-provenance statement
 
-Every entry in this library states its **provider, platform URL, cost, format, and the date it was
-last verified** (5 November 2026, by live web check). Ratings and enrollment numbers are quoted
-from the hosting platform's own course page at verification time. Where a platform does not
-publish a number (for example, lesson hours for some free guides), we say so rather than guess.
-See [`09_SOURCE_VERIFICATION/01_verification_method.md`](09_SOURCE_VERIFICATION/01_verification_method.md)
-for the exact procedure and [`09_SOURCE_VERIFICATION/02_url_master_list.md`](09_SOURCE_VERIFICATION/02_url_master_list.md)
-for every URL consulted.
+Every external fact (ratings, module counts, prices, subscriber figures) was read from the
+live web on **5 November 2026** and is restated with its source URL in each profile; the
+procedure and full URL list live in
+[`09_SOURCE_VERIFICATION/`](09_SOURCE_VERIFICATION/). Practice examples inside the step files
+are hypothetical and labeled as such — they demonstrate craft, never report findings.
 
-*Part of the [AI Research Excellence System (ARES)](../README.md) v3.1.*
+*Part of the [AI Research Excellence System (ARES)](../README.md) v3.2.*
