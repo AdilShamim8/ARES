@@ -97,4 +97,6 @@ moves and the standing rules.
   [`../07_SECTION_GUIDES/01_title_and_keywords.md`](../07_SECTION_GUIDES/01_title_and_keywords.md)
 - Ref-n-Write video #9 (abstract): [`../02_VIDEO_COURSES/video_notes/video_09_abstract.md`](../02_VIDEO_COURSES/video_notes/video_09_abstract.md)
 
+**Companion manual:** [Roadmap §3.2 Abstract](../THE_WRITING_ROADMAP.md#32-abstract--written-last), [§3.8 Conclusion](../THE_WRITING_ROADMAP.md#38-conclusion--written-last-after-everything-else), [§3.1 Title](../THE_WRITING_ROADMAP.md#31-title--keywords--written-last-decided-early) — the full treatments with sources.
+
 **Next:** [Step 10 — Edit and self-review →](step_10_edit_and_self_review.md)
