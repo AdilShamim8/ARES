@@ -1,9 +1,26 @@
 # Research Paper Writing — learn it step by step
 
-> **New here?** You are 12 steps from your first submitted paper. Follow the roadmap below —
-> one step at a time, real work at every step, nothing assumed.
+> **New here?** Two documents run this library:
+> [**THE WRITING ROADMAP**](THE_WRITING_ROADMAP.md) — the complete how-to-write-a-paper
+> manual (every rule taken from the courses, videos, and books, with sources named) — and
+> the [**12-step program**](00_GETTING_STARTED/) below — the week-by-week schedule that
+> walks you through it.
 
-## The 12-step roadmap (8 weeks, 3 phases)
+## THE WRITING ROADMAP — the manual (start here if you want the whole craft)
+
+[`THE_WRITING_ROADMAP.md`](THE_WRITING_ROADMAP.md) is one end-to-end guide to writing a
+research paper — from reading notes to submitted manuscript — in five parts:
+
+| Part | What it teaches | Its sources |
+|:---|:---|:---|
+| **0 · Orientation** | Where every teaching comes from; three ways to use the guide | the whole library |
+| **1 · Before you write** | Reading notes, the RQ ladder, the gap statement | Ref-n-Write video #4, RQ guide, Swales & Feak |
+| **2 · The academic writing style** | Clutter, verbs, sentences/paragraphs, story, moves→phrases, ESL edge, drafting order | Stanford Units 1–4, Schimel, Glasman-Deal, Phrasebank, Wallwork |
+| **3 · Section-by-section guide** | All 10 manuscript parts: video → Wiley module → pattern → style rules → pitfalls → work | the 9-video playlist + all 13 section guides |
+| **4 · Revision** | Three passes — structure, clarity, surface — plus the gates | Stanford Unit 4, Duke, Purdue OWL |
+| **5 · Submission** | Authorship, journal choice, cover letter, packet, peer review | Wiley's five non-section modules, École Polytechnique, Nature courses |
+
+## The 12-step program (8 weeks, 3 phases) — the schedule
 
 Every step lives in [`00_GETTING_STARTED/`](00_GETTING_STARTED/) and ends with an exit test —
 you never move on until your work passes. Track your progress right here in the checkboxes:
@@ -50,6 +67,7 @@ The steps point here on demand — you never browse these cold:
 
 | Shelf | Files | What it holds |
 |:---|:---:|:---|
+| [`THE_WRITING_ROADMAP.md`](THE_WRITING_ROADMAP.md) | 1 | **The end-to-end manual** — how to write every part, sourced from the courses |
 | [`00_GETTING_STARTED/`](00_GETTING_STARTED/) | 18 | The 12 steps + orientation, quick start, glossary |
 | [`01_COURSES/`](01_COURSES/) | 25 | Structured courses & MOOCs — Stanford, École Polytechnique, UC Irvine, Lund, TUM, Yale, MIT OCW, Nature Masterclasses, Elsevier, Wiley, CDC/TEPHINET, AuthorAID, ACS, Springer Nature… |
 | [`02_VIDEO_COURSES/`](02_VIDEO_COURSES/) | 19 | The anchor **Ref-n-Write 9-video playlist** (≈195,450 views) with one study-note file per video, plus six expert channels |
