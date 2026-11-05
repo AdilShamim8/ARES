@@ -39,7 +39,7 @@
 
 ## What Is ARES?
 
-**ARES = AI Research Excellence System.** It is a repository of **150+ modular Markdown documents** that turn a general-purpose AI assistant (Claude, or any capable LLM) into a disciplined research partner. Each file is a *prompt engine* with a precise job:
+**ARES = AI Research Excellence System.** It is a repository of **160+ modular Markdown documents** that turn a general-purpose AI assistant (Claude, or any capable LLM) into a disciplined research partner. Each file is a *prompt engine* with a precise job:
 
 | Layer | What it does | Example |
 |:---|:---|:---|
@@ -403,7 +403,7 @@ Every empirical number in ARES is traceable to a public dataset, registry, or pu
 
 ## The Research Paper Writing Learning Library
 
-ARES automates the production of papers; the [`research_paper_writing/`](research_paper_writing/) folder educates the person driving it. It is a curated worldwide library of **110 files** covering the best research-paper-writing resources on the web — every course rating, module count, price, and subscriber figure read from the live web on **5 November 2026** and documented in a full verification audit trail ([`research_paper_writing/09_SOURCE_VERIFICATION/`](research_paper_writing/09_SOURCE_VERIFICATION/)).
+ARES automates the production of papers; the [`research_paper_writing/`](research_paper_writing/) folder educates the person driving it — **beginner-first, as a 12-step roadmap**. Start at [`research_paper_writing/00_GETTING_STARTED/00_START_HERE.md`](research_paper_writing/00_GETTING_STARTED/00_START_HERE.md): twelve steps across three phases (Foundations → Write the paper → Finish and submit), eight weeks part-time, each step with hands-on exercises, fill-in templates, and an exit test that gates the next step. Behind the roadmap sits a worldwide reference library of **124 files** — every course rating, module count, price, and subscriber figure read from the live web on **5 November 2026** and documented in a full verification audit trail ([`research_paper_writing/09_SOURCE_VERIFICATION/`](research_paper_writing/09_SOURCE_VERIFICATION/)).
 
 | Folder | Files | Highlights |
 |:---|:---:|:---|
