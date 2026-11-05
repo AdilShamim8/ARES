@@ -2,7 +2,10 @@
 
 ## The one-paragraph version
 
-This folder is the **learning half of ARES**. The parent repository gives you an AI operating
+This library is the **learning half of ARES** — and it is built around a **12-step roadmap**
+([`00_START_HERE.md`](00_START_HERE.md)) that takes a beginner to a submitted paper in 8
+weeks of part-time work. Everything else in these 124 files is reference material that the
+steps call on when needed. The parent repository gives you an AI operating
 system that drafts, scores, and stress-tests manuscripts; this library gives *you* the education
 to drive it well. It is a curated catalog of the world's best research-paper-writing resources —
 **25 structured courses, 19 video resources, 8 books, 8 free guides, 5 mentorship programs, and
@@ -19,9 +22,9 @@ to drive it well. It is a curated catalog of the world's best research-paper-wri
 3. **Mentor-shaped.** The user of this library asked for "mentor with course and website
    information worldwide" — so every profile explains *who* teaches, *what* they cover, and
    *where* to ask a human for feedback (see `05_MENTORSHIP/`).
-4. **Organized for action.** Resources are filed by type (course / video / book / guide / mentor
-   / tool), and `08_LEARNING_PATHS/` sequences them by career stage so you never wonder what to
-   do next.
+4. **Roadmap-first.** The 12 steps in this folder are the path; the typed shelves
+   (course / video / book / guide / mentor / tool) are called on *by the steps*, so you never
+   browse cold or wonder what to do next.
 5. **Paired with ARES.** Each profile ends with a "how to use it with ARES" note that maps the
    resource onto the ten ARES skills, so learning and producing stay synchronized.
 
